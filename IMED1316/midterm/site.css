@@ -1,0 +1,112 @@
+/*******************************************/
+/* link to kuler.adobe color scheme        */
+/* http://adobe.ly/1yec8Qt                 */
+/*                                         */
+/* sticky footer docs                      */
+/* http://ryanfait.com/html5-sticky-footer */
+/*******************************************/
+#wrapper {
+	min-height: 100%;
+	margin: 0 auto -50px;
+}
+
+header {
+	padding: 10px;
+	background-color: #707678;
+	text-align: center;
+}
+header h1 {
+	font-size: 48px;
+} 
+header h4 {
+	margin-top: -25px;
+}
+
+aside {
+	float: right;
+	width: 280px;
+	/* background-color: grey; */
+	margin: 0;
+}
+aside h4 {
+	margin: 10px 0 2px 0;
+}
+aside dl {
+	margin: 10px 10px;
+}
+aside dt {
+	font-weight: bold;
+}
+aside dd {
+	margin-left: 10px;
+}
+aside table {
+	margin: auto;
+}
+aside table td {
+	text-align: center;
+	font-weight: bold;
+	font-size: 90%;
+}
+aside table img {
+	text-align: center;
+}
+
+article {
+	width: 780px;
+	margin: 0px;
+	padding: 10px;
+	/* background-color: green; */
+}
+article h4 {
+	margin-left: 20px;
+}
+article #articlepic {
+	float: right;
+	margin-right: 30px;
+}
+article ul {
+	margin: 10px 0;
+	/* background-color: yellow; */
+}
+article li {
+	margin-left: -10px;
+}
+article p {
+	margin: 10px;
+}
+article dl {
+	margin-left: 20px;
+}
+article dt {
+	font-weight: bold;
+	float: left;
+	margin-right: 10px;
+}
+
+footer, .push {
+	height: 50px;
+	/* background-color: blue; */
+}
+footer hr {
+	margin-bottom: 5px;
+}
+footer .pRight {
+	text-align: right;
+	margin-right: 10px;
+	/* background-color: cornflowerblue; */
+}
+footer .pLeft {
+	float: left;
+	text-align: left;
+	margin-left: 10px;
+	/* background-color: pink; */
+}
+
+html, body {
+	height: 100%;
+	width: 1060px;
+	margin: auto;
+	background-color: #C2A57B;
+	font-family: sans-serif;
+}
