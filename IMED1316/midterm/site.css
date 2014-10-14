@@ -5,9 +5,22 @@
 /* sticky footer docs                      */
 /* http://ryanfait.com/html5-sticky-footer */
 /*******************************************/
+/* * {
+	margin: 0;
+} */
+
+html, body {
+	height: 100%;
+	width: 1060px;
+	margin: auto;
+	background-color: #C2A57B;
+	font-family: sans-serif;
+}
+
 #wrapper {
 	min-height: 100%;
-	margin: 0 auto -50px;
+	/* there is a bug here - losing 10px in height somewhere */
+	margin: 0 auto -60px;
 }
 
 header {
@@ -17,9 +30,11 @@ header {
 }
 header h1 {
 	font-size: 48px;
+	/* background-color: blue; */
 } 
 header h4 {
 	margin-top: -25px;
+	/* background-color: yellow; */
 }
 
 aside {
@@ -84,14 +99,18 @@ article dt {
 	margin-right: 10px;
 }
 
-footer, .push {
+footer, #push {
 	height: 50px;
+	margin-bottom: 0;
 	/* background-color: blue; */
+	clear: both;
 }
 footer hr {
-	margin-bottom: 5px;
+	margin-bottom: -5px;
 }
 footer .pRight {
+	float: right;
+	clear: both;
 	text-align: right;
 	margin-right: 10px;
 	/* background-color: cornflowerblue; */
@@ -101,12 +120,4 @@ footer .pLeft {
 	text-align: left;
 	margin-left: 10px;
 	/* background-color: pink; */
-}
-
-html, body {
-	height: 100%;
-	width: 1060px;
-	margin: auto;
-	background-color: #C2A57B;
-	font-family: sans-serif;
 }
