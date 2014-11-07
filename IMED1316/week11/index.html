@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Interactive Images</title>
+		<meta charset="utf-8"/>
+		<style>
+			#main {
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<img src="college.png" usemap="#schools" alt="local colleges in Houston"/>
+			<map name="schools">
+				<area shape="rect" coords="34,104,107,256" href="http://rice.edu" alt="Rice University"/>
+				<area shape="circle" coords="344,184,92" href="http://uh.edu" alt="University of Houston"/>
+				<area shape="poly" coords="551,96,463,248,640,248" href="http://hccs.edu" alt="Houston Community College" />
+			</map>
+		</div>
+		<div id="second">
+			<p><a href="#"
+				onmouseover="document.about.src='about_over.png'"
+				onmouseout="document.about.src='about.png'">
+					<img src="about.png" id="about" alt="link to about us"/>
+			</a></p>
+			<p><a href="#"
+				onmouseover="document.links.src='links_over.png'"
+				onmouseout="document.links.src='links.png'">
+					<img src="links.png" id="links" alt="link to links"/>
+			</a></p>
+			<p><a href="#"
+				onmouseover="document.contact.src='contacts_over.png'"
+				onmouseout="document.contact.src='contacts.png'">
+					<img src="contacts.png" id="contact" alt="link to contact"/>
+			</a></p>
+		</div>
+	</body>
+</html>
