@@ -1,0 +1,54 @@
+ <html>
+<head>
+<title>form page</title>
+</head>
+
+<body>
+
+<form method="post" action="http:foo.com/cgi-bin/yamform.pl" name="delivery">
+<h1>Bonnie's Pizza!</h1>
+
+<p>
+Please tell me your name: <br />
+<input type="text" name="firstname" />&#160;&nbsp;
+<input type="text" name="lastname" />
+<input type="password" name="pw" />
+</p>
+
+<p>
+What toppings would you like?<br />
+<input type="checkbox" name="toppings" value="sausage" />Sausage<br/>
+<input type="checkbox" name="toppings" value="pineapple" />Pineapple<br/>
+<input type="checkbox" name="toppings" value="onions" />Onions
+
+</p>
+
+<p>
+What crust would you like?<br />
+<input type="radio" name="crust" value="thin" />Thin<br/>
+<input type="radio" name="crust" value="thick" />Thick<br/>
+<input type="radio" name="crust" value="Chicago" />Chicago
+
+</p>
+
+<p>Where do you want your pizza?<br />
+<select name="location">
+<option value="please">Please select from the following</option>
+<option value="dine-in">Dine In</option>
+<option value="take-out">Take Out</option>
+<option value="delivered">Delivered</option>
+</select>
+</p>
+
+<p>
+Any special instructions?<br/>
+<textarea name="comments" rows="6" cols="60"></textarea>
+</p>
+
+<p><input type="submit" name="submit" value="make me a pizza" /></p>
+<p><input type="reset" name="reset" value="start over" /></p>
+
+</form>
+</body>
+
+</html>
