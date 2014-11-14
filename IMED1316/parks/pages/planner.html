@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>National Parks &#8211; America's Natural Legacy</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="../css/site.css" media="all"/>
+	</head>
+	<body>
+		<div id="main">
+			<header>
+				<img src="../images/NP_banner.png" alt="National Parks banner"/>
+				<h1>National Parks &#8211; America's Natural Legacy</h1>
+			</header>
+			<section>
+				<h2>Trip Planner</h2>
+				<form method="post" action="mailto:downtownhippie@gmail.com" name="planner">
+					<p>Name:<br/>
+					<input type="text" name="name"/></p>
+
+					<p>E-Mail:<br/>
+					<input type="text" name="email"/></p>
+
+					<p>What activities are you interested in?<br/>
+					<table class="activity">
+						<tr>
+							<td class="activity"><input type="checkbox" name="activity" value="biking"/>Biking</td>
+							<td class="activity"><input type="checkbox" name="activity" value="camping"/>Camping</td>
+							<td class="activity"><input type="checkbox" name="activity" value="Hiking"/>Hiking</td>
+							<td class="activity"><input type="checkbox" name="activity" value="wheelchair"/>Wheelchair Accessible</td>
+						</tr>
+						<tr>
+							<td class="activity"><input type="checkbox" name="activity" value="boating"/>Boating</td>
+							<td class="activity"><input type="checkbox" name="activity" value="fishing"/>Fishing</td>
+							<td class="activity"><input type="checkbox" name="activity" value="climbing"/>Rock Climbing</td>
+							<td class="activity"></td>
+						</tr>
+					</table>
+
+					<p>Which month do you plan to visit a park?<br/>
+					<input type="radio" name="month" value="june">June<br/>
+					<input type="radio" name="month" value="july">July<br/>
+					<input type="radio" name="month" value="august">August<br/></p>
+
+					<p>How would you like to receive more information?<br/>
+					<select name="response">
+						<option value="none">Please select from the following</option>
+						<option value="email">Email</option>
+						<option value="phone">Phone</option>
+						<option value="smail">U.S. Mail</option>
+					</select>
+
+					<p>Any special requests?<br/>
+					<textarea rows="6" cols="60"></textarea></p>
+					<p><input type="submit" name="submit" value="tell me more about a trip"/></p>
+					<p><input type="reset" name="reset" value="start over"/></p>
+				</form>
+				<hr/>
+			</section>
+			<section>
+				<a href="../index.html">Back to Home</a>
+			</section>
+			<footer>
+			</footer>
+		</div>
+	</body>
+</html>
