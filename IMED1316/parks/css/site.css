@@ -40,6 +40,15 @@ td.activity {
 	text-align: left;
 	border: 0;
 }
+table.month {
+	margin: 0;
+	padding: 0;
+}
+td.month {
+	padding: 2px;
+	border: 0;
+	text-align: left;
+}
 th, td {
 	border: 1px black solid;
 	padding: 12px;
