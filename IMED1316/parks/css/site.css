@@ -32,9 +32,7 @@ table {
 	border-collapse: collapse;
 }
 table.activity {
-	margin: 10px 0 0 0;
-	/* text-align: left; */
-	/* border: 0; */
+	margin: 8px 0 0 0;
 }
 td.activity {
 	text-align: left;
