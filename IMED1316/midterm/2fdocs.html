@@ -1,7 +1,57 @@
-link to folder with grocery list
+<!DOCTYPE html>
 
-link to folder with docs for integra and remote
 
-link to page with docs on using integra/tv/ps3/roku/hulu/netflix
 
-link to page about how to use stereo/itunes
+
+<html>
+	<head>
+		<!--
+			link to folder with grocery list
+
+			link to folder with docs for integra and remote
+
+			link to page with docs on using integra/tv/ps3/roku/hulu/netflix
+
+			link to page about how to use stereo/itunes
+		-->
+		<title>The Home Page</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="site.css"/>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<h1>The Home Page - documentation</h1>
+				<h4>How stuff works</h4>
+			</header>
+			<aside>
+			</aside>
+			<article>
+				<h2><a href="javascipt:window.print('F:/Untitled1.ods')" alt="grocery list">Grocery List</a></h2>
+				<h3>Manuals</h3>
+				<ul>
+					<li>Home Theater Receiver</li>
+					<li>Home Theater Remote</li>
+					<li>Refrigerator<li>
+				</ul>
+				<h3>How Tos</h3>
+				<ul>
+					<li>TV has audio but no video</li>
+				</ul>
+			</article>
+			<div id="push"></div>
+		</div> <!-- wrapper -->
+		<footer>
+			<hr/>
+			<p class="pRight">&#169; 2014 <a href="mailto:someone@some.where">Joe Reid</a></p>
+			<p class="pLeft"><a href="index.html">Return to Home Page</a></p>
+		</footer>
+	</body>
+	<script type="text/javascript">
+		function printdoc(docUrl) 
+		{
+			var w = window.open(docUrl);
+			w.print();
+		}
+	</script>
+</html>

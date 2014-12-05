@@ -109,6 +109,7 @@ footer, #push {
 }
 footer hr {
 	margin-bottom: -5px;
+	margin-top: 25px;
 }
 footer .pRight {
 	float: right;
