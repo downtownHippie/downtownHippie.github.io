@@ -20,7 +20,7 @@ html, body {
 #wrapper {
 	min-height: 100%;
 	/* there is a bug here somewhere - losing 27px in height somewhere */
-	margin: 0 auto -71px;
+	margin: 0 auto -74px;
 	/* background-color: hotpink; */
 }
 
