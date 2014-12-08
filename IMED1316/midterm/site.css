@@ -19,8 +19,9 @@ html, body {
 
 #wrapper {
 	min-height: 100%;
-	/* there is a bug here - losing 10px in height somewhere */
-	margin: 0 auto -60px;
+	/* there is a bug here somewhere - losing 27px in height somewhere */
+	margin: 0 auto -77px;
+	/* background-color: hotpink; */
 }
 
 header {
@@ -40,11 +41,8 @@ header h4 {
 aside {
 	float: right;
 	width: 280px;
-	/* background-color: grey; */
 	margin: 0;
-}
-aside h4 {
-	margin: 10px 0 2px 0;
+	/* background-color: grey; */
 }
 aside dl {
 	margin: 10px 10px;
@@ -69,14 +67,14 @@ aside table img {
 }
 */
 
+h3 {
+	margin-bottom: -10px;
+}
 article {
 	width: 780px;
 	margin: 0px;
 	padding: 10px;
 	/* background-color: green; */
-}
-article h4 {
-	margin-left: 20px;
 }
 article #articlepic {
 	float: right;
@@ -104,8 +102,8 @@ article dt {
 footer, #push {
 	height: 50px;
 	margin-bottom: 0;
-	/* background-color: blue; */
 	clear: both;
+	/* background-color: blue; */
 }
 footer hr {
 	margin-bottom: -5px;
