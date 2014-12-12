@@ -22,7 +22,7 @@ html, body {
 	/* there is a bug here somewhere */
 	/* firefox loses 27px */
 	/* chrome and IE lose 25px */
-	margin: 0 auto -74px;
+	margin: 0 auto -77px;
 	/* background-color: hotpink; */
 }
 
