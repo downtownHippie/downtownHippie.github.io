@@ -1,0 +1,962 @@
+<devicedata>
+    <copyright>Copyright 2004-2014 Control4 Corporation.  All rights reserved.</copyright>
+    <creator>The B&amp;W Group</creator>
+    <manufacturer>Rotel</manufacturer>
+    <name>Rotel RC-1082</name>
+    <model>RC-1082 [DriverWorks]</model>
+    <created>07/08/2010 3:33 PM</created>
+    <modified>01/31/2014 9:57 AM</modified>
+    <version>3</version>
+    <small>devices_sm\receiver.gif</small>
+    <large>devices_lg\receiver.gif</large>
+    <control>lua_gen</control>
+    <controlmethod>serial</controlmethod>
+    <driver>DriverWorks</driver>
+    <proxies qty="1">
+        <proxy proxybindingid="5001">receiver</proxy>
+    </proxies>
+    <capabilities>
+        <can_downclass>False</can_downclass>
+        <can_switch>True</can_switch>
+        <has_discrete_volume_control>False</has_discrete_volume_control>
+        <has_up_down_volume_control>True</has_up_down_volume_control>
+        <has_discrete_mute_control>False</has_discrete_mute_control>
+        <has_toggle_mute_control>True</has_toggle_mute_control>
+        <audio_provider_count>2</audio_provider_count>
+        <audio_consumer_count>8</audio_consumer_count>
+        <has_discrete_input_select>True</has_discrete_input_select>
+        <has_toad_input_select>False</has_toad_input_select>
+        <serialsettings>19200 8 none 1 none 232</serialsettings>
+        <can_upclass>False</can_upclass>
+        <can_poll_serial>False</can_poll_serial>
+        <serialdelay>0</serialdelay>
+    </capabilities>
+    <connections>
+        <connection proxybindingid="5001">
+            <id>1</id>
+            <facing>6</facing>
+            <connectionname>Serial RS-232</connectionname>
+            <type>1</type>
+            <consumer>True</consumer>
+            <audiosource>False</audiosource>
+            <videosource>False</videosource>
+            <linelevel>True</linelevel>
+            <classes>
+                <class>
+                    <classname>RS_232</classname>
+                </class>
+            </classes>
+        </connection>
+        <connection proxybindingid="5001">
+            <id>3000</id>
+            <facing>6</facing>
+            <connectionname>PHONO</connectionname>
+            <type>6</type>
+            <consumer>True</consumer>
+            <audiosource>False</audiosource>
+            <videosource>False</videosource>
+            <linelevel>True</linelevel>
+            <classes>
+                <class>
+                    <classname>STEREO</classname>
+                </class>
+            </classes>
+        </connection>
+        <connection proxybindingid="5001">
+            <id>3001</id>
+            <facing>6</facing>
+            <connectionname>CD</connectionname>
+            <type>6</type>
+            <consumer>True</consumer>
+            <audiosource>False</audiosource>
+            <videosource>False</videosource>
+            <linelevel>True</linelevel>
+            <classes>
+                <class>
+                    <classname>STEREO</classname>
+                </class>
+            </classes>
+        </connection>
+        <connection proxybindingid="5001">
+            <id>3002</id>
+            <facing>6</facing>
+            <connectionname>TUNER</connectionname>
+            <type>6</type>
+            <consumer>True</consumer>
+            <audiosource>False</audiosource>
+            <videosource>False</videosource>
+            <linelevel>True</linelevel>
+            <classes>
+                <class>
+                    <classname>STEREO</classname>
+                </class>
+            </classes>
+        </connection>
+        <connection proxybindingid="5001">
+            <id>3003</id>
+            <facing>6</facing>
+            <connectionname>AUX 1</connectionname>
+            <type>6</type>
+            <consumer>True</consumer>
+            <audiosource>False</audiosource>
+            <videosource>False</videosource>
+            <linelevel>True</linelevel>
+            <classes>
+                <class>
+                    <classname>STEREO</classname>
+                </class>
+            </classes>
+        </connection>
+        <connection proxybindingid="5001">
+            <id>3004</id>
+            <facing>6</facing>
+            <connectionname>AUX 2</connectionname>
+            <type>6</type>
+            <consumer>True</consumer>
+            <audiosource>False</audiosource>
+            <videosource>False</videosource>
+            <linelevel>True</linelevel>
+            <classes>
+                <class>
+                    <classname>STEREO</classname>
+                </class>
+            </classes>
+        </connection>
+        <connection proxybindingid="5001">
+            <id>3005</id>
+            <facing>6</facing>
+            <connectionname>AUX 3</connectionname>
+            <type>6</type>
+            <consumer>True</consumer>
+            <audiosource>False</audiosource>
+            <videosource>False</videosource>
+            <linelevel>True</linelevel>
+            <classes>
+                <class>
+                    <classname>STEREO</classname>
+                </class>
+            </classes>
+        </connection>
+        <connection proxybindingid="5001">
+            <id>3006</id>
+            <facing>6</facing>
+            <connectionname>TAPE 1</connectionname>
+            <type>6</type>
+            <consumer>True</consumer>
+            <audiosource>False</audiosource>
+            <videosource>False</videosource>
+            <linelevel>True</linelevel>
+            <classes>
+                <class>
+                    <classname>STEREO</classname>
+                </class>
+            </classes>
+        </connection>
+        <connection proxybindingid="5001">
+            <id>3007</id>
+            <facing>6</facing>
+            <connectionname>TAPE 2</connectionname>
+            <type>6</type>
+            <consumer>True</consumer>
+            <audiosource>False</audiosource>
+            <videosource>False</videosource>
+            <linelevel>True</linelevel>
+            <classes>
+                <class>
+                    <classname>STEREO</classname>
+                </class>
+            </classes>
+        </connection>
+        <connection proxybindingid="5001">
+            <id>4000</id>
+            <facing>6</facing>
+            <connectionname>MAIN OUTPUT</connectionname>
+            <type>6</type>
+            <consumer>False</consumer>
+            <audiosource>False</audiosource>
+            <videosource>False</videosource>
+            <linelevel>True</linelevel>
+            <classes>
+                <class>
+                    <classname>STEREO</classname>
+                </class>
+            </classes>
+        </connection>
+        <connection proxybindingid="5001">
+            <id>4001</id>
+            <facing>6</facing>
+            <connectionname>RECORD OUTPUT</connectionname>
+            <type>6</type>
+            <consumer>False</consumer>
+            <audiosource>False</audiosource>
+            <videosource>False</videosource>
+            <linelevel>True</linelevel>
+            <classes>
+                <class>
+                    <classname>STEREO</classname>
+                </class>
+            </classes>
+        </connection>
+        <connection>
+            <id>5001</id>
+            <facing>6</facing>
+            <connectionname>Receiver</connectionname>
+            <type>2</type>
+            <consumer>False</consumer>
+            <audiosource>False</audiosource>
+            <videosource>False</videosource>
+            <linelevel>False</linelevel>
+            <classes>
+                <class>
+                    <classname>RECEIVER</classname>
+                </class>
+            </classes>
+        </connection>
+        <connection proxybindingid="5001">
+            <id>7000</id>
+            <facing>6</facing>
+            <connectionname>MAIN OUTPUT Audio/Video End-Point</connectionname>
+            <type>7</type>
+            <consumer>False</consumer>
+            <audiosource>False</audiosource>
+            <videosource>False</videosource>
+            <linelevel>True</linelevel>
+            <classes>
+                <class>
+                    <classname>AUDIO_SELECTION</classname>
+                </class>
+                <class>
+                    <classname>AUDIO_VOLUME</classname>
+                </class>
+            </classes>
+        </connection>
+        <connection proxybindingid="5001">
+            <id>7001</id>
+            <facing>6</facing>
+            <connectionname>RECORD OUTPUT Audio/Video End-Point</connectionname>
+            <type>7</type>
+            <consumer>False</consumer>
+            <audiosource>False</audiosource>
+            <videosource>False</videosource>
+            <linelevel>True</linelevel>
+            <classes>
+                <class>
+                    <classname>AUDIO_SELECTION</classname>
+                </class>
+            </classes>
+        </connection>
+    </connections>
+    <config>
+        <power_management_method>AlwaysOn</power_management_method>
+        <power_command_delay>0</power_command_delay>
+        <power_delay>0</power_delay>
+        <power_command_needed>False</power_command_needed>
+        <serialsettings>19200 8 none 1 none 232</serialsettings>
+        <documentation>
+RC-1082 DriverWorks 2-Way Serial Driver
+Driver written by the B&amp;W Group. Any bugs please report to msheehan@bwgroupusa.com
+
+SERIAL PROTOCOL: 
+3 wire RS-232C protocol
+19200 baud, 8 data bits, 1 stop bits, no parity, no flow control
+Uses an RJ45 type connector to DB9 connector cable.  
+Pin Settings:  
+RJ45 Side: Pin 3 TX, Pin 5 RX, Pins 4 &amp; 6 Gnd.
+DB9 Side: Pin 3 TX, Pin 2 RX, Pin 5 Gnd.
+
+Notes:
+This driver does not use the ON or OFF Proxy commands to control power to the unit.  It uses the SET_INPUT command and DISCONNECT_OUTPUT commands to power the unit on or off, respectively.
+
+Revised 10/25/11: Added a volume ramp timer to help with volume ramping issues. If ramping issues occur increase the delay timer which should help.  Also fixed debug mode to ensure it is off by default, which should improve speed of the driver.
+
+Revised 2/8/12: Added a feedback timer to help reduce potential issues from too much feedback data reducing system performance.
+
+Revised 9/21/2012: 
+  - Complete revision of how commands are received/processed, the process is now faster and more streamlined.  Volume ramping for example should now be faster and more responsive.  
+  - Fixed a bug that could cause the unit to occasionally not update feedback status.
+
+Revised 1/31/2014
+  - Fixed the Power On Delay property so it is effective now.  This delay is after Power On, but before any additional commands are sent to the device.
+  - Added a new Property to allow a delay before the initial Power On command is sent.
+</documentation>
+        <script><![CDATA[-- Initialization of driver
+intraCommandDelayValue = tonumber(Properties['Command Delay-Milliseconds'])
+intraVolRampDelayValue = tonumber(Properties['Volume Ramp Delay-Milliseconds'])
+powerOnDelayValue = tonumber(Properties['Power On Delay-Seconds'])
+delayBeforePowerOnValue = tonumber(Properties['Delay Before Issuing Power On Command-Seconds'])  
+g_debugprint = false
+g_debuglog = false
+
+-- global variables defined here to maintain units current state, so only changes will be sent to proxy
+g_muteState = {}
+g_receiverInput = {}
+g_PowerState = {
+	[0] = 'OFF',  -- Main Output
+	}
+
+tPendingCommands = {}
+tEmitCommands = {}
+idBusyTimer = 0
+tVolRampTimerID = {}
+tVolumeCommands = {}
+tVolumeCommandNames = {}
+tCurrentVolume = {}
+tMaxVolume = {}
+feedbackTimer = nil
+	
+-- Set some basic command byte data here.  Start and count should not change, but ID is unique for each model
+g_start = 'FE'
+g_count = '03'
+g_id = '06'		
+
+-- Type 10 is the default type byte for most commands, unless otherwise specified
+g_type = '10' 
+
+-- use the CMDS table for mapping simple commands received from Proxy
+CMDS = {}
+CMDS[5001] = {
+	Status_Query	= 'FF',
+	}
+
+-- command map table for commands shared by multiple zones (power, volume, mute, etc)
+COMMAND_MAP = {}
+COMMAND_MAP[5001] = {
+	CONNECT_OUTPUT		= '02',  -- Power On
+	POWER_OFF			= '01',  -- Power Off
+	RECORD_OFF	    	= '12',
+	START_VOL_UP    	= '13',
+	START_VOL_DOWN  	= '14',
+	STOP_VOL_UP     	= '13',
+	STOP_VOL_DOWN   	= '14',
+	PULSE_VOL_UP    	= '13',
+	PULSE_VOL_DOWN  	= '14',
+	VOLUME_UP			= '13',
+	VOLUME_DOWN	    	= '14',
+	MUTE_TOGGLE     	= '15',
+	}
+
+-- Map the bindings in the .c4i to the necessary control codes for the receiver	 	 
+-- Inputs
+BINDING_MAP  =  {
+	[0] = '03',   -- INPUT PHONO
+	[1] = '04',   -- INPUT CD
+	[2] = '05',   -- INPUT TUNER
+	[3] = '06',   -- INPUT AUX 1
+	[4] = '07',   -- INPUT AUX 2
+	[5] = '08',   -- INPUT AUX 3
+	[6] = '09',   -- INPUT TAPE 1
+	[7] = '0A',   -- INPUT TAPE 2
+	}
+
+-- Record Source commands
+BINDING_MAP_RECORD  =  {
+	[0] = '0B',   -- INPUT PHONO
+	[1] = '0C',   -- INPUT CD
+	[2] = '0D',   -- INPUT TUNER
+	[3] = '0E',   -- INPUT AUX 1
+	[4] = '0F',   -- INPUT AUX 2
+	[5] = '10',   -- INPUT AUX 3
+	[6] = '11',   -- INPUT TAPE 1
+	[7] = '12',   -- INPUT OFF
+	}
+
+REV_BINDING_MAP = {
+	['PHONO']  = 0,   -- INPUT PHONO
+	['CD']     = 1,   -- INPUT CD
+	['TUNER']  = 2,   -- INPUT TUNER
+	['AUX1']   = 3,   -- INPUT AUX 1
+	['AUX2']   = 4,   -- INPUT AUX 2
+	['AUX3']   = 5,   -- INPUT AUX 3
+	['TAPE1']  = 6,   -- INPUT TAPE 1
+	['TAPE2']  = 7,   -- INPUT TAPE 2
+	['OFF']    = -1,  -- INPUT OFF (RECORD)
+	}	 
+
+-- End of initialization
+
+function OnPropertyChanged(strProperty)
+  if (strProperty == 'Debug Mode') then
+    if (Properties[strProperty] == 'Off') then
+      g_debugprint = false
+      g_debuglog = false
+      g_DebugTimer = 0
+    end
+    if (Properties[strProperty] == 'Print') then
+      g_debugprint = true
+      g_debuglog = false
+    end
+    if (Properties[strProperty] == 'Log') then
+      g_debugprint = false
+      g_debuglog = true
+      startDebugTimer()
+    end
+    if (Properties[strProperty] == 'Print and Log') then
+      g_debugprint = true
+      g_debuglog = true
+      startDebugTimer()
+    end
+  elseif (strProperty == 'Command Delay-Milliseconds') then
+    intraCommandDelayValue = tonumber(Properties['Command Delay-Milliseconds'])
+  elseif (strProperty == 'Volume Ramp Delay-Milliseconds') then
+    intraVolRampDelayValue = tonumber(Properties['Volume Ramp Delay-Milliseconds'])
+  elseif (strProperty == 'Power On Delay-Seconds') then
+    powerOnDelayValue = tonumber(Properties['Power On Delay-Seconds'])
+  elseif (strProperty == 'Delay Before Issuing Power On Command-Seconds') then
+    delayBeforePowerOnValue = tonumber(Properties['Delay Before Issuing Power On Command-Seconds'])
+  end
+end
+
+function startDebugTimer()
+  if (g_DebugTimer) then
+    g_DebugTimer = C4:KillTimer(g_DebugTimer)
+  end
+  g_DebugTimer = C4:AddTimer(15, 'MINUTES')
+end
+
+function dbg(strDebugText)
+  if (g_debugprint) then print(strDebugText) end
+  if (g_debuglog) then C4:ErrorLog(strDebugText) end
+end
+
+function dbgStatus(e)
+  print('Debug Status: ' .. e)
+end
+
+function ReceivedFromProxy(idBinding, strCommand, tParams)
+  proxy = 'Undefined'
+  if idBinding == 5001 then
+    proxy = 'Receiver'
+  end
+  dbg('ReceivedFromProxy [' .. idBinding .. ']: ' .. strCommand .. ' for ' .. proxy)
+
+  if (tParams) then
+    tParams['BindingID'] = idBinding
+  end
+  ExecuteCommand(strCommand, tParams)
+end
+
+function ExecuteCommand(strCommand, Parameters)
+  dbg('ExecuteCommand: ' .. strCommand)
+  if (tParams) then
+    idBinding = tonumber(tParams['BindingID'])
+  else
+    idBinding = 5001
+  end
+  
+  if (CMDS[strCommand] ~= nil) and (type(CMDS[strCommand])=='function') then
+    if Parameters~=nil then
+      CMDS[strCommand] (Parameters,strCommand)
+    end
+  elseif (CMDS[idBinding][strCommand] ~= nil) then
+    strCmd = BuildCommand(g_type, CMDS[idBinding][strCommand])
+    dbg(hexdump(strCmd))
+    emit(strCmd, strCommand)
+  else
+    dbg('ExecuteCommand - Command not defined: '.. strCommand)
+  end
+end
+
+function emit(strCommand, strCommandName)
+  dbg('Emit: ')
+  dbg(hexdump(strCommand))
+  local bUsePowerOnDelay = false
+  if ((strCommandName == 'CONNECT_OUTPUT') or (strCommandName == 'DISCONNECT_OUTPUT') or (strCommandName == 'ON') or (strCommandName == 'OFF')) then
+    bUsePowerOnDelay = true
+  end
+  
+  table.insert(tEmitCommands, {strCommand, bUsePowerOnDelay})
+  if idEmitCommandsTimer == nil then
+    idEmitCommandsTimer = C4:AddTimer(intraCommandDelayValue, 'MILLISECONDS', true)
+  end
+end
+
+function OnTimerExpired(idTimer)
+  if (idTimer == idEmitCommandsTimer) then
+    if idBusyTimer ~= 0 then
+      return
+    end 
+    if tEmitCommands[1] ~= nil then
+      dbg('SendToSerial:')
+      dbg(hexdump(tEmitCommands[1][1]))
+      C4:SendToSerial(1, tEmitCommands[1][1]) 
+      if (tEmitCommands[1][2] == true) then
+        idBusyTimer = C4:AddTimer(powerOnDelayValue, 'SECONDS', false)
+      end
+      table.remove(tEmitCommands, 1)
+    end 
+    if tEmitCommands[1] == nil then
+      C4:KillTimer(idEmitCommandsTimer)
+      idEmitCommandsTimer = nil
+    end
+    return
+  end  
+  if (idTimer == idBusyTimer) then
+    idBusyTimer = C4:KillTimer(idBusyTimer)
+  end
+  for OutputKey,VolRampTimerID in pairs(tVolRampTimerID) do
+    if idTimer == VolRampTimerID then
+      if (tCurrentVolume[OutputKey % 1000] ~= nil) and (tCurrentVolume[OutputKey % 1000] == 0) then
+        C4:KillTimer(VolRampTimerID)
+        tVolRampTimerID[OutputKey] = nil
+        for j,k in pairs(tEmitCommands) do 
+          if (k[1] == tVolumeCommands[OutputKey]) then
+            table.remove(tEmitCommands, j)
+          end
+        end
+      end
+      if (tCurrentVolume[OutputKey % 1000] ~= nil) and (tMaxVolume[OutputKey % 1000] ~= nil) and (tCurrentVolume[OutputKey % 1000] >= tMaxVolume[OutputKey % 1000]) then
+        C4:KillTimer(VolRampTimerID)
+        tVolRampTimerID[OutputKey] = nil
+        for j,k in pairs(tEmitCommands) do 
+          if (k[1] == tVolumeCommands[OutputKey]) then
+            table.remove(tEmitCommands, j)
+          end
+        end
+      end
+      emit(tVolumeCommands[OutputKey])
+      return
+    end
+  end
+  if (idTimer == g_DebugTimer) then
+    dbg('Turning Debug Mode back to Off [default] (timer expired)')
+    C4:UpdateProperty('Debug Mode', 'Off')
+    g_debugprint = false
+    g_debuglog = false
+    g_DebugTimer = C4:KillTimer(g_DebugTimer)
+    return
+  end
+  if (idTimer == feedbackTimer) then
+    feedbackTimer = nil
+    if (g_recvbuf ~= nil) then
+      ReceivedFromSerial('', '')
+    end
+  end
+end
+
+function Get_Device_State(strCommand)
+  cmd = CMDS[5001][strCommand]
+  strCmd = BuildCommand(g_type, cmd)
+  if strCmd ~= nil then
+    emit(strCmd, strCommand)
+  end
+end
+
+function CMDS.LUA_ACTION(tParams, strCommand)
+  if tParams ~= nil then
+    for cmd,cmdv in pairs(tParams) do
+      print (cmd,cmdv)
+      if cmd == 'ACTION' then
+        if cmdv == 'Destroy Timers' then
+          OnDriverDestroyed()
+        else
+          print('From ExecuteCommand Function - Undefined Action')
+          print('Key: ' .. cmd .. ' Value: ' .. cmdv)
+        end
+      else
+        print('From ExecuteCommand Function - Undefined Command')
+        print('Key: ' .. cmd .. ' Value: ' .. cmdv)
+      end
+    end
+  end
+end
+
+-- Dynamic Commands
+function CMDS.ON()
+end
+
+function CMDS.OFF()
+end
+
+function CMDS.GET_IS_MUTED()
+end
+
+function CMDS.GET_AUDIO_PATH()
+end
+
+function CMDS.GET_PROPERTIES()  -- called when the proxy first accesses the Receiver device
+  Get_Device_State('Status_Query') 
+end
+
+function CMDS.CONNECT_OUTPUT(tParams, strCommand)
+  idBusyTimer = C4:AddTimer(delayBeforePowerOnValue, 'SECONDS', false)
+  local cmd = COMMAND_MAP[tParams['BindingID']][strCommand]
+  local strCmd = BuildCommand(g_type, cmd)
+  if strCmd ~= nil then 
+    emit(strCmd, strCommand) 
+  end
+end
+
+function CMDS.DISCONNECT_OUTPUT(tParams, strCommand)
+  dbg(strCommand .. '-' .. tParams.OUTPUT)
+  local OutputKey = tParams.OUTPUT % 1000
+  local cmd = ''
+  if OutputKey == 0 then
+    cmd = COMMAND_MAP[tParams['BindingID']]['POWER_OFF']
+  elseif OutputKey == 1 then
+    cmd = COMMAND_MAP[tParams['BindingID']]['RECORD_OFF']  
+  end
+  local strCmd = BuildCommand(g_type, cmd)
+  
+  if strCmd ~= nil then
+    emit(strCmd, strCommand)
+    g_receiverInput[tParams.OUTPUT % 1000] = nil
+    C4:SendToProxy(5001, 'INPUT_OUTPUT_CHANGED', {INPUT = -1, OUTPUT = 4000 + (tParams.OUTPUT % 1000)})
+    C4:SendToProxy(5001, 'INPUT_OUTPUT_CHANGED', {INPUT = -1, OUTPUT = 7000 + (tParams.OUTPUT % 1000)})
+  end		
+end
+
+function CMDS.SET_INPUT(tParams, strCommand)
+  dbg('SET_INPUT')
+  local OutputKey = tParams['OUTPUT'] % 1000
+  local inputKey = tonumber(tParams['INPUT']) % 1000  
+  local input = ''
+
+  if OutputKey == 0 then
+    input = BINDING_MAP[inputKey]
+  elseif OutputKey == 1 then
+    input = BINDING_MAP_RECORD[inputKey]
+  end
+
+  local strCmd = BuildCommand(g_type, input)
+
+  if (strCmd ~= nil) then
+    emit(strCmd, strCommand)
+  end
+  Get_Device_State('Status_Query')
+end
+
+function CMDS.MUTE_TOGGLE(tParams, strCommand)
+  dbg(strCommand .. '-' .. tParams.OUTPUT) 
+  local cmd=COMMAND_MAP[tParams['BindingID']][strCommand]
+  strCmd = BuildCommand(g_type, cmd)
+  emit(strCmd, strCommand)
+end
+
+function CMDS.PULSE_VOL_UP(tParams, strCommand)
+  dbg(strCommand .. '-' .. tParams.OUTPUT)
+  local cmd=COMMAND_MAP[tParams['BindingID']][strCommand]
+  strCmd = BuildCommand(g_type, cmd)
+  changeVolume(tParams, strCommand, strCmd)
+end
+
+function CMDS.PULSE_VOL_DOWN(tParams, strCommand)
+  dbg(strCommand .. '-' .. tParams.OUTPUT)
+  local cmd=COMMAND_MAP[tParams['BindingID']][strCommand]
+  strCmd = BuildCommand(g_type, cmd)
+  changeVolume(tParams, strCommand, strCmd)
+end
+
+function CMDS.START_VOL_UP(tParams, strCommand)
+  dbg(strCommand .. '-' .. tParams.OUTPUT)
+  local cmd=COMMAND_MAP[tParams['BindingID']][strCommand]
+  strCmd = BuildCommand(g_type, cmd)
+  changeVolume(tParams, strCommand, strCmd)
+end
+
+function CMDS.START_VOL_DOWN(tParams, strCommand)
+  dbg(strCommand .. '-' .. tParams.OUTPUT)
+  local cmd=COMMAND_MAP[tParams['BindingID']][strCommand]
+  strCmd = BuildCommand(g_type, cmd)
+  changeVolume(tParams, strCommand, strCmd)
+end
+
+function CMDS.STOP_VOL_UP(tParams, strCommand)
+  dbg(strCommand .. '-' .. tParams.OUTPUT)
+  local cmd=COMMAND_MAP[tParams['BindingID']][strCommand]
+  strCmd = BuildCommand(g_type, cmd)
+  changeVolume(tParams, strCommand, strCmd)
+end
+
+function CMDS.STOP_VOL_DOWN(tParams, strCommand)
+  dbg(strCommand .. '-' .. tParams.OUTPUT)
+  local cmd=COMMAND_MAP[tParams['BindingID']][strCommand]
+  strCmd = BuildCommand(g_type, cmd)
+  changeVolume(tParams, strCommand, strCmd)
+end
+
+function changeVolume(tParams, strCommand, strCommandData)
+  local OutputKey = tParams['OUTPUT'] % 1000
+  if (strCommand == 'STOP_VOL_UP') or (strCommand == 'STOP_VOL_DOWN') then
+    intraCommandDelayValue=g_holdIntraCommandDelayValue 
+    if tVolRampTimerID[OutputKey] ~= nil then
+      C4:KillTimer(tVolRampTimerID[OutputKey])
+      tVolRampTimerID[OutputKey] = nil
+      for j,k in pairs(tEmitCommands) do 
+        if (k[1] == strCommandData) then
+          table.remove(tEmitCommands, j)
+        end
+      end
+    end
+  else
+    if (strCommand == 'START_VOL_UP') or (strCommand == 'START_VOL_DOWN') then
+      g_holdIntraCommandDelayValue=intraCommandDelayValue 
+      intraCommandDelayValue=intraVolRampDelayValue
+      if (idEmitCommandsTimer ~=nil) then
+        C4:KillTimer(idEmitCommandsTimer)
+        idEmitCommandsTimer = nil
+      end
+      if (tVolRampTimerID[OutputKey] == nil) then
+        if (tVolRampTimerID[OutputKey]) then
+          tVolRampTimerID[OutputKey] = C4:KillTimer(tVolRampTimerID[OutputKey])
+        end
+        tVolRampTimerID[OutputKey] = C4:AddTimer(intraVolRampDelayValue, 'MILLISECONDS', true)
+        tVolumeCommands[OutputKey] = strCommandData
+        tVolumeCommandNames[OutputKey] = strCommand
+        emit(strCommandData, strCommand)
+      end
+    else
+       emit(strCommandData, strCommand)
+    end
+  end
+end
+
+-- function assembles the type and cmd with start and count bytes, gets checksum and returns completed cmd string
+function BuildCommand(type, cmd)
+  local strCmd = g_start .. ' ' .. g_count .. ' ' .. g_id .. ' ' .. type .. ' ' .. cmd .. ' '
+  strCmd = checksumCalc(strCmd)
+  return strCmd
+end
+
+-- function expects a string input, returns a hex string with checksum calculated
+function checksumCalc(strCmd)
+  local chk = 0
+  strCmd = tohex(strCmd)
+	
+  local start = string.find(strCmd,string.char(0xFE),1,true)
+  -- make sure start byte is byte 1
+  strCmd = string.sub(strCmd, start)
+  
+  -- Find count byte
+  pos, count = string.unpack(strCmd, 'b', start+1)
+  
+  -- calculate checksum
+  for x = 2, count+2, 1 do
+    pos,data = string.unpack(strCmd, 'b', x)
+    chk = chk + data
+  end
+	
+  -- meta encoding check
+  if chk == 253 then
+    strCmd = string.pack('A=bb', strCmd, chk, 0x00)
+  elseif chk == 254 then
+    chk = 253
+    strCmd = string.pack('A=bb', strCmd, chk, 0x01)
+  else 
+    strCmd = string.pack('A=b', strCmd, chk)
+  end
+  return strCmd
+end
+
+function ReceivedFromSerial(idBinding, strData)
+  if (feedbackTimer == nil) then
+    feedbackTimer = C4:AddTimer(10,'MILLISECONDS')
+    g_recvbuf = g_recvbuf or ''
+    g_recvbuf = g_recvbuf .. strData
+  else
+    g_recvbuf = g_recvbuf or ''
+    g_recvbuf = g_recvbuf .. strData
+    return
+  end
+
+  local i, pos = 0
+  local count = 1000 -- initialize to a high value so while loop doesnt start prematurely
+	
+  local start = string.find(g_recvbuf, string.char(0xFE),1,true)
+  if (start ~= nil) and (string.len(g_recvbuf) > 1) then
+    -- make sure start byte is byte 1
+    g_recvbuf = string.sub(g_recvbuf, start)
+    pos, count = string.unpack(g_recvbuf, 'b', start+1)
+    -- increment count for checksum, start byte and itself
+    count = count + 3
+  end
+	
+  while (start ~= nil) and (i < 10) and (string.len(g_recvbuf) >= count) do
+    i = i + 1
+    
+    if (string.len(g_recvbuf) >= count) then
+      --check for meta encoding (0xFD) 253, if found extend the string to include it
+      for x = 1, count, 1 do
+        local pos, data = string.unpack(g_recvbuf, 'b', x)
+        if data == 253 then
+          count = count + 1
+        elseif data == 254 and x > 1 then
+          -- if another start byte is found, must be incomplete string, throw away this string and start over
+          dbg('Start byte found in middle of parsing, rejecting current feedback string')
+          g_recvbuf = string.sub(g_recvbuf, x)
+          return
+        end
+      end
+      
+      --get msg
+      msg = string.sub(g_recvbuf, start,  count)
+      -- remove msg
+      g_recvbuf = string.sub(g_recvbuf, count+1)
+      
+      -- process msg
+      dbg('Message sent for processing: ')
+      dbg(hexdump(msg))
+      ProcessMsg(msg)
+    end
+   
+    start = string.find(g_recvbuf, string.char(0xFE),1,true)
+    if (start ~= nil) and (string.len(g_recvbuf) > 1) then
+      -- make sure start byte is byte 1
+      g_recvbuf = string.sub(g_recvbuf, start)
+	  pos, count = string.unpack(g_recvbuf, 'b', start+1)
+      -- increment count for checksum, start byte and itself
+      count = count + 3	  
+    end
+  end
+end
+
+function ProcessMsg(strMsg)
+  -- Remove the first 4 bytes from the string, these are headers
+  local pos, start, count, id, type = string.unpack(strMsg,'bbbb')
+  local inputString, recordString, muteString = '','',''
+  local receiverInput, muteState, PowerState, recordInput = '','','',''
+	
+  -- Determine input source
+  for i = 0, 5, 1 do
+    pos, data = string.unpack(strMsg, 'b', pos)
+    -- Ignore whitespace characters (32)
+    if (data ~= 32) then
+      data = string.format('%c', data)
+      inputString = inputString .. data
+    end
+  end
+  receiverInput = REV_BINDING_MAP[inputString]
+  if (receiverInput ~= nil) and (receiverInput ~= g_receiverInput[0]) then
+    g_receiverInput[0] = receiverInput
+    C4:SendToProxy(5001, 'INPUT_OUTPUT_CHANGED', {INPUT = receiverInput + 3000, OUTPUT = 4000})
+    dbg('Sent INPUT_OUTPUT_CHANGED notify to proxy: ' .. receiverInput + 3000)
+  end
+	
+  -- Recording input source
+  for i = 0, 5, 1 do
+    pos, data = string.unpack(strMsg, 'b', pos)
+    -- Ignore whitespace characters (32)
+    if (data ~= 32) then
+      data = string.format('%c', data)
+      recordString = recordString .. data
+    end
+  end
+  recordInput = REV_BINDING_MAP[recordString]
+  if (recordInput ~= nil) and (recordInput ~= g_receiverInput[1]) then
+    g_receiverInput[1] = recordInput
+    if (recordInput ~= -1) then
+      recordInput = recordInput + 3000
+    end
+    C4:SendToProxy(5001, 'INPUT_OUTPUT_CHANGED', {INPUT = recordInput, OUTPUT = 4001})
+    dbg('Sent INPUT_OUTPUT_CHANGED notify to proxy: ' .. recordInput .. ' for OUTPUT: ' .. 4001)
+  end
+	
+  -- Mute State
+  for i = 0, 8, 1 do
+    pos, data = string.unpack(strMsg, 'b', pos)
+    -- Ignore whitespace characters (32)
+    if (data ~= 32) then
+      data = string.format('%c', data)
+      muteString = muteString .. data
+    end
+  end	
+  if muteString == 'MUTEON' then 
+    muteState = 'True'
+  else
+    muteState = 'False'	
+  end
+  if (muteState ~= g_muteState[0]) then 
+    g_muteState[0] = muteState
+    C4:SendToProxy(5001,'MUTE_CHANGED', {MUTE = muteState, OUTPUT = 4000})
+    dbg('Sent muteState to proxy: ' .. muteState .. ' for OUTPUT: ' .. 4000)
+  end
+
+  -- Power State
+  if receiverInput == nil then
+    PowerState = 'OFF'
+  else
+    PowerState = 'ON'	
+  end
+  if (PowerState ~= g_PowerState[0]) then 
+    g_PowerState[0] = PowerState
+    C4:SendToProxy(5001, g_PowerState[0], {})
+    dbg('Sent powerState to proxy: ' .. g_PowerState[0] .. ' for OUTPUT: ' .. 4000)
+  end
+end
+
+function OnDriverDestroyed()
+  if (g_DebugTimer) then
+    g_DebugTimer = C4:KillTimer(g_DebugTimer)
+  end
+  if (idEmitCommandsTimer) then
+    idEmitCommandsTimer = C4:KillTimer(idEmitCommandsTimer)
+    idEmitCommandsTimer = nil
+  end
+  for OutputKey,VolRampTimerID in pairs(tVolRampTimerID) do
+    if (VolRampTimerID) then
+      VolRampTimerID = C4:KillTimer(VolRampTimerID)
+    end
+  end
+  if (idBusyTimer) then
+    idBusyTimer = C4:KillTimer(idBusyTimer)
+  end
+  if (feedbackTimer) then
+    feedbackTimer = C4:KillTimer(feedbackTimer)
+  end
+end]]></script>
+        <actions>
+            <action>
+                <name>Destroy All Timers</name>
+                <command>Destroy Timers</command>
+            </action>
+        </actions>
+        <properties>
+            <property>
+                <name>Command Delay-Milliseconds</name>
+                <type>RANGED_INTEGER</type>
+                <readonly>false</readonly>
+                <default>250</default>
+                <minimum>100</minimum>
+                <maximum>2500</maximum>
+            </property>
+            <property>
+                <name>Debug Mode</name>
+                <type>LIST</type>
+                <readonly>false</readonly>
+                <default>Off</default>
+                <items>
+                    <item>Off</item>
+                    <item>Print</item>
+                    <item>Log</item>
+                    <item>Print and Log</item>
+                </items>
+            </property>
+            <property>
+                <name>Power On Delay-Seconds</name>
+                <type>RANGED_INTEGER</type>
+                <readonly>false</readonly>
+                <default>2</default>
+                <minimum>0</minimum>
+                <maximum>25</maximum>
+            </property>
+            <property>
+                <name>Volume Ramp Delay-Milliseconds</name>
+                <type>RANGED_INTEGER</type>
+                <readonly>false</readonly>
+                <default>200</default>
+                <minimum>50</minimum>
+                <maximum>500</maximum>
+            </property>
+            <property>
+                <name>Delay Before Issuing Power On Command-Seconds</name>
+                <type>RANGED_INTEGER</type>
+                <readonly>false</readonly>
+                <default>0</default>
+                <minimum>0</minimum>
+                <maximum>60</maximum>
+            </property>
+        </properties>
+    </config>
+    <composer_categories>
+        <category>Audio/Video</category>
+    </composer_categories>
+</devicedata>

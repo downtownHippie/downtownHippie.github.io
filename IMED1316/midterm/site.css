@@ -131,3 +131,9 @@ footer .pLeft {
 .unstyledlist {
 	list-style-type: none;
 }
+
+.logoCenter {
+	display: block;
+	/* page is 1060, image is 792: fuck centering images*/
+	margin-left: 134px;
+}
