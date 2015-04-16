@@ -16,6 +16,12 @@ html, body {
 	background-color: #C2A57B;
 	font-family: sans-serif;
 }
+table {
+	margin: auto;
+}
+td {
+	text-align: center;
+}
 
 #wrapper {
 	min-height: 100%;
@@ -55,13 +61,9 @@ aside dt {
 aside dd {
 	margin-left: 10px;
 }
-aside table {
-	margin: auto;
-}
-aside table td {
-	text-align: center;
-	font-weight: bold;
+aside td {
 	font-size: 90%;
+	font-weight: bold;
 }
 /*
 aside table img {
