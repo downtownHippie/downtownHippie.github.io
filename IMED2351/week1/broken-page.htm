@@ -30,7 +30,7 @@ To see the example of what the fixed version should look like go here:  http://w
 //-->
 
 
-<styles>
+<style>
 #container
 {
 	margin: 0 auto;
@@ -40,13 +40,13 @@ To see the example of what the fixed version should look like go here:  http://w
 
 #header
 {
-	bgcolor: #ccc;
+	background-color: #ccc;
 	padding: 20px;
 }
 
 #header h1 { margin: 0; }
 
-.navigation
+#navigation
 {
 	float: left;
 	width: 900px;
@@ -81,7 +81,7 @@ To see the example of what the fixed version should look like go here:  http://w
 {
 	float: left;
 	width: 900px;
-	BAD-background: #fff url(background.gif) repeat-y 100% 0;
+	background: #fff url("background.gif") repeat-y 100% 0;
 }
 
 #content
@@ -98,7 +98,7 @@ To see the example of what the fixed version should look like go here:  http://w
 
 #aside
 {
-	floating: right;
+	float: right;
 	width: 240px;
 	padding: 20px 0;
 	margin: 0 20px 0 0;
@@ -115,7 +115,7 @@ To see the example of what the fixed version should look like go here:  http://w
 	padding: 20px;
 	height: 1%;
 }
-</styles>
+</style>
 
 </head>
 
@@ -123,7 +123,7 @@ To see the example of what the fixed version should look like go here:  http://w
 <div id="container">
 	<div id="header">
 		<h1>
-			Broken Page
+			Fixed Page
 		</h1>
 	</div>
 	<div id="navigation">
@@ -131,13 +131,13 @@ To see the example of what the fixed version should look like go here:  http://w
 			<li><a href="#">Home</a></li>
 			<li><a href="#">About</a></li>
 			<li><a href="#">Services</a></li>
-			<lo><a href="#">Contact us</a></lo>
+			<li><a href="#">Contact us</a></li>
 		</ul>
 	</div>
 	<div id="content-container">
-		<div id="content_BAD">
+		<div id="content">
 			<h2>
-				Content Heading
+				Joe Reid
 			</h2>
 			<p>
 				Lorem ipsum dolor sit amet consect etuer adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
@@ -149,21 +149,21 @@ To see the example of what the fixed version should look like go here:  http://w
 				Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
 			</p>
 			<p>
-				<a link="http://www.hccs.edu">Go to HCC!</a>
+				<a href="http://www.hccs.edu">Go to HCC!</a>
 			</p>
 		</div>
-		<dive id="aside">
+		<div id="aside">
 			<h3>
 				Aside heading
 			</h3>
 			<p>
 				Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.
 			</p>
-		</dive>
+		</div>
 		<div id="footer">
 			Copyright &copy; JavaScript Assignment 1, 2015
 		</div>
 	</div>
-</dove>
+</div>
 </body>
 </html>
