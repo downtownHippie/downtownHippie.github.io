@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<!-- 
+INSTRUCTIONS:
+
+1.  Fix the broken page.
+2.  Update some content.
+
+The following page is broken.  Open in a browser (or upload to your site) and determine the errors and fix them.
+
+There are 10 issues/problems with the page.  The issues can be with the HTML and/or CSS.
+
+CHANGE THE CONTENT
+
+Change the text "<h1>Broken Page</h1>" to "<h1>Fixed Page</h1>"
+
+Change the text "<h2>Content Heading</h2>" to Your full name (first last) -- e.g. "<h2>Joe Student</h2>"
+
+The page has a related image named "background.gif", don't forget to upload it with your page.
+
+
+Put a link to this page on your student home page for the class when completed.
+
+After you've fixed the issues and updated the content, upload this page and the image to your website and test.
+
+To see the example of what the fixed version should look like go here:  http://www.imed2351.com/javascript/assignment01/broken-page-demo.htm
+
+//-->
+
+
+<styles>
+#container
+{
+	margin: 0 auto;
+	width: 900px;
+	background: #fff;
+}
+
+#header
+{
+	bgcolor: #ccc;
+	padding: 20px;
+}
+
+#header h1 { margin: 0; }
+
+.navigation
+{
+	float: left;
+	width: 900px;
+	background: #333;
+}
+
+#navigation ul
+{
+	margin: 0;
+	padding: 0;
+}
+
+#navigation ul li
+{
+	list-style-type: none;
+	display: inline;
+}
+
+#navigation li a
+{
+	display: block;
+	float: left;
+	padding: 5px 10px;
+	color: #fff;
+	text-decoration: none;
+	border-right: 1px solid #fff;
+}
+
+#navigation li a:hover { background: #383; }
+
+#content-container
+{
+	float: left;
+	width: 900px;
+	BAD-background: #fff url(background.gif) repeat-y 100% 0;
+}
+
+#content
+{
+	clear: left;
+	float: left;
+	width: 560px;
+	padding: 20px 0;
+	margin: 0 0 0 30px;
+	display: inline;
+}
+
+#content h2 { margin: 0; }
+
+#aside
+{
+	floating: right;
+	width: 240px;
+	padding: 20px 0;
+	margin: 0 20px 0 0;
+	display: inline;
+}
+
+#aside h3 { margin: 0; }
+
+#footer
+{
+	clear: both;
+	background: #ccc;
+	text-align: right;
+	padding: 20px;
+	height: 1%;
+}
+</styles>
+
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<h1>
+			Broken Page
+		</h1>
+	</div>
+	<div id="navigation">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<lo><a href="#">Contact us</a></lo>
+		</ul>
+	</div>
+	<div id="content-container">
+		<div id="content_BAD">
+			<h2>
+				Content Heading
+			</h2>
+			<p>
+				Lorem ipsum dolor sit amet consect etuer adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
+			</p>
+			<p>
+				Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+			</p>
+			<p>
+				Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+			</p>
+			<p>
+				<a link="http://www.hccs.edu">Go to HCC!</a>
+			</p>
+		</div>
+		<dive id="aside">
+			<h3>
+				Aside heading
+			</h3>
+			<p>
+				Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.
+			</p>
+		</dive>
+		<div id="footer">
+			Copyright &copy; JavaScript Assignment 1, 2015
+		</div>
+	</div>
+</dove>
+</body>
+</html>
