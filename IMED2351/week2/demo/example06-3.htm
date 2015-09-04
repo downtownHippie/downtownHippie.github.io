@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- 
+
+Data Types (Unobtrusive way)
+
+String
+Whole Number
+Decimal/Float Number
+Date
+
+Why do I use the <span></span> tag?
+
+What does new Date() do?  Why is it so long?
+
+-->
+
+</head>
+
+<body>
+
+<h1>Example 6-3 - Data Types (Unobtrusive way)</h1>
+
+<p>
+
+The name is: <span id="name"></span>
+<br />
+The quantity is: <span id="quantity"></span>
+<br />
+The price is: <span id="price"></span>
+<br />
+The date is: <span id="today"></span>
+
+</p>
+
+<script>
+
+	// Initialize and Assign the variables values
+	var name = "Tom";
+	var quantity = 50;
+	var price = 18.99;
+	var today = new Date();
+
+	// Display/Output the variables to the browser to see the values using getElementById().innerHTML
+	
+	document.getElementById("name").innerHTML = name;
+	
+	document.getElementById("quantity").innerHTML = quantity;
+	
+	document.getElementById("price").innerHTML = price;
+	
+	document.getElementById("today").innerHTML = today;
+	
+	
+</script>
+
+</body>
+</html>

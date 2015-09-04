@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- JavaScript in External File -->
+<script src="example03.js"></script>
+
+<!-- JavaScript in HEAD tag -- embedded -->
+<script>
+	document.getElementById("para2").innerHTML = "From the HEAD tag.";
+</script>
+
+</head>
+
+<body>
+
+<h1>Example 3 - Using .innerHTML</h1>
+
+<p id="para1"></p>
+
+<p id="para2"></p>
+
+<p id="para3"></p>
+
+<!-- JavaScript in the BODY tag -- embedded -->
+<script>
+	document.getElementById("para3").innerHTML = "From the BODY tag.";
+</script>
+
+</body>
+</html>

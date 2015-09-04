@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+
+<h1>Example 3-2 - Using .innerHTML -- Correct way</h1>
+
+<p id="para1"></p>
+
+<p id="para2"></p>
+
+<p id="para3"></p>
+
+
+
+
+<!-- JavaScript in External File moved to bottom -->
+<script src="example03-2.js"></script>
+
+<!-- JavaScript in HEAD tag -- embedded -  moved to bottom -->
+<script>
+	document.getElementById("para2").innerHTML = "From the HEAD tag.";
+</script>
+
+<!-- JavaScript in the BODY tag -- embedded -->
+<script>
+	document.getElementById("para3").innerHTML = "From the BODY tag.";
+</script>
+
+</body>
+</html>

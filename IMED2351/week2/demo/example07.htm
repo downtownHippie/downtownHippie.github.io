@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- 
+
+Data Types
+
+string, number, boolean
+
+Arithmetic Operators
+
++ - * / %
+
+
+TODO:  Format numbers to 2 decimal places
+
+-->
+
+</head>
+
+<body>
+
+<h1>Example 7 - Data Types - Arithmetic Operators</h1>
+
+<script>
+
+	var price;
+	var total;
+	var tax;
+	var taxamount;
+	var productname;
+	var delivery;
+	
+	document.write("<h1>Price Demo</h1>");
+	
+	productname = "40GB USB Drive";
+	
+	price = 19.99;
+	
+	tax = 0.0825;
+	// This is a sales tax of 8.25%.  It must be converted to a decimal.
+	
+	taxamount = price * tax;
+	// 19.99 * 0.0825 = 1.649175
+	
+	total = price + taxamount;
+	// 19.99 + 1.649175 = 21.639175
+	
+	delivery = false;
+	
+	document.write("<br>Product name: " + productname);
+	
+	document.write("<br>Price: " + price);
+	
+	document.write("<br>Tax Amount: " + taxamount);
+	
+	document.write("<br>Total: " + total);
+	
+	document.write("<br>Delivery? " + delivery);
+	
+</script>
+
+</body>
+</html>
