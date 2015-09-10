@@ -54,18 +54,35 @@ var grandtotal;
 var cust1total;
 var cust2total;
 var cust3total;
-var taxamount;
-var pizzacost;
+
+var taxamount = 0.0825;
+var pizzacost = 10;
+
+var cust1tip = 0.1;
+var cust1qty = 5;
+
+var cust2tip = 0.15;
+var cust2qty = 2;
+
+var cust3tip = 0;
+var cust3qty = 10;
 
 // customer 1
+cust1total = cust1qty * pizzacost; cust1total *= 1 + taxamount; cust1total *= 1 + cust1tip;
 
 // customer 2
+cust2total = cust2qty * pizzacost; cust2total *= 1 + taxamount; cust2total *= 1 + cust2tip;
 
 // customer 3
+cust3total = cust3qty * pizzacost; cust3total *= 1 + taxamount; cust3total *= 1 + cust3tip;
 
 // grand total
+grandtotal = cust1total + cust2total + cust3total;
 
-
+document.getElementById('cust1total').innerHTML = Number(cust1total).toFixed(2);
+document.getElementById('cust2total').innerHTML = Number(cust2total).toFixed(2);
+document.getElementById('cust3total').innerHTML = Number(cust3total).toFixed(2);
+document.getElementById('grandtotal').innerHTML = Number(grandtotal).toFixed(2);
 </script>
 
 </body>
