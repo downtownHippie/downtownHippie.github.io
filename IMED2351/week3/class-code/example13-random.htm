@@ -1,0 +1,31 @@
+<html>
+<head>
+</head>
+
+<body>
+
+<h1>Random Number</h1>
+
+<script>
+/*
+	Example 13 - Random numbers
+*/
+
+var randnumber;
+
+randnumber = Math.random();										// generate random number
+
+document.write(randnumber);										// display
+
+document.write('<p></p>');
+
+document.write(randnumber * (10 - 1) + 1);						// create within a range of floating point numbers between (1 - 10)
+
+document.write('<p></p>');
+
+document.write(Math.round(randnumber * (10 - 1) + 1, 0));		// make a whole number
+
+</script>
+
+</body>
+</html>

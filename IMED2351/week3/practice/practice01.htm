@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Compare Numbers</title>
+<!--
+
+EXERCISE/PRACTICE:
+
+Objective:
+Asks user to enter two numbers, displays which number is larger/smaller or if they are equal.
+
+//--> 
+</head>
+
+<body>
+
+<h1>Compare Numbers</h1>
+
+<script>
+// Declare variables
+var firstNumber;
+var secondNumber;
+var number1;
+var number2;
+
+// Prompt user for two numbers
+firstNumber = prompt("Enter first number:");
+secondNumber = prompt("Enter second number:");
+
+// Convert the answers to number (Integers), just in case
+number1 = parseInt(firstNumber);
+number2 = parseInt(secondNumber);
+
+// Do number comparison & display
+if (number1 == number2)
+	document.write("<h2>The two numbers are equal.</h2>");
+	
+if (number1 > number2)
+	alert("The first number " + number1 + " is larger than " + number2 + "!");
+	
+if (number1 < number2)
+	alert("The first number " + number1 + " is smaller than " + number2 + "!");
+
+</script>
+
+
+</body>
+</html>

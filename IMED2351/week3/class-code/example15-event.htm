@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<ul id="myList"><li>Coffee</li><li>Tea</li></ul>
+
+<p id="demo">Click the button to append an item to the list</p>
+
+<button id="mybutton">Try it</button>
+
+<p><strong>Note:</strong><br>First create an LI node,<br> then create a Text node,<br> then append the Text node to the LI node.<br>Finally append the LI node to the list.</p>
+
+<script>
+/*
+	Example 15 - Click Event & add element dynamically
+
+	Using JavaScript to add additional List Items dynamically via mouse click
+	Uses Unobtrusive JavaScript
+*/
+	
+	document.getElementById("mybutton").onclick = myFunction;
+
+	function myFunction() {
+
+		var node=document.createElement("LI");					// create the element you want to add
+		var textnode=document.createTextNode("Water");			// create a new text value
+		node.appendChild(textnode);								// append/add the new text value above to the LI node
+
+		document.getElementById("myList").appendChild(node);	// Add the newly created LI to the UL
+
+	}
+</script>
+
+</body>
+</html>

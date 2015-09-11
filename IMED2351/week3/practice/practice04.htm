@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Form - Introduction</title>
+<!--
+
+EXERCISE/PRACTICE:
+
+Objective:
+Capturing and displaying values from <form>
+
+Introduces:
+Form
+Event - onclick
+Function
+
+Is there anything wrong with this code/form?
+
+//--> 
+</head>
+
+<body>
+
+<h1>Simple Form</h1>
+
+<form>
+	Name: <input type="text" id="name" value=""><br>
+	<button id="myBtn">Submit</button>
+</form>
+
+<script>
+
+document.getElementById("myBtn").onclick = submitForm;
+
+function submitForm() {
+	var name = document.getElementById("name").value;
+
+	alert("You entered: " + name);
+
+}
+
+</script>
+
+</body>
+</html>

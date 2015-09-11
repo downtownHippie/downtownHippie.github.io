@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple form 1</title>
+<!--
+Practice:
+
+Objective: Simple form validation
+
+This page validates two form fields for existence.  Checks if fields are empty and returns an error message.
+If fields are good then it will display a message on the page instead of the form.
+
+Uses:
+conditional statement -- if()
+alert()
+event -- onclick
+HTML form element - text box
+.trim()
+getElementById()
+.innerHTML
+.value
+
+
+TODO:
+- In the JavaScript section, add comment lines to what you think each section is doing where it says //comment:
+- Add a text field to ask for email address.  Check for existence.  Do not allow to continue if email is missing.
+- Add a text field for favorite color.  Validate for existence.
+- Instead of using an alert() box, try to display the error message "in-line"/next to the text box.  You will need to update the HTML to do this.
+- BONUS: Research RegEx and validate for a "real" email using a RegEx pattern.  Display error message if text not entered is not an email address.
+
+- Study the code for this and try to recreate it for other forms that may have text boxes and textarea boxes on them.
+
+- What happens when you run this page?
+- Is there anything that does not make sense in the JavaScript?
+- Is there anything that looks familiar?
+
+//-->
+</head>
+
+<body>
+
+<h1>Simple form validate</h1>
+
+<div id="content">
+	
+	<legend>All fields required</legend>
+	
+	<form>
+		First Name: <input type="text" name="firstname" id="firstname" value=""><br>
+		Last Name: <input type="text" name="lastname" id="lastname" value=""><br>
+		<button id="validateBtn">Save</button>
+	</form>
+</div>
+
+<script>
+
+// comment:
+document.getElementById("validateBtn").onclick = function() {
+	
+	// comment:
+	var firstName;
+	var lastName;
+	var isValid;
+	
+	// comment:
+	isValid = true;
+	firstName = document.getElementById("firstname").value;
+	lastName = document.getElementById("lastname").value;
+	
+	// comment:
+	if (firstName.trim() == "") {
+		isValid = false;
+		alert("First Name is Required");
+	}
+	
+	// comment:
+	if (lastName.trim() == "") {
+		isValid = false;
+		alert("Last Name is Required");
+	}
+	
+	// comment:
+	if (isValid == true) {
+		document.getElementById("content").innerHTML = "Hi " + firstName + " " + lastName + "! Thank you for your information";
+	}
+	
+	// comment:
+	return false;
+};
+
+</script>
+</body>
+</html>

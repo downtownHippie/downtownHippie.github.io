@@ -1,0 +1,42 @@
+<html>
+
+<head>
+
+
+</head>
+
+<body>
+
+This is my picture:
+
+<img id="mylogo" src="" />
+
+<script>
+/*
+	Example 14 - Using JavaScript to place an image dynamically with mouseover/mouseout
+
+*/
+
+var myhcclogo = 'http://ctle.hccs.edu/gcpass/PREPMath/SelfChecks/PREP_Posttest/HCC_District_C_RGB.jpg';
+var myuhlogo = 'http://findlogo.net/images/U/university%20of%20houston%20logo.jpg';
+
+var mypic = document.getElementById("mylogo");
+mypic.style.height = '200px';
+mypic.style.width = '200px';
+mypic.style.border = 'thin solid black';
+
+mypic.src = myhcclogo;
+
+mypic.onmouseover = function() {
+	mypic.src = myuhlogo;
+	//mypic.style.border = 'thin solid red';
+};
+
+mypic.onmouseout = function() {
+	mypic.src = myhcclogo;
+};
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+
+<script>
+/*
+	Example 10 - The Array object & for() loop & array functions
+*/
+var names = new Array('Susan', 'Tom', 'Rob', 'Joe');
+
+names.push('Zoe');
+
+names.sort();
+
+names.reverse();
+
+for(x = 0; x < names.length; x++)
+{
+	document.write('<br>' + names[x] + '-' + x);
+}
+
+document.write('<br>' + names[1].length);
+
+</script>
+
+</body>
+</html>

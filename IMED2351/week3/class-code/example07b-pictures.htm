@@ -1,0 +1,29 @@
+<html>
+<head></head>
+
+<body>
+
+
+<div id="content">
+
+</div>
+
+<script>
+/*
+	Example 07b - The for() loop with image
+	Different way to display the image to the page.
+	This has JavaScript dynamically create the <img> element and "appends" 
+	to the <div>
+	This is the preferred way to create new elements in a document
+*/
+for (var x = 1; x <= 4; x++)
+{
+	var img = document.createElement("img");
+	img.src = "image" + x + ".jpg";
+	
+	document.getElementById("content").appendChild(img);
+}
+
+</script>
+</body>
+</html>

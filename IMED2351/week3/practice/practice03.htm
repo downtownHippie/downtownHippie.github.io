@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Event - Introduction</title>
+<!--
+
+EXERCISE/PRACTICE:
+
+Objective:
+JavaScript Event
+
+Introduces:
+Form
+Event - onclick
+Function
+
+What is the difference between the 3 button clicks?
+
+Why can you click on the paragraph too?
+
+//--> 
+</head>
+
+<body>
+
+<h1>Simple Event</h1>
+
+<form>
+
+	<button id="myBtn">Click Me!</button>
+	
+	<p></p>
+	
+	<!-- inline JavaScript example -->
+	<button onclick="alert('You clicked me too!');">Click Me Too!</button>
+	
+	<p></p>
+	
+	<button id="meThree">Click Me Three!</button>
+	
+</form>
+
+<p id="clickThis">You can click me too!</p>
+
+<script>
+
+// first button
+document.getElementById("myBtn").onclick = buttonPress;
+
+function buttonPress() {
+
+	alert("You clicked me!");
+
+}
+
+// third button
+document.getElementById("meThree").onclick = function() {
+	alert("You clicked me Three!");
+	return false;		// what does this do?
+};
+
+// click the paragraph?
+document.getElementById("clickThis").onclick = function() {
+	alert("You clicked a Paragraph!");
+};
+
+</script>
+
+</body>
+</html>

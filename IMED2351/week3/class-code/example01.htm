@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+
+<h1 id="yearBorn"></h1>
+
+<script>
+/*
+	Example 01 - Year born
+*/
+
+var age = prompt("How old are you?");
+var thisYear = new Date();
+
+thisYear = thisYear.getFullYear();
+
+var yearBorn = thisYear - age;
+
+document.getElementById("yearBorn").innerHTML = yearBorn;
+
+</script>
+
+</body>
+</html>

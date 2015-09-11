@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+	background-color: #000;
+}
+
+</style>
+</head>
+
+<body id="mybody">
+
+<script>
+/*
+	Example 16 - setTimeout()
+
+	Use JavaScript to change the body background color X number of seconds (1000 milliseconds = 1 second)
+	Commented out items of code are various ways of creating function(s) or accessing a DOM element.
+*/
+
+// function statement
+var setColor = function(mycolor) {
+	// multiple ways to access a DOM element
+	//document.bgColor = mycolor;
+	//document.getElementsByTagName('body')[0].style.background = mycolor;
+	//document.body.style.background = mycolor;
+	document.getElementById('mybody').style.background = mycolor;
+}
+
+setTimeout("setColor('white')", 1000);
+setTimeout("setColor('lightpink')", 1500);
+setTimeout("setColor('pink')", 2000);
+setTimeout("setColor('deeppink')", 2500);
+setTimeout("setColor('red')", 3000);
+setTimeout("setColor('tomato')", 3500);						// enclose function call within quotes
+setTimeout(function(){setColor('darkred')}, 4000);			// enclose within anonymous function
+//setTimeout("document.bgColor = 'darkred'", 4000);
+
+
+
+
+/*
+// example function declaration
+function setColor(mycolor) {
+	//document.bgColor = mycolor;
+	document.getElementsByTagName('body')[0].style.background = mycolor;
+}
+*/
+
+</script>
+</body>
+</html>

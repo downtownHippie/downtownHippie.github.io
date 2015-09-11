@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple form 2</title>
+<!--
+Practice:
+
+Objective: Simple form validation 2
+
+TODO:
+- Using what you learned from the practice05.htm, add JavaScript validation to this form.
+- All fields are required.
+- You may use an alert() box to display the error message(s) or "in-line" error messages.
+- When successful, the form should be hidden and a message of "Hi <user>!.  Thank you for your submission!" where <user> is the name entered.
+- BONUS: Research RegEx and validate for a "real" email using a RegEx pattern.  Display error message if text not entered is not an email address.
+- BONUS: Research RegEx and validate for a valide Website using a RegEx pattern.  Display error message if text not entered is not in the form http://www.site.com or site.com, etc.
+
+HINT:  Do not be intimidated by the beauty of my form
+
+//-->
+
+<style>
+#content {
+	font: normal 13px/100% Verdana, Tahoma, sans-serif;
+	color: #999999;
+}
+
+input, textarea {
+    padding: 9px;
+    border: solid 1px #E5E5E5;
+    outline: 0;
+    font: normal 13px/100% Verdana, Tahoma, sans-serif;
+    width: 200px;
+    background: #FFFFFF left top repeat-x;
+    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    }
+   
+textarea {
+    width: 400px;
+    max-width: 400px;
+    height: 150px;
+    line-height: 150%;
+    }
+   
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+    border-color: #C9C9C9;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+    }
+   
+.form label {
+    margin-left: 10px;
+    color: #999999;
+    }
+   
+.submit input {
+    width: auto;
+    padding: 9px 15px;
+    background: #617798;
+    border: 0;
+    font-size: 14px;
+    color: #FFFFFF;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Simple form validate 2</h1>
+
+<div id="content">
+	
+	<legend>All fields required</legend>
+	
+	<form class="form">
+	   
+		<p class="name">
+			<input type="text" name="name" id="name" />
+			<label for="name">Name</label>
+		</p>
+	   
+		<p class="email">
+			<input type="text" name="email" id="email" />
+			<label for="email">E-mail</label>
+		</p>
+	   
+		<p class="web">
+			<input type="text" name="web" id="web" />
+			<label for="web">Website</label>
+		</p>
+	   
+		<p class="text">
+			<textarea name="text" id="comment"></textarea>
+		</p>
+	   
+		<p class="submit">
+			<input type="button" value="Send" class="submit" id="submitBtn" />
+		</p>
+	   
+	</form>
+</div>
+
+<script>
+// put JavaScript code here
+
+</script>
+
+</body>
+</html>

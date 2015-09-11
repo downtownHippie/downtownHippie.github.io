@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head> 
+
+<title>Add/Subtract/Multiply/Divide Numbers</title> 
+<!--
+
+EXERCISE/PRACTICE:
+
+Objective:
+Asks user to enter two numbers, outputs sum, product, difference, and quotient
+
+TODO:
+Run this page.  Enter some numbers.
+Type this page again for practice.
+Try adding a third number to calculate and display.
+
+//--> 
+</head> 
+
+<body> 
+
+<h1>Add/Subtract/Multipley/Divide Numbers</h1> 
+
+<script>
+
+// Declare the variables
+var firstNumber; 
+var secondNumber; 
+var number1; 
+var number2; 
+var sum; 
+var diff; 
+var product; 
+var quotient; 
+
+// Prompt user for two numbers
+firstNumber = prompt("Enter first number:"); 
+secondNumber = prompt("Enter second number:"); 
+
+// Convert the answers to number (Integers), just in case
+number1 = parseInt(firstNumber); 
+number2 = parseInt(secondNumber); 
+
+// Do calculations on the numbers
+sum = number1 + number2; 
+diff = number1 - number2; 
+product = number1 * number2; 
+quotient = number1 / number2; 
+
+// Display the numbers and results
+document.write("<h2>The first number is " + firstNumber);
+document.write("<h2>The second number is " + secondNumber);
+
+document.write("<h2>The sum is " + sum + "</h2>"); 
+document.write("<h2>The difference is " + diff + "</h2>"); 
+document.write("<h2>The product is " + product + "</h2>"); 
+document.write("<h2>The quotient is " + quotient + "</h2>"); 
+
+</script> 
+
+</body> 
+</html> 

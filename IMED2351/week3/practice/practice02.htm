@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Do number math</title>
+<!--
+
+EXERCISE/PRACTICE:
+
+Objective:
+Asks user to enter 3 numbers, outputs average, product, largest and smallest number.
+
+Is there a better way to do this?
+
+//--> 
+</head>
+
+<body>
+
+<h1>Some number math</h1>
+
+
+<script>
+
+var number1;
+var number2;
+var number3;
+var sum;
+var average;
+var product;
+var largest
+var smallest
+
+number1 = prompt("Enter first number:");
+number2 = prompt("Enter second number:");
+number3 = prompt("Enter third number:");
+
+number1 = parseInt(number1);
+number2 = parseInt(number2);
+number3 = parseInt(number3);
+
+sum = number1 + number2 + number3;
+average = (number1 + number2 + number3) / 3;
+product = number1 * number2 * number3;
+
+largest = Math.max(number1, number2, number3);
+
+smallest = Math.min(number1, number2, number3);
+
+alert("The sum is: " + sum + "\nThe average is: " + average + "\nThe product is: " + product + "\nThe largest number is: " + largest + "\nThe smallest number is: " + smallest);
+
+</script>
+
+</body>
+</html>

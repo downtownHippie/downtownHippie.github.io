@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+
+<h1>The Temperature Converter</h1>
+
+<script>
+/*
+
+	Example 12 - The Temperature Converter functions
+
+	It's hot out! Let's make a converter.
+
+	Create a function called celsiusToFahrenheit:
+
+	Store a Celsius temperature into a variable.
+	Convert it to Fahrenheit and output "NN°C is NN°F".
+	Create a function called fahrenheitToCelsius:
+
+	Now store a Fahrenheit temperature into a variable.
+	Convert it to Celsius and output "NN°F is NN°C."
+*/
+
+var celsius = 30;
+var celsiusInF = celsiusToFahrenheit(celsius);
+console.log(celsius + '°C is ' + celsiusInF + '°F');
+
+var fahrenheit = 20;
+var fahrenheitInC = fahrenheitToCelsius(fahrenheit);
+console.log(fahrenheit + '°F is ' + fahrenheitInC + '°C');
+
+
+function celsiusToFahrenheit(celsius) {
+  var celsiusInF = (celsius*9)/5 + 32;
+  console.log(celsius + '°C is ' + celsiusInF + '°F');
+}
+
+function fahrenheitToCelsius(fahrenheit) {
+  var fahrenheitInC = ((fahrenheit - 32)*5)/9;
+  console.log(fahrenheit + '°F is ' + fahrenheitInC + '°C');
+}
+
+</script>
+</body>
+</html>
