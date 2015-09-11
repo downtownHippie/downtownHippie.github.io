@@ -26,14 +26,23 @@ You will need to create the necessary variables needed to keep track of the valu
 
 <h1>Add</h1>
 
-<p>First number: <span></span></p>
+<p>First number: <span id="num1"></span></p>
 
-<p>Second number: <span></span></p>
+<p>Second number: <span id="num2"></span></p>
 
-<p>Result: <span></span></p>
+<p>Result: <span id="result"></span></p>
 
 <script>
 // Place your JavaScript code here
+
+var num1 = Number(prompt("enter the first of 2 numbers to add: "));
+var num2 = Number(prompt("enter the second of 2 numbers to add: "));
+
+var result = num1 + num2;
+
+document.getElementById("num1").textContent = num1;
+document.getElementById("num2").textContent = num2;
+document.getElementById("result").textContent = result;
 
 </script>
 </body>
