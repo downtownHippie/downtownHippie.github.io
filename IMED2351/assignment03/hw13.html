@@ -29,6 +29,12 @@ BONUS:  Add validation.  If the user enters a number less than 0 or greater than
 //-->
 </head>
 
+<script>
+	function resetForm() {
+		document.getElementById("numberGrade").value = "";
+		document.getElementById("letterGrade").textContent = "";
+	};
+</script>
 <body>
 
 <h1>Letter Grade</h1>
@@ -51,7 +57,28 @@ function getLetterGrade() {
 	var letterGrade = "F";
 	
 	// Place conditional logic here
-
+	if (numberGrade > 100) {
+		alert("Grade must be less than or equal to 100");
+		resetForm();
+		return false;
+	}
+	else if (numberGrade < 0) {
+		alert("Grade must be greater or equal to 0");
+		resetForm();
+		return false;
+	}
+	else if (numberGrade >= 90) {
+		letterGrade = "A";
+	}
+	else if (numberGrade >= 80) {
+		letterGrade = "B";
+	}
+	else if (numberGrade >= 70) {
+		letterGrade = "C";
+	}
+	else if (numberGrade >= 60) {
+		letterGrade = "D";
+	}
 
 	document.getElementById("letterGrade").innerHTML = letterGrade;
 	

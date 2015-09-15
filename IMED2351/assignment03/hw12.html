@@ -36,6 +36,7 @@ How old are you? <input type="text" id="yourAge">
 
 <p id="response"></p>
 
+
 <script>
 
 document.getElementById("mybutton").onclick = checkAge;
@@ -47,9 +48,15 @@ function checkAge() {
 	var response = "";
 	
 	// Place conditional logic here
-
+	if (yourAge < voteAge) {
+		response = "You are not old enough to vote.  You must be " + voteAge + ".";
+	}
+	else {
+		response = "You are old enough to vote! You are " + yourAge + " years old";
+	};
 	
 	document.getElementById("response").innerHTML = response;
+	document.getElementById("yourAge").value = "";
 	
 	return false;
 }
