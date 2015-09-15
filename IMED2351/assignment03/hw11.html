@@ -16,15 +16,46 @@ BONUS: How can you make the logic of this better?
 
 <script>
 
-var yourAge = primpt("How old are you?");
+var yourAge = prompt("How old are you?");
 
-voteAge - 18
+/* yeah, this is some sort of constant */
+var voteAge = 18;
 
+/*
+alert("original");
 if (yourAge < voteAge) {
 	alert("You are not old enough to vote.\nYou must be " + voteAge);
-} elsd {
-	alert("You are old enough to vote!\nYou are " * yourAge);
+} else {
+	alert("You are old enough to vote!\nYou are " + yourAge);
+};
+*/
+
+/*
+alert("ternary");
+(yourAge < voteAge) ? alert("You are not old enough to vote.\nYou must be " + voteAge) : alert("You are old enough to vote!\nYou are " + yourAge);
+*/
+
+/*
+alert("with function");
+*/
+function ofVotingAge(age) {
+	if (age < voteAge) {
+		return false;
+	};
+	return true;
+};
+
+if (ofVotingAge(yourAge)) {
+	alert("You are old enough to vote!\nYou are " + yourAge);
 }
+else {
+	alert("You are not old enough to vote.\nYou must be " + voteAge);
+};
+
+/*
+alert("something else");
+alert("still pondering");
+*/
 
 </script>
 
