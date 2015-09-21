@@ -33,6 +33,29 @@ This may be hard.
 
 <script>
 // Place your JavaScript code here
+var num1 = parseInt(prompt('Please enter a number greater than 0: '));
+if (num1 <= 0) {
+	alert("Number must be greater than 0");
+	exit;
+}
+
+var num2 = parseInt(prompt('Please enter a number greater than 1: '));
+if (num2 <= 1) {
+	alert("Number must be greater than 1");
+	exit;
+}
+
+if (num1 < num2) {
+	for (i = num1 ; i <= num2 ; i++) {
+		document.write(i + ' ');
+	}
+}
+else {
+	document.write("oo -- backwards, I like counting backwards...</br>");
+	for (i = num1 ; i >= num2 ; i--) {
+		document.write(i + ' ');
+	}
+}
 
 </script>
 </body>

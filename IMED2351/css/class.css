@@ -1,3 +1,33 @@
-html, body {
+body {
 	background-color: lightblue;
 }
+
+.assignment04 table {
+	border : 1px solid black;
+}
+.assignment04 td {
+	border : 1px solid black;
+}
+
+.chess {
+	background-color: #CCCC66;
+}
+
+table .chess {
+	font-family: monospace;
+	font-size: 14px;
+}
+.chess .black {
+	background-color: #FFF;
+	color: #000;
+}
+
+.chess .white {
+	background-color: #000;
+	color: #FFF;
+}
+
+.chess .td {
+	height: 60px;
+}
+

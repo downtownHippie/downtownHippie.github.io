@@ -25,13 +25,18 @@ INSTRUCTIONS:
 
 	var pin = 12345;
 	var entry;
+	var tries = 0;
 	
 	do {
 		entry = prompt("Enter your PIN:");
 		
-	} while(entry != pin);
+	} while((entry != pin) && (++tries < 3));
 
-	if (entry == pin) {
+
+	if (tries == 3) {
+		document.getElementById("message").textContent = "YOU HAVE RUN OUT OF TRIES. ACCOUNT LOCKED!";
+	}
+	else if (entry == pin) {
 		document.getElementById("message").textContent = "PIN Accepted.  You now have access to your account.";
 	}
 	

@@ -11,38 +11,35 @@ INSTRUCTIONS:
 4. Change the color of the text in the black squares to white
 
 //-->
+
+<link rel="stylesheet" type="text/css" href="../css/class.css"/>
 </head>
 
-<body bgcolor="#CCCC66">
+<body class="chess">
 
 <h1>Chess Board using Nested For Loop</h1>
 
-<table width="540px" cellspacing="0px" cellpadding="0px">
-<!-- cell 540px wide (9 columns x 60px) -->
-
 <script>
+document.write('<table width="205px" cellspacing="0px" cellpadding="0px">');
+
 var total = 0;
 
-for(row = 1; row <= 9; row++) {
-   
+for(row = 1; row <= 3; row++) {
 	document.write('<tr>');
-   
-	for(col = 1; col <= 9; col++) {
-
+	for(col = 1; col <= 3; col++) {
 		total = row + col;
-
 		if (total % 2 == 0) {
-			document.write('<td style="height: 60px; background-color: #FFFFFF">&nbsp;</td>');
+			document.write('<td class="chess black">');
 		} else {
-			document.write('<td style="height: 60px; background-color: #000000">&nbsp;</td>');
+			document.write('<td class="chess white">');
 		}
+		document.write('<br/>&nbspRow: ' + row + '<br/>&nbspCol: ' + col + '<br/>&nbsp</td>');
 	}
-	  
 	document.write('</tr>');
 }
 
+document.write('</table>');
 </script>
 
-</table>
 </body>
 </html>

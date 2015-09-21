@@ -35,7 +35,20 @@ This may be hard.
 
 <script>
 // Place your JavaScript code here
+	var num1 = parseInt(prompt('Please enter a number greater than 0 and less than 100: '));
+	if (num1 <= 0 || num1 >= 100) {
+		alert("Number must be greater than 0 and less than 100");
+		exit;
+	}
 
+	var num2 = parseInt(prompt('Please enter a number greater than the first and less than 1000: '));
+	if (num2 <= num1 || num2 >= 1000) {
+		alert("Number must be greater than " + num1 + " and less than 1000");
+		exit;
+	}
+	for (i = num1 ; i <= num2 ; i++) {
+		document.write(i + ' ');
+	}
 </script>
 </body>
 </html>

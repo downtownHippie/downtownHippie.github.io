@@ -18,8 +18,16 @@ INSTRUCTIONS:
 
 <script>
 
-for(i = 65; i <= 90; i++) { 									//65 is an upper case A; for lowercase, add 32.
+for(i = 90; i >= 65; i--) { 									//65 is an upper case A; for lowercase, add 32.
    document.write(String.fromCharCode(i) + ' '); 				//String.fromCharCode() is a string function
+}
+
+</script>
+<br/>
+<script>
+
+for(i = 90; i >= 65; i--) { 									//65 is an upper case A; for lowercase, add 32.
+   document.write(String.fromCharCode(i + 32) + ' '); 				//String.fromCharCode() is a string function
 }
 
 </script>
