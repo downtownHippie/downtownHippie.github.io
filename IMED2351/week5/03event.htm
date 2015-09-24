@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+</head>
+
+<body>
+
+<h1>Class Code - Events</h1>
+
+This is my picture:
+
+<img id="mylogo" src="" />
+
+<script>
+/*
+	Class Code - Events - Using JavaScript to place an image dynamically with mouseover/mouseout
+
+*/
+
+var myhcclogo = 'HCC_Logo.jpg';
+var myuhlogo = 'UH_Logo.jpg';
+
+var mypic = document.getElementById("mylogo");
+mypic.style.height = '200px';
+mypic.style.width = '200px';
+mypic.style.border = 'thin solid black';
+
+mypic.src = myhcclogo;
+
+mypic.onmouseover = function() {
+	mypic.src = myuhlogo;
+};
+
+mypic.onmouseout = function() {
+	mypic.src = myhcclogo;
+};
+
+</script>
+
+</body>
+</html>

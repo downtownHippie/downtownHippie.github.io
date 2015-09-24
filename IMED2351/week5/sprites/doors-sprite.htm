@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+This is the setup of page for the red doors sprite
+I use this page to orient the doors.
+Both doors are contained in the same image "open-and-closed-doors.jpg"
+I use the CSS background: url to place the "sliced" part of the image
+I use the GIF "img_trans.gif" as the placeholder of the <img> tag
+The .left class specifies the door on the left of the picture
+The .right class specifies the door on the right of the picture
+When you open this page, notice the doors are on top of each other, instead of side by side
+//-->
+<style>
+img.left {
+    width: 402px;
+    height: 604px;
+    background: url(open-and-closed-doors.jpg) 0 0;
+}
+
+img.right {
+    width: 402px;
+    height: 604px;
+    background: url(open-and-closed-doors.jpg) -350px 0;
+}
+</style>
+</head>
+<body>
+
+<img class="left" src="img_trans.gif">
+<br><br>
+<img class="right" src="img_trans.gif">
+
+</body>
+</html>

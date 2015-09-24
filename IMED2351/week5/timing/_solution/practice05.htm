@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>setInterval</title>
+
+<style>
+img {
+	height: 200px;
+}
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+h1 {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1>My Blue Bonnet</h1>
+
+<img src="bluebonnet01.jpg" class="centered" id="myimage">
+
+<script>
+// Display the 5 Bluebonnet pictures every 3 seconds
+// There are 5 images:  "bluebonnet01.jpg", "bluebonnet02.jpg", "bluebonnet03.jpg", "bluebonnet04.jpg", "bluebonnet05.jpg"
+// Put the image names into an array. Use setInterval to rotate/display them every X seconds.
+// Are there any issues with this solution?
+// BONUS:  Add the ability to start/stop the slideshow.  You can use a button or link and attach it to an event.
+// http://www.w3schools.com/js/js_timing.asp
+
+var mypics = ["bluebonnet01.jpg", "bluebonnet02.jpg", "bluebonnet03.jpg", "bluebonnet04.jpg", "bluebonnet05.jpg"];
+
+var myimage = document.getElementById("myimage");
+
+var count = mypics.length;
+var i = 1;
+
+setInterval(function() {
+
+	if (i <= count-1)
+	{
+		myimage.src = mypics[i];
+		i++;
+	} else {
+		i = 0;
+	}
+	
+}, 3000);
+
+
+</script>
+</body>
+</html>

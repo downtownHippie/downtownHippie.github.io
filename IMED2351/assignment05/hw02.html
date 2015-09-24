@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hw02.htm</title>
+<!--
+
+INSTRUCTIONS:
+
+	1.  Convert the if()...else() statement to a switch() statement.
+	2.  Complete the months of the year for the switch() statement you created.
+	3.  The current month should display in the <h2>
+
+	Reference:
+	
+	http://www.w3schools.com/js/js_switch.asp
+	http://www.w3schools.com/js/js_date_methods.asp
+
+//-->
+</head>
+
+<body>
+
+<h1>Assignment 5 - Switch()</h1>
+
+<h2 id="mydate"></h2>
+
+
+<script>
+// UPDATE JAVASCRIPT CODE HERE
+	
+	var now = new Date();
+	var month;
+	var name;
+	
+	month = now.getMonth();
+	
+	/* convert to switch() */
+	if (month == 0) {
+		name = "January";
+	} else if (month == 1) {
+		name = "February";
+	} else if (month == 2) {
+		name = "March";
+	} else if (month == 3) {
+		name = "April";
+	}
+	/* finish here */
+
+    document.getElementById("mydate").textContent = "This month is " + name;
+
+</script>
+</body>
+</html>

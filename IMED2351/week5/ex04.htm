@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+colored squares
+use form to ask input of 3 colors
+color some div's with those values & put name of color in the div
+do with radio buttons of fixed colors
+//-->
+<style>
+div {
+	border-style: solid;
+	border-width: 1px;
+	height: 100px;
+	width: 100px;
+	float: left;
+	text-align: center;
+	line-height: 100px;
+}
+form {
+	clear: both;
+}
+</style>
+</head>
+<body>
+
+<div id="first">1</div>
+
+<div id="second">2</div>
+
+<div id="third">3</div>
+
+<p>&nbsp;</p>
+
+<form>
+First color: <input type="radio" name="firstcolor" value="blue">Blue <input type="radio" name="firstcolor" value="red">Red <input type="radio" name="firstcolor" value="white">White <br>
+Second color: <input type="radio" name="secondcolor" value="blue">Blue <input type="radio" name="secondcolor" value="red">Red <input type="radio" name="secondcolor" value="white">White <br>
+Third color: <input type="radio" name="thirdcolor" value="blue">Blue <input type="radio" name="thirdcolor" value="red">Red <input type="radio" name="thirdcolor" value="white">White <br>
+<button id="mybutton">Colors!</button>
+</form>
+
+<!-- Insert JavaScript code here -->
+<script>
+	var mybutton = document.getElementById("mybutton");
+	
+	mybutton.onclick = function() {
+		// get values from text fields
+		var firstcolor = document.getElementsByName("firstcolor");
+		var secondcolor = document.getElementsByName("secondcolor");
+		var thirdcolor = document.getElementsByName("thirdcolor");
+		
+		// get div objects
+		var firstdiv = document.getElementById("first");
+		var seconddiv = document.getElementById("second");
+		var thirddiv = document.getElementById("third");
+		
+		// apply styles to div objects -- do 1 at a time
+		for (var i = 0; i < firstcolor.length; i++) {
+			if (firstcolor[i].checked == true) {
+				firstdiv.style.backgroundColor = firstcolor[i].value;
+			}
+		}
+		
+		for (var i = 0; i < secondcolor.length; i++) {
+			if (secondcolor[i].checked == true) {
+				seconddiv.style.backgroundColor = secondcolor[i].value;
+			}
+		}
+		
+		for (var i = 0; i < thirdcolor.length; i++) {
+			if (thirdcolor[i].checked == true) {
+				thirddiv.style.backgroundColor = thirdcolor[i].value;
+			}
+		}
+		
+		return false;
+	};
+	
+	
+</script>
+
+</body>
+</html>

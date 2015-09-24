@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img.closed {
+    width: 402px;
+    height: 604px;
+    background: url(open-and-closed-doors.jpg) 0 0;
+}
+
+img.open {
+    width: 402px;
+    height: 604px;
+    background: url(open-and-closed-doors.jpg) -350px 0;
+}
+</style>
+</head>
+<body>
+
+<img class="closed" id="mypic" src="img_trans.gif"><br><br>
+
+<script>
+
+var pic = document.getElementById("mypic");
+
+pic.onclick = function() {
+
+	if (pic.className == "open")
+	{
+		pic.className = "closed";
+	} else {
+		pic.className = "open";
+	}
+
+};
+
+</script>
+
+</body>
+</html>

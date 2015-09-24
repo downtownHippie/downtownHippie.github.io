@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<!--
+create random name generator
+create two arrays, one for first names of 5, one for last names of 5
+display the combined names
+use a loop
+use Math.random()
+use Math.floor()
+
+//-->
+</head>
+<body>
+
+  <p id="text"></p>
+  
+<script>
+var firstnames = ["doug", "john", "susan", "tony", "sally"];
+var lastnames = ["roberts", "jones", "marshalls", "carveys", "parkers"];
+
+var firstname;
+var lastname;
+var rand1;
+var rand2;
+
+var text = document.getElementById("text");
+
+for(var i = 0; i <= 4; i++) {
+  
+  rand1 = Math.floor(Math.random() * 4 + 1);
+  rand2 = Math.floor(Math.random() * 4 + 1);
+  
+  text.innerHTML += firstnames[rand1] + " " + lastnames[rand2] + "<br>";
+}
+</script>
+  
+</body>
+</html>
+

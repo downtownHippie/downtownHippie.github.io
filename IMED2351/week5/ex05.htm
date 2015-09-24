@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+colored squares
+use form to ask input of 3 colors
+color some div's with those values & put name of color in the div
+do with select list of fixed colors
+//-->
+<style>
+div {
+	border-style: solid;
+	border-width: 1px;
+	height: 100px;
+	width: 100px;
+	float: left;
+	text-align: center;
+	line-height: 100px;
+}
+form {
+	clear: both;
+}
+</style>
+</head>
+<body>
+
+<div id="first">1</div>
+
+<div id="second">2</div>
+
+<div id="third">3</div>
+
+<p>&nbsp;</p>
+
+<form>
+First color: 
+<select id="firstcolor">
+	<option value="red">Red</option>
+	<option value="white">White</option>
+	<option value="blue">Blue</option>
+</select>
+<br>
+Second color: 
+<select id="secondcolor">
+	<option value="red">Red</option>
+	<option value="white">White</option>
+	<option value="blue">Blue</option>
+</select>
+<br>
+Third color: 
+<select id="thirdcolor">
+	<option value="red">Red</option>
+	<option value="white">White</option>
+	<option value="blue">Blue</option>
+</select>
+<br>
+<button id="mybutton">Colors!</button>
+</form>
+
+<!-- Insert JavaScript code here -->
+<script>
+	var mybutton = document.getElementById("mybutton");
+	
+	mybutton.onclick = function() {
+		// get values from text fields
+		var firstcolor = document.getElementById("firstcolor").value;
+		var secondcolor = document.getElementById("secondcolor").value;
+		var thirdcolor = document.getElementById("thirdcolor").value;
+		
+		// get div objects
+		var firstdiv = document.getElementById("first");
+		var seconddiv = document.getElementById("second");
+		var thirddiv = document.getElementById("third");
+		
+		// apply styles to div objects
+		firstdiv.style.backgroundColor = firstcolor;
+		seconddiv.style.backgroundColor = secondcolor;
+		thirddiv.style.backgroundColor = thirdcolor;
+		
+		return false;
+	};
+	
+	
+</script>
+
+</body>
+</html>

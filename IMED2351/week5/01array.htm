@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+</head>
+
+<body>
+
+<h1>Class Code - Arrays</h1>
+
+<script>
+/*
+	Class Code - Arrays
+
+*/
+
+// Create array
+var pets = ["dog", "cat", "bird"];
+
+var petsSize = pets.length;
+
+document.write("<br>The pets[] array is: " + pets);
+
+document.write("<br>The length of pets[] is: " + petsSize);
+
+document.write("<br>The pets[] array sorted: " + pets.sort());
+
+document.write("<br>The pets[] array - reverse sort: " + pets.reverse());
+
+// add new element to array
+pets[3] = "fish";
+
+document.write("<br>The updated pets[] array: " + pets);
+
+// add multiple elements to array
+pets.push("hamster", "pony");
+
+document.write("<br>The pets[] array using .push: " + pets);
+
+document.write("<br>The pets[] array with better formatting: " + pets.join(", "));
+
+// search for a value inside the array
+var findDog = pets.indexOf("Dog");
+
+document.write("<br>The index of 'Dog' is? " + findDog);
+// Is there anything wrong with this?
+
+findDog = pets.indexOf("dog");
+
+document.write("<br>The index of 'dog' is? " + findDog);
+
+document.write("<br>The value of the find is? " + pets[findDog]);
+
+
+// TODO:  find fish
+
+// TODO:  Use for() loop to iterrate through array and display
+
+
+
+</script>
+
+</body>
+</html>

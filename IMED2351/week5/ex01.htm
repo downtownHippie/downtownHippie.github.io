@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<!--
+create 10 random whole numbers and display them on a separate line
+use a loop
+use Math.random()
+use Math.floor()
+
+//-->
+</head>
+<body>
+
+  <p id="text"></p>
+  
+<script>
+var list = [];
+
+var text = document.getElementById("text");
+
+for(var i = 0; i <= 10; i++) {
+  
+  list[i] = Math.floor(Math.random() * 10 + 1) + "<br>";
+  
+  text.innerHTML += list[i];
+}
+</script>
+  
+</body>
+</html>
+

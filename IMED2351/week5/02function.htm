@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+</head>
+
+<body>
+
+<h1>Class Code - Functions</h1>
+
+<script>
+/*
+	Class Code - Functions
+
+*/
+
+// declare variables
+var total;
+var fullname;
+
+// function declarations
+function addNumbers(a, b) {
+	// a, b are parameters
+	var sum = a + b;
+	return sum;
+}
+
+function joinName(first, last) {
+	// first, last are parameters
+	return first + " " + last;
+}
+
+total = addNumbers(5, 5);
+// the numbers 5, 5 are arguments
+
+document.write("<br>Total of 5 + 5 is: " + total);
+
+fullname = joinName("Tom", "Jones");
+// the numbers "Tom", "Jones" are arguments
+
+document.write("<br>The full name is: " + fullname);
+
+
+</script>
+
+</body>
+</html>

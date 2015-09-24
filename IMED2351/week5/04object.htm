@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+</head>
+
+<body>
+
+<h1>Class Code - Objects</h1>
+
+<script>
+/*
+	Class Code - Objects
+	
+	Using JavaScript to create a user-defined object
+
+*/
+
+	// This is an object literal named student{}
+	var student = {
+		firstname: "Tony",
+		lastname: "Blue",
+		classgrades: [65, 75, 100, 92],
+		classAverage: function() {
+			
+			// get the classgrades[] array for this object
+			var grades = this.classgrades;
+			
+			var total = 0;
+			var avg = 0;
+			
+			// loop through the classgrades
+			for (var x = 0; x < grades.length; x++) {
+				// add the grades into the total
+				total += grades[x];
+			}
+			
+			// calculate average
+			avg = (total / grades.length);
+			
+			// return value
+			return avg;
+		}
+	};
+
+	// use the object to display to browser
+	document.write("<h2>Student</h2>");
+	
+	document.write("<br>FirstName: " + student.firstname);
+	document.write("<br>LastName: " + student.lastname);
+	
+	document.write("<p>Grades:</p>");
+	
+	// This is a special loop for arrays foreach() could also use for() loop
+	student.classgrades.forEach(function(item) {
+		document.write(item + "<br>");
+	});
+
+	// TODO: Display the class average for the student using the classAverage() method
+	
+	
+	
+	// This is an Object Constructor (or aka Function Constructor)
+	function Teacher() {
+	
+		this.firstname = "Susan";
+		this.lastname = "Jones";
+		
+		this.classes = ["Math", "Science", "Reading"];
+		
+		this.isActive = true;
+		
+		this.retireDate = new Date(2016, 11, 31);		// this is December 31, 2016 (not November!)
+		
+		this.daysUntilRetire = function(dDate) {
+			
+			dDate = (dDate || this.retireDate);			// this is the conditional operator
+			
+			var today = new Date();
+			
+			var diff = new Date(dDate.getTime() - today.getTime());		// getTime() returns number of milliseconds since 1/1/1970
+			
+			// 60-second * 60-minutes * 24-hours * 1000-milliseconds => 1 day in milliseconds (86,400,000)
+			diff = (diff / (60 * 60 * 24 * 1000));
+			
+			return diff;
+		};
+	}
+	
+	// use the object
+	
+	// must instatiate the object first (convert to variable)
+	var teacher = new Teacher();
+	
+	document.write("<h2>Teacher</h2>");
+	
+	document.write("<br>FirstName: " + teacher.firstname);
+	document.write("<br>LastName: " + teacher.lastname);
+	
+	document.write("<p>Classes:</p>");
+	
+	// This is a special loop for arrays forEach() could also use for() loop
+	teacher.classes.forEach(function(item) {
+		document.write(item + "<br>");
+	});
+
+	// TODO: Display the days until retire for the Teacher using the daysUntilRetire() method
+	
+	
+	
+	/*
+	
+	References:
+	
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript
+	http://a-developer-life.blogspot.com/2011/11/7-ways-to-create-objects-in-javascript.html
+	
+	http://www.w3schools.com/js/js_date_methods.asp
+	
+	http://www.epochconverter.com/
+	
+	*/
+</script>
+
+</body>
+</html>
