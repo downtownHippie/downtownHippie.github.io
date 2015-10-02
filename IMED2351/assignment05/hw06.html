@@ -67,9 +67,7 @@ p {
 
 function showColor() {
 	this.textContent = this.id;
-	console.log (this.id);
-	var color = window.getComputedStyle(this).getPropertyValue('backgroundColor');
-	document.getElementById('text').textContent = '\'' + color + '\'';
+	document.getElementById('text').textContent = this.id;
 };
 
 function clearColor() {
