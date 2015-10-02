@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>hw01.htm</title>
+<title>hw01</title>
 <!--
 
 INSTRUCTIONS:
@@ -29,6 +29,7 @@ INSTRUCTIONS:
 	http://www.w3schools.com/js/js_array_methods.asp
 
 //-->
+<link rel="stylesheet" type="text/css" href="../css/class.css"/>
 </head>
 
 <body>
@@ -37,6 +38,8 @@ INSTRUCTIONS:
 
 <h2>Shopping List</h2>
 
+<aside id="aside"></aside>
+
 <ul id="list">
 </ul>
 
@@ -44,6 +47,76 @@ INSTRUCTIONS:
 <script>
 // INSERT JAVASCRIPT CODE HERE
 
+var shoppingList = ['Apple Watch','Apple iPad Pro','Apple iPhone6s','Bose Speakers','Brother MFC Printer','Xbox 360','Amazon Echo','Canon EOS Rebel T5','Schwinn Speed Cruiser Bike','JavaScript & jQuery textbook'];
+
+shoppingList.push('pony');
+shoppingList.push('fairy tail ending');
+
+var innerH = '';
+
+for (var i = 0 ; i < shoppingList.length ; i++) {
+	innerH += '<li id="list' + i + '">' + shoppingList[i] + '</li>';
+	//setTimeout(function(){document.getElementById('list').innerHTML = innerH}, 10000);
+}
+
+document.getElementById('list').innerHTML = innerH;
+
 </script>
+
+
+<script>
+function fixApple() {
+	document.getElementById('list0').innerHTML = document.getElementById('list0').innerHTML.bold();
+	document.getElementById('list1').innerHTML = document.getElementById('list1').innerHTML.bold();
+	document.getElementById('list2').innerHTML = document.getElementById('list2').innerHTML.bold();
+	document.getElementById('aside').innerHTML = 'who wants all this Apple stuff';
+	document.getElementById('list0').innerHTML = document.getElementById('list0').innerHTML.strike();
+	document.getElementById('list1').innerHTML = document.getElementById('list1').innerHTML.strike();
+	document.getElementById('list2').innerHTML = document.getElementById('list2').innerHTML.strike();
+};
+function fixBose() {
+	document.getElementById('list3').innerHTML = document.getElementById('list3').innerHTML.bold();
+	document.getElementById('aside').innerHTML = 'Bose does not make good speakers';
+	document.getElementById('list3').innerHTML = document.getElementById('list3').innerHTML.strike();
+};
+function fixBrother() {
+	document.getElementById('aside').innerHTML = 'Brother makes decent printers, we\'ll keep this';
+};
+function fixXB() {
+	document.getElementById('list5').innerHTML = document.getElementById('list5').innerHTML.bold();
+	document.getElementById('aside').innerHTML = 'no Xbox, what a waste of time, and money</br>and hardware...';
+	document.getElementById('list5').innerHTML = document.getElementById('list5').innerHTML.strike();
+};
+function fixEcho() {
+	document.getElementById('list6').innerHTML = document.getElementById('list6').innerHTML.bold();
+	document.getElementById('aside').innerHTML = 'echo echo echo...';
+	document.getElementById('list6').innerHTML = document.getElementById('list6').innerHTML.strike();
+};
+function fixRebel() {
+	document.getElementById('list7').innerHTML = document.getElementById('list7').innerHTML.bold();
+	document.getElementById('aside').innerHTML = 'Canon makes good cameras, but this isn\'t one of them';
+	document.getElementById('list7').innerHTML = document.getElementById('list7').innerHTML.strike();
+};
+function fixSchwinn() {
+	document.getElementById('list8').innerHTML = document.getElementById('list8').innerHTML.bold();
+	document.getElementById('aside').innerHTML = 'Schwinn might make a good bike for around town,</br>but pedaling in Houston is sweaty';
+	document.getElementById('list8').innerHTML = document.getElementById('list8').innerHTML.strike();
+}
+function fixBooks() {
+	document.getElementById('aside').innerHTML = 'books are good too, we\'ll keep it</br>and who doesn\'t want a pony and a fairy tail ending...';
+};
+window.onload = function () {
+	setTimeout(fixApple, 2500);
+	setTimeout(fixBose, 4500);
+	setTimeout(fixBrother, 6500);
+	setTimeout(fixXB, 8500);
+	setTimeout(fixEcho, 10500);
+	setTimeout(fixRebel, 12500);
+	setTimeout(fixSchwinn, 14500);
+	setTimeout(fixBooks, 16500);
+	setTimeout(addStuff, 18500);
+};
+</script>
+
 </body>
 </html>

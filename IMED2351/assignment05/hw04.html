@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>hw03.htm</title>
+<title>hw04</title>
 <!--
 
 INSTRUCTIONS:
@@ -47,7 +47,27 @@ INSTRUCTIONS:
 
 <script>
 // INSERT JAVASCRIPT CODE HERE
-	
+
+var recipe = {
+	title: 'Chef John\'s Macaroni and Cheese',
+	servings: 8,
+	oventemp: 400,
+	ingredients: ['macaroni', 'flour', 'dried thyme', 'cayenne pepper', 'milk', 'nutmeg', 'salt', 'cheddar cheese', 'dijon mustard', 'bread crumbs', 'melted butter'],
+	fahrenheitToCelsius: function() {
+		return (((this.oventemp - 32) * 5) / 9).toFixed(2);
+	}
+};
+
+document.getElementById('title').textContent = recipe.title;
+document.getElementById('serves').textContent = recipe.servings;
+document.getElementById('fahrenheit').textContent = recipe.oventemp;
+document.getElementById('celsius').textContent = recipe.fahrenheitToCelsius();
+var ingredientsList = '';
+for (var i = 0; i < recipe.ingredients.length; i++) {
+	ingredientsList += '<li>' + recipe.ingredients[i] + '</li>';
+};
+
+document.getElementById('ingredients').innerHTML = ingredientsList;
 
 </script>
 </body>

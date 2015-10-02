@@ -31,3 +31,8 @@ table .chess {
 	height: 60px;
 }
 
+aside {
+	float: right;
+	text-align: left;
+	margin-right: 500px;
+}

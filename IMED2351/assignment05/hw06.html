@@ -36,6 +36,10 @@ div {
 	background-color: green;
 	float: left;
 }
+#box4 {
+	background-color: purple;
+	float: left;
+}
 p {
 	clear: both;
 }
@@ -54,9 +58,36 @@ p {
 
 <div id="box3"></div>
 
+<div id="box4"></div>
+
 <p id="text"></p>
 
 <!-- INSERT JAVASCRIPT CODE HERE -->
+<script>
+
+function showColor() {
+	this.textContent = this.id;
+	console.log (this.id);
+	var color = window.getComputedStyle(this).getPropertyValue('backgroundColor');
+	document.getElementById('text').textContent = '\'' + color + '\'';
+};
+
+function clearColor() {
+	this.textContent = '';
+	document.getElementById('text').textContent = '';
+};
+
+var divs = document.getElementsByTagName('div');
+for (var i = 0 ; i < divs.length ; i++) {
+		divs[i].onmouseover = showColor;
+		divs[i].onmouseout = clearColor;
+};
+
+document.getElementById('box1').onclick = function() {
+	document.getElementById('text').textContent = 'No!!!';
+};
+
+</script>
 
 
 </body>

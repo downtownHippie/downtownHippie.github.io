@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>hw04</title>
+<title>hw08</title>
 <!--
 INSTRUCTIONS:
 
@@ -27,15 +27,15 @@ div {
 	line-height: 100px;
 }
 #box1 {
-	background-color: red;
+	background-color: black;
 	float: left;
 }
 #box2 {
-	background-color: white;
+	background-color: black;
 	float: left;
 }
 #box3 {
-	background-color: blue;
+	background-color: black;
 	float: left;
 }
 p {
@@ -47,15 +47,54 @@ p {
 
 <h1>Colored Boxes - Part 4</h1>
 
-<div id="box1">Red</div>
+<div id="box1" style="background-color: red;">Red</div>
 
-<div id="box2">White</div>
+<div id="box2" style="background-color: white;">White</div>
 
-<div id="box3">Blue</div>
+<div id="box3" style="background-color: blue;">Blue</div>
 
 <p id="text"></p>
 
 <!-- INSERT JAVASCRIPT CODE HERE -->
+<script>
+var divs = document.getElementsByTagName('div');
+
+function changeColor() {
+	switch (this.style.backgroundColor) {
+		case 'red':
+			this.style.backgroundColor = 'green';
+			this.textContent = "Green";
+			break;
+		case 'green':
+			this.style.backgroundColor = 'red';
+			this.textContent = "Red";
+			break;
+		case 'white':
+			this.style.backgroundColor = 'black';
+			this.textContent = "Black";
+			this.style.color = 'white';
+			break;
+		case 'black':
+			this.style.backgroundColor = 'white';
+			this.textContent = "White";
+			this.style.color = 'black';
+			break;
+		case 'blue':
+			this.style.backgroundColor = 'yellow';
+			this.textContent = "Yellow";
+			break;
+		case 'yellow':
+			this.style.backgroundColor = 'blue';
+			this.textContent = "Blue";
+			break;
+	};
+};
+
+for (var i = 0; i < divs.length; i++) {
+	divs[i].onmouseover = changeColor;
+	divs[i].onmouseout = changeColor;
+};
+</script>
 
 
 </body>

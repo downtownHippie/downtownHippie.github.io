@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>hw03.htm</title>
+<title>hw03</title>
 <!--
 
 INSTRUCTIONS:
@@ -35,6 +35,27 @@ INSTRUCTIONS:
 <script>
 // INSERT JAVASCRIPT CODE HERE
 	
+function maxNum(num1, num2) {
+	num1 = parseFloat(num1);
+	num2 = parseFloat(num2);
+
+	if (num1 > num2) {
+		return num1;
+	}
+	else if (num2 > num1) {
+		return num2;
+	}
+	else {
+		return 'Equal';
+	}
+};
+
+document.write(maxNum(6, 3) + '</br>');
+document.write(maxNum(12, 150) + '</br>');
+document.write(maxNum(9, -9) + '</br>');
+document.write(maxNum(100, 100.01) + '</br>');
+document.write(maxNum(98, 10) + '</br>');
+document.write(maxNum(8, 8) + '</br>');
 
 </script>
 </body>

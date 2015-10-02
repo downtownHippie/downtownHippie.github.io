@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>hw02.htm</title>
+<title>hw02</title>
 <!--
 
 INSTRUCTIONS:
@@ -30,11 +30,12 @@ INSTRUCTIONS:
 	
 	var now = new Date();
 	var month;
-	var name;
+	//var name;
 	
 	month = now.getMonth();
 	
 	/* convert to switch() */
+	/*
 	if (month == 0) {
 		name = "January";
 	} else if (month == 1) {
@@ -44,9 +45,51 @@ INSTRUCTIONS:
 	} else if (month == 3) {
 		name = "April";
 	}
+	*/
 	/* finish here */
 
-    document.getElementById("mydate").textContent = "This month is " + name;
+	switch(month) {
+		case 0:
+			month = 'hangover recovery time';
+			break;
+		case 1:
+			month = 'for lovers';
+			break;
+		case 2:
+			month = 'cold and plodding';
+			break;
+		case 3:
+			month = 'my birthday month';
+			break;
+		case 4:
+			month = 'for flowers and sneezes';
+			break;
+		case 5:
+			month = 'sum sum summertime';
+			break;
+		case 6:
+			month = 'getting warm enough';
+			break;
+		case 7:
+			month = 'finally warm enough to take the chill off my bones';
+			break;
+		case 8:
+			month = 'getting cool';
+			break;
+		case 9:
+			month = 'spooky';
+			break;
+		case 10:
+			month = 'stuffed';
+			break;
+		case 11:
+			month = 'dark';
+			break;
+		default:
+			month = 'not a month';
+	}
+
+    document.getElementById("mydate").textContent = "This month is " + month;
 
 </script>
 </body>
