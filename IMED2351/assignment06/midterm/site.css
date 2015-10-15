@@ -1,0 +1,168 @@
+/*******************************************/
+/* link to kuler.adobe color scheme        */
+/* http://adobe.ly/1yec8Qt                 */
+/*                                         */
+/* sticky footer docs                      */
+/* http://ryanfait.com/html5-sticky-footer */
+/*******************************************/
+/* * {
+	margin: 0;
+} */
+
+html, body {
+	height: 100%;
+	width: 1060px;
+	margin: auto;
+	background-color: #C2A57B;
+	font-family: sans-serif;
+}
+table {
+	margin: auto;
+}
+td {
+	text-align: center;
+}
+
+#wrapper {
+	min-height: 100%;
+	/* there is a bug here somewhere */
+	/* firefox loses 27px */
+	/* chrome and IE lose 25px */
+	margin: 0 auto -77px;
+	/* background-color: hotpink; */
+}
+
+header {
+	padding: 10px;
+	background-color: #707678;
+	text-align: center;
+}
+header h1 {
+	font-size: 48px;
+	/* background-color: blue; */
+} 
+header h4 {
+	margin-top: -25px;
+	/* background-color: yellow; */
+}
+
+aside {
+	float: right;
+	width: 280px;
+	margin: 0;
+	/* background-color: grey; */
+}
+aside dl {
+	margin: 10px 10px;
+}
+aside dt {
+	font-weight: bold;
+}
+aside dd {
+	margin-left: 10px;
+}
+aside td {
+	font-size: 90%;
+	font-weight: bold;
+}
+/*
+aside table img {
+	text-align: center;
+}
+*/
+
+h3 {
+	margin-bottom: 0;
+}
+article {
+	width: 780px;
+	margin: 0px;
+	padding: 10px;
+	/* background-color: green; */
+}
+article #articlepic {
+	float: right;
+	margin-right: 30px;
+}
+article ul {
+	margin: 10px 0;
+	/* background-color: yellow; */
+}
+article li {
+	margin-left: -10px;
+}
+article p {
+	margin: 10px;
+}
+article dl {
+	margin-left: 20px;
+}
+article dt {
+	font-weight: bold;
+	float: left;
+	margin-right: 10px;
+}
+
+footer, #push {
+	height: 50px;
+	margin-bottom: 0;
+	clear: both;
+	/* background-color: blue; */
+}
+footer hr {
+	margin-bottom: -5px;
+	margin-top: 25px;
+}
+footer .pRight {
+	float: right;
+	clear: both;
+	text-align: right;
+	margin-right: 10px;
+	/* background-color: cornflowerblue; */
+}
+footer .pLeft {
+	float: left;
+	text-align: left;
+	margin-left: 10px;
+	/* background-color: pink; */
+}
+
+.notopmarginlist {
+	margin-top: 0;
+}
+.unstyledlist {
+	list-style-type: none;
+}
+
+.logoCenter {
+	display: block;
+	/* page is 1060, image is 792: fuck centering images*/
+	margin-left: 134px;
+}
+
+/* begin css relative to IMED2351 */
+nav {
+	z-index: 30;
+}
+nav ul {
+	list-style: outside none none;
+}
+
+nav li {
+	display: inline-block;
+	background-color: #707678
+}
+
+nav li a {
+	display: block;
+}
+
+.navMenu {
+	visibility: hidden;
+	position: absolute
+}
+
+nav div a {
+	position: relative;
+	display: block;
+}

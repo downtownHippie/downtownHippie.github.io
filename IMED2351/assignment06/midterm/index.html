@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Home Page</title>
+		<meta charset="utf-8"/>
+		<meta name="robots" content="noindex,nofollow"/>
+		<meta name="description" content="the home page for the home"/>
+		<link rel="stylesheet" type="text/css" href="site.css"/>
+		<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<h1>The Home Page</h1>
+				<h4>The home page for our home</h4>
+			</header>
+			<nav>
+				<ul>
+					<li>
+						<a href="#">House Hold</a>
+						<div class="navMenu">
+							<a href="hermann.html">Building Contact Info</a>
+							<a href="vendors.html">Utility Contact Info</a>
+						</div>
+					</li>
+					<li>
+						<a href="#">Technical</a>
+						<div class="navMenu">
+							<a href="hippie.cc.html">Network Documentation</a>
+							<a href="2fdocs.html">Appliance Documentation</a>
+							<a href="hometheater.html">Home Theater How To</a>
+							<a href="stereo.html">Stereo How To</a>
+						</div>
+					</li>
+					<li>
+						<a href="#">Administrative</a>
+						<div class="navMenu">
+							<a href="calendar.html">Household Calendar</a>
+							<a href="feedback.html">Feedback</a>
+							<a href="contact.html">Contact</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
+			<aside>
+				<dl>
+					<dt>Address</dt>
+						<dd>204 Travis, #2f</dd>
+						<dd>Houston, TX 77002</dd>
+					<dt>Legal</dt>
+						<dd>Unit 2F Floor 2</dd>
+						<dd>0.0317 interior common land and elements</dd>
+						<dd>1289 sqft</dd>
+						<dd>Hermann Lofts Condominium Amendment</dd>
+					<dt>Elements</dt>
+						<dd>Parking: B20, B21</dd>
+						<dd>Storage: L-28</dd>
+					<dt>HCAD Links</dt>
+						<dd><a target="_blank" href="http://www.hcad.org/records/recorddetails.asp?tab=2&amp;bld=1&amp;card=1&amp;taxyear=2014&amp;acct=1194590020005">hcad.org</a></dd>
+						<dd><a target="_blank" href="http://www.hcad.org/iMaps/Tiles/Color_static/5457A6.pdf">hcad map</a></dd>
+				</dl>
+					<table>
+						<thead>
+							<tr>
+								<td>2nd Floor</td>
+								<td>Basement</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="images/level2.jpg"><img src="images/level2SM.jpg" alt="layout of 2nd floor"/></a></td>
+								<td><a href="images/basement.jpg"><img src="images/basementSM.jpg" alt="layout of basement"/></a></td>
+							</tr>
+						</tbody>
+					</table>
+			</aside>
+			<article>
+				<div id="articlepic">
+					<img src="images/hermann.jpg" alt="picture of exterior of hermann lofts"/>
+				</div>
+				<h3>welcome to the home page for your home</h3>
+				<ul class="notopmarginlist">
+					<li><a href="hippie.cc.html">hippie.cc</a></li>
+					<li><a href="hermann.html">contact information</a></li>
+					<li><a href="2fdocs.html">2f documentation</a></li>
+					<li><a href="vendors.html">2f vendors</a></li>
+					<li><a href="hometheater.html">how to use the home theater</a></li>
+					<li><a href="stereo.html">how to use the stereo</a></li>
+					<li><a href="calendar.html">household calendar</a></li>
+				</ul>
+			</article>
+			<div id="push"></div>
+		</div> <!-- wrapper -->
+		<footer>
+			<hr/>
+			<p class="pRight">&#169; 2014 <a href="mailto:someone@some.where">Joe Reid</a></p>
+		</footer>
+	</body>
+
+	<script>
+		var openItem = 0;
+
+		function menuClose() {
+		}
+
+		function menuOpen(id) {
+		}
+		
+	</script>
+</html>
+
+<!--
+The idea of the hidden div menu came from:
+http://javascript-array.com/scripts/simple_drop_down_menu/
+I deconstructed it:
+	the html/css:
+		the horizontal "nav menu" is a horizontal list (ul with
+		list-style none) with list-item as a string of inline-block
+		anchor tags (making them newline separated), all but the
+		first hidden in a div.	mousing in, and out and around
+		the first anchor unhides the rest of the anchors in that
+		div, and then mousing in out and around the div affects
+		is visibility
+	
+		the div's position is absolute while it's anchors position
+		is relative, with the z index on the whole element the
+		menus float
+
+	javascript:
+		storing the id of the element in a global variable
+		allows each menu to close whoever last opened then set
+		themselves as open.
+
+and rebuilt it for my purposes.
+-->
