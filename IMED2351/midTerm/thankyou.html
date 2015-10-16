@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Home Page</title>
+		<meta charset="utf-8"/>
+		<meta name="robots" content="noindex,nofollow"/>
+		<meta name="description" content="the home page for the home"/>
+		<link rel="stylesheet" type="text/css" href="site.css"/>
+		<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<h1>The Thank You Page</h1>
+				<h4>Thank you for coming to The Home Page for our home</h4>
+				<h4>The Home Page for our home</h4>
+			</header>
+			<nav>
+				<ul>
+					<li>
+						<a href="index.html" class="navMenuHeader">Home</a>
+					</li>
+					<li>
+						<a href="#" class="navMenuHeader">House Hold</a>
+						<div class="navMenu">
+							<a href="hermann.html">Building Contact Info</a>
+							<a href="vendors.html">Utility Contact Info</a>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="navMenuHeader">Technical</a>
+						<div class="navMenu">
+							<a href="hippie.cc.html">Network Documentation</a>
+							<a href="2fdocs.html">Appliance Documentation</a>
+							<a href="hometheater.html">Home Theater How To</a>
+							<a href="stereo.html">Stereo How To</a>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="navMenuHeader">Administrative</a>
+						<div class="navMenu">
+							<a href="calendar.html">Household Calendar</a>
+							<a href="feedback.html">Feedback</a>
+							<a href="contact.html">Contact</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
+			<aside>
+			</aside>
+			<article>
+				<h1>Thank You!</h1>
+			</article>
+			<div id="push"></div>
+		</div> <!-- wrapper -->
+		<footer>
+			<hr/>
+			<p class="pRight">&#169; 2016 <a href="mailto:someone@some.where">Joe Reid</a> IMED2351</p>
+		</footer>
+		<script>
+			window.onload = function () {
+				var menus = document.getElementsByClassName("navMenu");
+				var menuHeaders = document.getElementsByClassName("navMenuHeader");
+				var menuCount = menus.length;
+
+				for (var i = 0; i < menuCount; i++) {
+					menus[i].onmouseover = function() {
+						menuOpen(this);
+					};
+					menus[i].onmouseout = function() {
+						menuClose();
+					};
+					menuHeaders[i].onmouseover = function() {
+						menuOpen(this.nextElementSibling);
+					};
+					menuHeaders[i].onmouseout = function() {
+						menuClose();
+					};
+				}
+			}
+
+			// nav menu
+			var openItem = 0;
+			function menuClose() {
+				if (openItem) openItem.style.visibility = 'hidden';
+			}
+			function menuOpen(id) {
+				if (openItem) openItem.style.visibility = 'hidden';
+				openItem = id;
+				openItem.style.visibility = 'visible';
+			}
+		</script>
+	</body>
+</html>
