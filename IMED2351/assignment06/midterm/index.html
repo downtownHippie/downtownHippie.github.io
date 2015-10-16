@@ -108,7 +108,23 @@
 		<script>
 
 			window.onload = function () {
-				initNav(this);
+				var menus = document.getElementsByClassName("navMenu");
+				var menuHeaders = document.getElementsByClassName("navMenuHeader");
+				var menuCount = menus.length;
+				for (var i = 0; i < menuCount; i++) {
+					menus[i].onmouseover = function() {
+						menuOpen(this);
+					};
+					menus[i].onmouseout = function() {
+						menuClose();
+					};
+					menuHeaders[i].onmouseover = function() {
+						menuOpen(this.nextElementSibling);
+					};
+					menuHeaders[i].onmouseout = function() {
+						menuClose();
+					};
+				}
 			}
 
 			// image rotation
