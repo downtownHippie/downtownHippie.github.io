@@ -18,6 +18,7 @@
 				<ul>
 					<li>
 						<a href="index.html" class="navMenuHeader">Home</a>
+						<div class="navMenu"></div>
 					</li>
 					<li>
 						<a href="#" class="navMenuHeader">House Hold</a>
@@ -105,25 +106,9 @@
 		</footer>
 
 		<script>
-			window.onload = function () {
-				var menus = document.getElementsByClassName("navMenu");
-				var menuHeaders = document.getElementsByClassName("navMenuHeader");
-				var menuCount = menus.length;
 
-				for (var i = 0; i < menuCount; i++) {
-					menus[i].onmouseover = function() {
-						menuOpen(this);
-					};
-					menus[i].onmouseout = function() {
-						menuClose();
-					};
-					menuHeaders[i].onmouseover = function() {
-						menuOpen(this.nextElementSibling);
-					};
-					menuHeaders[i].onmouseout = function() {
-						menuClose();
-					};
-				}
+			window.onload = function () {
+				initNav(this);
 			}
 
 			// image rotation
@@ -132,7 +117,7 @@
 				document.getElementById('articlepic').innerHTML = '<figure><img src="images/hermann-' + ++imageIndex % 3 + '.jpg" alt="images of Hermann Lofts" width="262" height="363"><figcaption>image ' + imageIndex + ' </figcaption></figure>';
 			}
 			// oh god, make it stop
-			setInterval(imageRotate, 2500);
+			//setInterval(imageRotate, 2500);
 			
 			// date countdown
 			var superBowlDate = new Date('February 5, 2017 18:30');
@@ -142,6 +127,25 @@
 
 			// nav menu
 			var openItem = 0;
+			function initNav(id) {
+				var menus = document.getElementsByClassName("navMenu");
+				var menuHeaders = document.getElementsByClassName("navMenuHeader");
+				var menuCount = menus.length;
+				for (var i = 0; i < menuCount; i++) {
+					menus[i].onmouseover = function() {
+						menuOpen(id);
+					};
+					menus[i].onmouseout = function() {
+						menuClose();
+					};
+					menuHeaders[i].onmouseover = function() {
+						menuOpen(id.nextElementSibling);
+					};
+					menuHeaders[i].onmouseout = function() {
+						menuClose();
+					};
+				}
+			}
 			function menuClose() {
 				if (openItem) openItem.style.visibility = 'hidden';
 			}
