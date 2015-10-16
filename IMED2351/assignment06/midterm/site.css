@@ -166,12 +166,18 @@ nav li a {
 	color: black;
 }
 
+nav div a {
+	position: relative;
+	display: block;
+}
+
 .navMenu {
 	visibility: hidden;
 	position: absolute;
 }
 
-nav div a {
-	position: relative;
-	display: block;
+.hideList {
+}
+
+.hideListHeader {
 }

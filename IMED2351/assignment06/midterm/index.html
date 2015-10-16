@@ -17,15 +17,15 @@
 			<nav>
 				<ul>
 					<li>
-						<a href="#" onmouseover="menuOpen('m0')" onmouseout="menuClose()" id="mh0" class="navMenuHeader">House Hold</a>
-						<div onmouseover="menuOpen('m0')" onmouseout="menuClose()" id='m0' class="navMenu">
+						<a href="#" class="navMenuHeader">House Hold</a>
+						<div class="navMenu">
 							<a href="hermann.html">Building Contact Info</a>
 							<a href="vendors.html">Utility Contact Info</a>
 						</div>
 					</li>
 					<li>
-						<a href="#" onmouseover="menuOpen('m1')" onmouseout="menuClose()" id="mh1" class="navMenuHeader">Technical</a>
-						<div onmouseover="menuOpen('m1')" onmouseout="menuClose()" id='m1' class="navMenu">
+						<a href="#" class="navMenuHeader">Technical</a>
+						<div class="navMenu">
 							<a href="hippie.cc.html">Network Documentation</a>
 							<a href="2fdocs.html">Appliance Documentation</a>
 							<a href="hometheater.html">Home Theater How To</a>
@@ -33,8 +33,8 @@
 						</div>
 					</li>
 					<li>
-						<a href="#" onmouseover="menuOpen('m2')" onmouseout="menuClose()" id="mh2" class="navMenuHeader">Administrative</a>
-						<div onmouseover="menuOpen('m2')" onmouseout="menuClose()" id='m2' class="navMenu">
+						<a href="#" class="navMenuHeader">Administrative</a>
+						<div class="navMenu">
 							<a href="calendar.html">Household Calendar</a>
 							<a href="feedback.html">Feedback</a>
 							<a href="contact.html">Contact</a>
@@ -91,64 +91,66 @@
 				</ul>
 				-->
 				<h3>Don't forget!!!</h3>
-				<h4><span id="superBowl"></span> days until Superbowl LI</h4>
+				<h4>Superbowl LI - February 5, 2017</h4>
+				<p>Only <span id="superBowl"></span> days <em>until a 6:30PM kickoff</em></p>
 			</article>
 			<div id="push"></div>
 		</div> <!-- wrapper -->
 		<footer>
 			<hr/>
-			<p class="pRight">&#169; 2014 <a href="mailto:someone@some.where">Joe Reid</a></p>
+			<p class="pRight">&#169; 2016 <a href="mailto:someone@some.where">Joe Reid</a> IMED2351</p>
 		</footer>
 	</body>
 
 	<script>
-		var superBowlDate = new Date('February 5, 2017');
+
+
+
+		window.onload = function () {
+			var menus = document.getElementsByClassName("navMenu");
+			var menuHeaders = document.getElementsByClassName("navMenuHeader");
+			var menuCount = menus.length;
+
+			for (var i = 0; i < menuCount; i++) {
+				menus[i].onmouseover = function() {
+					menuOpen(this);
+				};
+				menus[i].onmouseout = function() {
+					menuClose();
+				};
+				menuHeaders[i].onmouseover = function() {
+					menuOpen(this.nextElementSibling);
+				};
+				menuHeaders[i].onmouseout = function() {
+					menuClose();
+				};
+			}
+		}
+
+		// image rotation
+		var imageIndex = 0;
+		function imageRotate() {
+			document.getElementById('articlepic').innerHTML = '<figure><img src="images/hermann-' + ++imageIndex % 3 + '.jpg" alt="images of Hermann Lofts" width="262" height="363"><figcaption>image ' + imageIndex + ' </figcaption></figure>';
+		}
+		// oh god, make it stop
+		//setInterval(imageRotate, 2500);
+		
+		// date countdown
+		var superBowlDate = new Date('February 5, 2017 18:30');
 		var today = new Date();
 		var daysUntil = Math.floor((superBowlDate.getTime() - today.getTime()) / (60 * 60 * 24 * 1000));
-
 		document.getElementById('superBowl').textContent = daysUntil;
 
+		// nav menu
 		var openItem = 0;
-
 		function menuClose() {
 			if (openItem) openItem.style.visibility = 'hidden';
 		}
-
 		function menuOpen(id) {
 			if (openItem) openItem.style.visibility = 'hidden';
-			openItem = document.getElementById(id);
+			openItem = id;
 			openItem.style.visibility = 'visible';
 		}
-
-		window.onload = function () {
-			/*
-			for (var i = 0; i < 3; i++) {
-				console.log('setting up menus ' + i);
-				var m = document.getElementById('m' + i);
-				m.onmouseover = menuOpen('m' + i);
-				var mh = document.getElementById('mh' + i);
-				mh.onmouseover = menuOpen('mh' + i);
-				document.getElementById('m' + i).onmouseout = menuClose);
-				document.getElementById('mh' + i).onmouseout = menuClose();
-				
-			}
-
-			var menuHeaders = document.getElementsByClassName("navMenuHeader");
-			for (var i = 0; i < menuHeaders.length ; i++) {
-				menuHeaders[i].onmouseover = menuOpen(menus[i]);
-				menuHeaders[i].onmouseout = menuClose();
-			}
-			*/
-		}
-
-		var imageIndex = 0;
-
-		function imageRotate() {
-			document.getElementById('articlepic').innerHTML = '<figure><img src="images/hermann-' + ++imageIndex % 3 + '.jpg" alt="images of Hermann Lofts" width="262" height="363"><figcaption>image ' + imageIndex % 3 + ' </figcaption></figure>';
-		}
-
-		//setInterval(imageRotate, 2500);
-
 		
 	</script>
 </html>
@@ -159,16 +161,16 @@ http://javascript-array.com/scripts/simple_drop_down_menu/
 I deconstructed it:
 	the html/css:
 		the horizontal "nav menu" is a horizontal list (ul with
-		list-style none) with list-item as a string of inline-block
-		anchor tags (making them newline separated), all but the
+		list-style none) with the list-item as a string of inline-block
+		anchor tags (giving them shape), all but the
 		first hidden in a div.	mousing in, and out and around
 		the first anchor unhides the rest of the anchors in that
 		div, and then mousing in out and around the div affects
-		is visibility
+		its visibility as well
 	
 		the div's position is absolute while it's anchors position
-		is relative, with the z index on the whole element the
-		menus float
+		is relative, with the positive z index on the whole element the
+		menus float above the page
 
 	javascript:
 		storing the id of the element in a global variable
