@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Home Page</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="site.css"/>
+		<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<h1>The Home Page - hippie.cc</h1>
+				<h4>The network to meet all your computing needs</h4>
+			</header>
+			<aside>
+				<h3>Links to network services</h3>
+				<ul>
+					<li><a href="http://outer.hippie.cc" target="_blank">outer.hippie.cc</a></li>
+					<li style="list-style-type: none;"><a href="http://192.168.1.254" target="_blank">outer by ip</a></li>
+					<li><a href="http://fire.hippie.cc" target="_blank">fire.hippie.cc</a></li>
+					<li style="list-style-type: none;"><a href="http://192.168.29.1" target="_blank">fire by ip</a></li>
+					<li><a href="http://firenet.hippie.cc" target="_blank">firenet.hippie.cc</a></li>
+					<li style="list-style-type: none;"><a href="http://192.168.29.2" target="_blank">firenet by ip</a></li>
+					<li><a href="http://printer.hippie.cc" target="_blank">printer.hippie.cc</a></li>
+					<li style="list-style-type: none;"><a href="http://192.168.29.7" target="_blank">printer by ip</a></li>
+					<li><a href="http://solstar.hippie.cc:50500" target="_blank">MediaTomb on solstar</a></li>
+					<li style="list-style-type: none;"><a href="http://192.168.29.33:50500" target="_blank">MediaTomb by ip</a></li>
+				</ul>
+				<table>
+					<thead>
+						<tr>
+							<td>hippie.cc network diagram</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a href="images/networkDiagram.jpg"><img src="images/networkDiagramSM.jpg" alt="network diagram"/></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</aside>
+			<article>
+				<h3>External Network Connectivity</h3>
+				<p>Internet connectivity provided by AT&amp;T u-Verse</p>
+				<dl>
+					<dt>Router Model:</dt>
+						<dd>Motorola NVG589</dd>
+						<dd>specifically designed for AT&amp;T</dd>
+					<dt>Hostname:</dt>
+						<dd>outer.zoonet</dd>
+					<dt>IP Address:</dt>
+						<dd>192.168.1.254</dd>
+					<dt>Netmask:</dt>
+						<dd>255.255.255.0</dd>
+					<dt>DHCP lease range:</dt>
+						<dd>192.168.1.64 - 192.168.1.68</dd>
+					<dt>WIFI Status:</dt>
+						<dd><span style="color: red; font-weigh: bold;">DISABLED</span></dd>
+					<dt>Password:<dt>
+						<dd>standard network configuration password</dd>
+				</dl>
+				<p>The NVG589 router has been converted into a passthough bridge<p>
+				<p>A PDF of that conversion process is <a href="PDFs/motorolaNVG589bridge.pdf">here</a>.<br/>
+				Notes made on the coversion are in <span style="color: red;">red</span> in the margins.<br/>
+				There is a link in the PDF, in <span style="color: green;">green</span>, that points to its source.</p>
+				<h3>Internal Network Setup</h3>
+					<h4>Core network router</h4>
+					<dl>
+						<dt>Router Model:</dt>
+							<dd>Routerboard/Mikrotik RB450G</dd>
+						<dt>Hostname:</dt>
+							<dd>fire.hippie.cc</dd>
+						<dt>IP Address:</dt>
+							<dd>192.168.29.1</dd>
+						<dt>Netmask:</dt>
+							<dd>255.255.255.0</dd>
+						<dt>DHCP lease range:</dt>
+							<dd>192.168.29.128 - 192.168.29.192</dd>
+						<dt>Username:</dt>
+							<dd>admin</dd>
+						<dt>Password:</dt>
+							<dd>standard network configuration password</dd>
+					</dl>
+
+					<h4>Core network switch</h4>
+					<dl>
+						<dt>Switch Model:</dt>
+							<dd>TP-Link TL-SG2008</dd>
+						<dt>Hostname:</dt>
+							<dd>firenet.hippie.cc</dd>
+						<dt>IP Address:</dt>
+							<dd>192.168.29.2</dd>
+						<dt>DHCP status:<dt>
+							<dd>dynamic</dd>
+						<dt>Username:</dt>
+							<dd>admin</dd>
+						<dt>Password:</dt>
+							<dd>standard network configuration password without apostrophe</dd>
+					</dl>
+
+					<h4>WiFi Access Point</h4>
+					<dl>
+						<dt>Access Point Model:</dt>
+							<dd>Netgear WNR3500L v1</dd>
+						<dt>Hostname:</dt>
+							<dd>flame.hippie.cc</dd>
+						<dt>IP Address:</dt>
+							<dd>192.168.29.3</dd>
+						<dt>WIFI SSID (name):</dt>
+							<dd>triangle</dd>
+						<dt>DHCP status:</dt>
+							<dd>static</dd>
+						<dt>Username:</dt>
+							<dd>admin</dd>
+						<dt>Password:</dt>
+							<dd>standard network configuration password</dd>
+					</dl>
+
+				<h3><a href="newWIFIaddress.html">How to configure a new wifi device</a></h3>
+			</article>
+			<div id="push"></div>
+		</div> <!-- wrapper -->
+		<footer>
+			<hr/>
+			<p class="pRight">&#169; 2014 <a href="mailto:someone@some.where">Joe Reid</a></p>
+			<p class="pLeft"><a href="index.html">Return to Home Page</a></p>
+		</footer>
+	</body>
+</html>
