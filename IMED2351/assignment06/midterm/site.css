@@ -134,32 +134,41 @@ footer .pLeft {
 	list-style-type: none;
 }
 
+/* center image on the rotel documentation page */
+/* page is 1060, image is 792: fuck centering images*/
 .logoCenter {
 	display: block;
-	/* page is 1060, image is 792: fuck centering images*/
 	margin-left: 134px;
 }
 
 /* begin css relative to IMED2351 */
 nav {
 	z-index: 30;
+	background-color: #707678;
+	/* background-color: cornflowerblue; */
 }
 nav ul {
 	list-style: outside none none;
+	text-align: center;
 }
 
 nav li {
 	display: inline-block;
-	background-color: #707678
+	background-color: #707678;
+	width: 200px;
 }
 
 nav li a {
 	display: block;
+	background-color: #707678;
+	text-decoration: none;
+	width: 200px;
+	color: black;
 }
 
 .navMenu {
 	visibility: hidden;
-	position: absolute
+	position: absolute;
 }
 
 nav div a {
