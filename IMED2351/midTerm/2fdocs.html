@@ -12,7 +12,7 @@
 				<h1>The Home Page - Documentation</h1>
 				<h4>How stuff works</h4>
 			</header>
-						<nav>
+			<nav>
 				<ul>
 					<li>
 						<a href="index.html" class="navMenuHeader">Home</a>
@@ -99,7 +99,6 @@
 			<p class="pRight">&#169; 2016 <a href="mailto:someone@some.where">Joe Reid</a> IMED2351</p>
 			<p class="pLeft"><a href="index.html">Return to Home Page</a></p>
 		</footer>
-
 		<script>
 			window.onload = function () {
 				var hideLists = document.getElementsByClassName("hideListHeader");
@@ -109,7 +108,6 @@
 						hideMenu(this.nextElementSibling);
 					};
 				}
-				
 				var menus = document.getElementsByClassName("navMenu");
 				var menuHeaders = document.getElementsByClassName("navMenuHeader");
 				var menuCount = menus.length;
@@ -127,9 +125,9 @@
 						menuClose();
 					};
 				}
-				
 			}
-			var openItem = 0;			
+			// nav menu
+			var openItem = 0;
 			function menuClose() {
 				if (openItem) openItem.style.visibility = 'hidden';
 			}

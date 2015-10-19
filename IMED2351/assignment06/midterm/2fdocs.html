@@ -99,7 +99,6 @@
 			<p class="pRight">&#169; 2016 <a href="mailto:someone@some.where">Joe Reid</a> IMED2351</p>
 			<p class="pLeft"><a href="index.html">Return to Home Page</a></p>
 		</footer>
-
 		<script>
 			window.onload = function () {
 				var hideLists = document.getElementsByClassName("hideListHeader");
@@ -109,13 +108,9 @@
 						hideMenu(this.nextElementSibling);
 					};
 				}
-			}
-
-			window.onload = function () {
 				var menus = document.getElementsByClassName("navMenu");
 				var menuHeaders = document.getElementsByClassName("navMenuHeader");
 				var menuCount = menus.length;
-
 				for (var i = 0; i < menuCount; i++) {
 					menus[i].onmouseover = function() {
 						menuOpen(this);
@@ -131,7 +126,6 @@
 					};
 				}
 			}
-
 			// nav menu
 			var openItem = 0;
 			function menuClose() {
