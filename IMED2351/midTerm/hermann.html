@@ -115,8 +115,7 @@
 			<p class="pLeft"><a href="index.html">Return to Home Page</a></p>
 		</footer>
 		<script>
-			var currentYear = new Date().getFullYear();
-			document.getElementById('currYear').textContent = currentYear;
+			document.getElementById('currYear').textContent = new Date().getFullYear();
 			window.onload = function () {
 				var menus = document.getElementsByClassName("navMenu");
 				var menuHeaders = document.getElementsByClassName("navMenuHeader");
