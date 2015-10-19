@@ -103,10 +103,13 @@
 		</div> <!-- wrapper -->
 		<footer>
 			<hr/>
-			<p class="pRight">&#169; 2014 <a href="mailto:someone@some.where">Joe Reid</a></p>
+			var currentYear = new Date().getFullYear();
+			document.getElementById('currYear').textContent = currentYear;
 			<p class="pLeft"><a href="index.html">Return to Home Page</a></p>
 		</footer>
 		<script>
+			var currentYear = new Date().getFullYear();
+			document.getElementById('currYear').textContent = currentYear;
 			window.onload = function () {
 				var menus = document.getElementsByClassName("navMenu");
 				var menuHeaders = document.getElementsByClassName("navMenuHeader");
