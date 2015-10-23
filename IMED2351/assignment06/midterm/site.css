@@ -141,7 +141,24 @@ footer .pLeft {
 	margin-left: 134px;
 }
 
-/* begin css relative to IMED2351 */
+/*
+ *
+ *
+ *
+ *
+ *
+ * begin css relative to IMED2351
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+
+/* navigation menu */
 nav {
 	z-index: 30;
 	background-color: #707678;
@@ -176,8 +193,38 @@ nav div a {
 	position: absolute;
 }
 
+/* hide show menus */
 .hideList {
 }
 
 .hideListHeader {
+}
+
+/* form input validation */
+.errorText {
+	font-style: italic;
+	color: red;
+}
+
+#contactForm {
+	overflow: hidden;
+}
+
+label.contact {
+	display: inline-block;
+	width: 100px;
+}
+
+label.textA {
+	margin: .25em 0 0; /* align top is really high compared the first line of text...push it back down a bit */
+	vertical-align: top;
+}
+
+input.contact {
+	float: right;
+	margin: 1em 17em 0;
+}
+
+span.errorText {
+	margin: 0 0 0 1em;
 }
