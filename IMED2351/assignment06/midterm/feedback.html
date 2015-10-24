@@ -85,37 +85,7 @@
 		</footer>
 		<script>
 			document.getElementById('currYear').textContent = currentYear;
-			window.onload = function () {
-				var menus = document.getElementsByClassName("navMenu");
-				var menuHeaders = document.getElementsByClassName("navMenuHeader");
-				var menuCount = menus.length;
-
-				for (var i = 0; i < menuCount; i++) {
-					menus[i].onmouseover = function() {
-						menuOpen(this);
-					};
-					menus[i].onmouseout = function() {
-						menuClose();
-					};
-					menuHeaders[i].onmouseover = function() {
-						menuOpen(this.nextElementSibling);
-					};
-					menuHeaders[i].onmouseout = function() {
-						menuClose();
-					};
-				}
-			}
-
-			// nav menu
-			var openItem = 0;
-			function menuClose() {
-				if (openItem) openItem.style.visibility = 'hidden';
-			}
-			function menuOpen(id) {
-				if (openItem) openItem.style.visibility = 'hidden';
-				openItem = id;
-				openItem.style.visibility = 'visible';
-			}
 		</script>
+		<script src="js/navMenu.js"></script>
 	</body>
 </html>
