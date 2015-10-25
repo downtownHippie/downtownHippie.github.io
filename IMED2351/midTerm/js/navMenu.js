@@ -23,7 +23,7 @@
 //  the original had a delay on close, I might reimplement that, it was "smoother"
 
 var navMenuImport = document.querySelector('#navMenuHTML');
-var navMenuContent = navMenuImport.import.querySelector('#navMenuList');
+var navMenuContent = navMenuImport.importNode.querySelector('#navMenuList');
 document.getElementsByTagName('nav')[0].innerHTML = document.importNode(navMenuContent, true).innerHTML;
 
 var navMenuMenus = document.getElementsByClassName("navMenu");
