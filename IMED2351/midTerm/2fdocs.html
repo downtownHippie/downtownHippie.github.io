@@ -96,36 +96,10 @@
 		</div> <!-- wrapper -->
 		<footer>
 			<hr/>
-			<p class="pRight">&#169; 2014 - <span id="currYear">2014</span> <a href="mailto:someone@some.where">Joe Reid</a> IMED1316 and IMED2351</p>
+			<p class="pRight">&#169; 2014 - <span id="currYearForCopyright">2014</span> <a href="mailto:someone@some.where">Joe Reid</a> IMED1316 and IMED2351</p>
 			<p class="pLeft"><a href="index.html">Return to Home Page</a></p>
 		</footer>
-		<script>
-			document.getElementById('currYear').textContent = new Date().getFullYear();
-			window.onload = function () {
-				var hideLists = document.getElementsByClassName("hideListHeader");
-
-				for (var i = 0; i < hideLists.length; i++) {
-					hideLists[i].onclick = function() {
-						hideMenu(this.nextElementSibling);
-					};
-				}
-			}
-
-			function hideMenu(id) {
-				var state = id.style.display;
-				switch (state) {
-					case 'block':
-						id.style.display = 'none';
-						break;
-					case 'none':
-						id.style.display = 'block';
-						break;
-					default: // is probably shown, so hide; too bad we don't konw what the css says
-						id.style.display = 'none';
-						break; // unnecessary?
-				}
-			}
-	</script>
-	<script src="js/navMenu.js"></script>
+		<script src="js/navMenu.js"></script>
+		<script src="js/hippie.cc.js"></script>
 	</body>
 </html>
