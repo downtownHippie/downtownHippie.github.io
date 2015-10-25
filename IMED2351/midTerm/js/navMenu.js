@@ -24,8 +24,7 @@
 
 //var navMenuImport = document.querySelector('#navMenuHTML');
 var navMenuContent = document.querySelector('#navMenuHTML').import.querySelector('#nav');
-//document.getElementsByTagName('nav')[0].innerHTML = document.importNode(navMenuContent, true).innerHTML;
-document.getElementsByTagName('nav')[0].innerHTML = document.importNode(navMenuContent, true);
+document.getElementsByTagName('nav')[0].innerHTML = document.importNode(navMenuContent, true).innerHTML;
 
 var navMenuMenus = document.getElementsByClassName("navMenu");
 var navMenuMenuHeaders = document.getElementsByClassName("navMenuHeader");
