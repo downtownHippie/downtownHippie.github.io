@@ -167,6 +167,7 @@ nav {
 nav ul {
 	list-style: outside none none;
 	text-align: center;
+	margin: auto;
 }
 
 nav li {

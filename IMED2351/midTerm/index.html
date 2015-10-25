@@ -53,23 +53,13 @@
 				<div id="articlepic">
 					<img src="images/hermann-0.jpg" alt="picture of exterior of hermann lofts" caption="exterior"/>
 				</div>
-				<!--
-				<h3>welcome to the home page for your home</h3>
-				<ul class="notopmarginlist">
-					<li><a href="hippie.cc.html">hippie.cc</a></li>
-					<li><a href="hermann.html">contact information</a></li>
-					<li><a href="2fdocs.html">2f documentation</a></li>
-					<li><a href="vendors.html">2f vendors</a></li>
-					<li><a href="hometheater.html">how to use the home theater</a></li>
-					<li><a href="stereo.html">how to use the stereo</a></li>
-					<li><a href="calendar.html">household calendar</a></li>
-				</ul>
-				-->
 				<h3><a href="file:///J:/Documents/2F-Travis/newGrocery.ods">Grocery List</a></h3>
 				<p><em>right click the link to copy the grocery list link location, then paste back into browser address bar and press return to open grocery list from local network storage</em></p>
 				<h3>Don't forget!!!</h3>
 				<h4>Superbowl LI - February 5, 2017</h4>
-				<p>Only <span id="superBowl"></span> days <em>until a 6:30PM kickoff</em></p>
+				<p>Only <span id="superBowl"></span></br><em>until a 6:30PM kickoff</em></p>
+				<h1>nav menus currently only work in chrome - file includes, the most basic computer programmer tool, are stupid in html, even 25 years on</h1>
+				<h1>and stupid to debug because the browser has to protect me from myself</h1>
 			</article>
 			<div id="push"></div>
 		</div> <!-- wrapper -->
@@ -96,7 +86,7 @@
 			var superBowlDate = new Date('February 5, 2017 18:30');
 			var today = new Date();
 			var daysUntil = Math.floor((superBowlDate.getTime() - today.getTime()) / (60 * 60 * 24 * 1000));
-			document.getElementById('superBowl').textContent = daysUntil;
+			document.getElementById('superBowl').textContent = daysUntil + ' days';
 
 			// random image load
 			window.onload = function () {
