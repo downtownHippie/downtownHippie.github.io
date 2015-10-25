@@ -24,7 +24,7 @@
 
 var navMenuImport = document.querySelector('#navMenuHTML');
 var navMenuContent = navMenuImport.import.querySelector('#nav');
-document.getElementById("theNavMenu").innerHTML = document.importNode(navMenuContent, true).innerHTML;
+document.getElementById("theNavMenu") = document.importNode(navMenuContent, true);
 
 var navMenuMenus = document.getElementsByClassName("navMenu");
 var navMenuMenuHeaders = document.getElementsByClassName("navMenuHeader");
