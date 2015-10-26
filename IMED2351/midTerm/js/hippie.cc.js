@@ -32,8 +32,8 @@ function hideMenu(id) {
 		case 'none':
 			id.style.display = 'block';
 			break;
-		default: // is probably shown, so hide; too bad we don't konw what the css says
-			id.style.display = 'none';
+		default: // hide on purpose since this is hideMenu - too bad we can't ask what the css is...
+			id.style.display = 'block';
 			break; // unnecessary?
 	}
 }

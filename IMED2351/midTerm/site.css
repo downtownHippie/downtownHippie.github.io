@@ -173,6 +173,7 @@ nav div a {
 
 /* hide show menus */
 .hideList {
+	display: none;
 }
 
 .hideListHeader {
