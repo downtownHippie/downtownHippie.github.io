@@ -3,8 +3,11 @@
 	<head>
 		<title>The Home Page</title>
 		<meta charset="utf-8"/>
+		<meta name="robots" content="noindex,nofollow"/>
+		<meta name="description" content="the home page for the home"/>
 		<link rel="stylesheet" type="text/css" href="site.css"/>
 		<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+		<link rel="import" id="navMenuHTML" href="navMenu.html"/>
 	</head>
 	<body>
 		<div id="wrapper">
@@ -13,22 +16,25 @@
 				<h4>How stuff works</h4>
 			</header>
 			<nav>
+<div id='navMenuList'>
 				<ul>
 					<li>
 						<a href="index.html" class="navMenuHeader">Home</a>
-						<div class="navMenu"></div>
+						<div class="navMenu">
+						</div>
 					</li>
 					<li>
 						<a href="#" class="navMenuHeader">House Hold</a>
 						<div class="navMenu">
 							<a href="hermann.html">Building Contact Info</a>
 							<a href="vendors.html">Utility Contact Info</a>
+							<a href="weather.html">Local Weather/Floor Info</a>
 						</div>
 					</li>
 					<li>
 						<a href="#" class="navMenuHeader">Technical</a>
 						<div class="navMenu">
-							<a href="hippie.cc.html">Network Documentation</a>
+						<a href="hippie.cc.html">Network Documentation</a>
 							<a href="2fdocs.html">Appliance Documentation</a>
 							<a href="hometheater.html">Home Theater How To</a>
 							<a href="stereo.html">Stereo How To</a>
@@ -43,11 +49,11 @@
 						</div>
 					</li>
 				</ul>
+</div>
 			</nav>
 			<aside>
 			</aside>
 			<article>
-				<h2><a href="file:///J:/Documents/2F-Travis/newGrocery.ods">Grocery List</a></h2>
 				<h3 id="docListApp" class="hideListHeader">Appliances</h3>
 					<ul class="hideList">
 						<li><a href="PDFs/W10487789.pdf" target="_blank">Refrigerator</a></li>
@@ -96,36 +102,10 @@
 		</div> <!-- wrapper -->
 		<footer>
 			<hr/>
-			<p class="pRight">&#169; 2014 - <span id="currYear">2014</span> <a href="mailto:someone@some.where">Joe Reid</a> IMED1316 and IMED2351</p>
+			<p class="pRight">&#169; 2014 - <span id="currYearForCopyright">2014</span> <a href="mailto:someone@some.where">Joe Reid</a> IMED1316 and IMED2351</p>
 			<p class="pLeft"><a href="index.html">Return to Home Page</a></p>
 		</footer>
-		<script>
-			document.getElementById('currYear').textContent = new Date().getFullYear();
-			window.onload = function () {
-				var hideLists = document.getElementsByClassName("hideListHeader");
-
-				for (var i = 0; i < hideLists.length; i++) {
-					hideLists[i].onclick = function() {
-						hideMenu(this.nextElementSibling);
-					};
-				}
-			}
-
-			function hideMenu(id) {
-				var state = id.style.display;
-				switch (state) {
-					case 'block':
-						id.style.display = 'none';
-						break;
-					case 'none':
-						id.style.display = 'block';
-						break;
-					default: // is probably shown, so hide; too bad we don't konw what the css says
-						id.style.display = 'none';
-						break; // unnecessary?
-				}
-			}
-	</script>
-	<script src="js/navMenu.js"></script>
+		<script src="js/navMenu.js"></script>
+		<script src="js/hippie.cc.js"></script>
 	</body>
 </html>

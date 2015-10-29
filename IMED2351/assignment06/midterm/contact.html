@@ -7,6 +7,7 @@
 		<meta name="description" content="the home page for the home"/>
 		<link rel="stylesheet" type="text/css" href="site.css"/>
 		<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+		<link rel="import" id="navMenuHTML" href="navMenu.html"/>
 	</head>
 	<body>
 		<div id="wrapper">
@@ -15,22 +16,25 @@
 				<h4>how to phone home and ask us stuff</h4>
 			</header>
 			<nav>
+<div id='navMenuList'>
 				<ul>
 					<li>
 						<a href="index.html" class="navMenuHeader">Home</a>
-						<div class="navMenu"></div>
+						<div class="navMenu">
+						</div>
 					</li>
 					<li>
 						<a href="#" class="navMenuHeader">House Hold</a>
 						<div class="navMenu">
 							<a href="hermann.html">Building Contact Info</a>
 							<a href="vendors.html">Utility Contact Info</a>
+							<a href="weather.html">Local Weather/Floor Info</a>
 						</div>
 					</li>
 					<li>
 						<a href="#" class="navMenuHeader">Technical</a>
 						<div class="navMenu">
-							<a href="hippie.cc.html">Network Documentation</a>
+						<a href="hippie.cc.html">Network Documentation</a>
 							<a href="2fdocs.html">Appliance Documentation</a>
 							<a href="hometheater.html">Home Theater How To</a>
 							<a href="stereo.html">Stereo How To</a>
@@ -45,6 +49,7 @@
 						</div>
 					</li>
 				</ul>
+</div>
 			</nav>
 			<aside>
 			</aside>
@@ -61,7 +66,7 @@
 		</div> <!-- wrapper -->
 		<footer>
 			<hr/>
-			<p class="pRight">&#169; 2014 - <span id="currYear">2014</span> <a href="mailto:someone@some.where">Joe Reid</a> IMED1316 and IMED2351</p>
+			<p class="pRight">&#169; 2014 - <span id="currYearForCopyright">2014</span> <a href="mailto:someone@some.where">Joe Reid</a> IMED1316 and IMED2351</p>
 		</footer>
 
 		<script>
@@ -94,17 +99,9 @@
 				return valid;
 			};
 
-			document.getElementById('currYear').textContent = new Date().getFullYear();
-
-
-			// misc funcs
-			function isNullorEmpty(text) {
-				if ((text == null) || (text == '')) {
-					return true;
-				}
-				return false;
-			}
+			document.getElementById('currYearForCopyright').textContent = new Date().getFullYear();
 		</script>
 		<script src="js/navMenu.js"></script>
+		<script src="js/hippie.cc.js"></script>
 	</body>
 </html>

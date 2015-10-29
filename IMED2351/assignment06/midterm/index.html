@@ -7,6 +7,7 @@
 		<meta name="description" content="the home page for the home"/>
 		<link rel="stylesheet" type="text/css" href="site.css"/>
 		<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+		<link rel="import" id="navMenuHTML" href="navMenu.html"/>
 	</head>
 	<body>
 		<div id="wrapper">
@@ -15,22 +16,25 @@
 				<h4>The home page for our home</h4>
 			</header>
 			<nav>
+<div id='navMenuList'>
 				<ul>
 					<li>
 						<a href="index.html" class="navMenuHeader">Home</a>
-						<div class="navMenu"></div>
+						<div class="navMenu">
+						</div>
 					</li>
 					<li>
 						<a href="#" class="navMenuHeader">House Hold</a>
 						<div class="navMenu">
 							<a href="hermann.html">Building Contact Info</a>
 							<a href="vendors.html">Utility Contact Info</a>
+							<a href="weather.html">Local Weather/Flood Info</a>
 						</div>
 					</li>
 					<li>
 						<a href="#" class="navMenuHeader">Technical</a>
 						<div class="navMenu">
-							<a href="hippie.cc.html">Network Documentation</a>
+						<a href="hippie.cc.html">Network Documentation</a>
 							<a href="2fdocs.html">Appliance Documentation</a>
 							<a href="hometheater.html">Home Theater How To</a>
 							<a href="stereo.html">Stereo How To</a>
@@ -45,6 +49,7 @@
 						</div>
 					</li>
 				</ul>
+</div>
 			</nav>
 			<aside>
 				<dl>
@@ -80,74 +85,50 @@
 			</aside>
 			<article>
 				<div id="articlepic">
-					<img src="images/hermann.jpg" alt="picture of exterior of hermann lofts" caption="exterior"/>
+					<img src="images/hermann-0.jpg" alt="picture of exterior of hermann lofts" caption="exterior"/>
 				</div>
-				<!--
-				<h3>welcome to the home page for your home</h3>
-				<ul class="notopmarginlist">
-					<li><a href="hippie.cc.html">hippie.cc</a></li>
-					<li><a href="hermann.html">contact information</a></li>
-					<li><a href="2fdocs.html">2f documentation</a></li>
-					<li><a href="vendors.html">2f vendors</a></li>
-					<li><a href="hometheater.html">how to use the home theater</a></li>
-					<li><a href="stereo.html">how to use the stereo</a></li>
-					<li><a href="calendar.html">household calendar</a></li>
-				</ul>
-				-->
+				<h3><a href="file:///J:/Documents/2F-Travis/newGrocery.ods">Grocery List</a></h3>
+				<p><em>right click the link to copy the grocery list link location, then paste back into browser address bar and press return to open grocery list from local network storage</em></p>
 				<h3>Don't forget!!!</h3>
 				<h4>Superbowl LI - February 5, 2017</h4>
-				<p>Only <span id="superBowl"></span> days <em>until a 6:30PM kickoff</em></p>
+				<p>Only <span id="superBowl"></span></br><em>until a 6:30PM kickoff</em></p>
 			</article>
 			<div id="push"></div>
 		</div> <!-- wrapper -->
 		<footer>
 			<hr/>
-			<p class="pRight">&#169; 2014 - <span id="currYear">2014</span> <a href="mailto:someone@some.where">Joe Reid</a> IMED1316 and IMED2351</p>
+			<p class="pRight">&#169; 2014 - <span id="currYearForCopyright">2014</span> <a href="mailto:someone@some.where">Joe Reid</a> IMED1316 and IMED2351</p>
 		</footer>
 
 		<script>
-			document.getElementById('currYear').textContent = new Date().getFullYear();
-
 			// image rotation
+			var captions = ['Hermann Lofts from south east', 'Hermann Lofts from Market Sq. Park', 'Hermann Lofts from North East', 'Hermann Building - Vintage'];
 			var imageIndex = 0;
 			function imageRotate() {
-				document.getElementById('articlepic').innerHTML = '<figure><img src="images/hermann-' + ++imageIndex % 3 + '.jpg" alt="images of Hermann Lofts" width="262" height="363"><figcaption>image ' + imageIndex + ' </figcaption></figure>';
+				imageIndex = ++imageIndex % 4;
+				document.getElementById('articlepic').innerHTML = 
+					'<figure><img src="images/hermann-' + imageIndex +
+					'.jpg" alt="images of Hermann Lofts" width="262" height="363"><figcaption>' + 
+					captions[imageIndex] + '</figcaption></figure>';
 			}
 			// oh god, make it stop
-			setInterval(imageRotate, 2500);
+			setInterval(imageRotate, 4500);
 			
 			// date countdown
 			var superBowlDate = new Date('February 5, 2017 18:30');
 			var today = new Date();
 			var daysUntil = Math.floor((superBowlDate.getTime() - today.getTime()) / (60 * 60 * 24 * 1000));
-			document.getElementById('superBowl').textContent = daysUntil;
+			document.getElementById('superBowl').textContent = daysUntil + ' days';
 
-	</script>
-	<script src="js/navMenu.js"></script>
+			// random image load
+			window.onload = function () {
+				var i = getRandomInt(0, 3);
+				document.getElementById('articlepic').innerHTML = '<figure><img src="images/hermann-' + i + 
+					'.jpg" alt="images of Hermann Lofts" width="262" height="363"><figcaption>' + captions[i] + '</figcaption></figure>';
+			};
+
+		</script>
+		<script src="js/navMenu.js"></script>
+		<script src="js/hippie.cc.js"></script>
 	</body>
 </html>
-
-<!--
-The idea of the hidden div menu came from:
-http://javascript-array.com/scripts/simple_drop_down_menu/
-I deconstructed it:
-	the html/css:
-		the horizontal "nav menu" is a horizontal list (ul with
-		list-style none) with the list-item as a string of inline-block
-		anchor tags (giving them shape), all but the
-		first hidden in a div.	mousing in, and out and around
-		the first anchor unhides the rest of the anchors in that
-		div, and then mousing in out and around the div affects
-		its visibility as well
-	
-		the div's position is absolute while it's anchors position
-		is relative, with the positive z index on the whole element the
-		menus float above the page
-
-	javascript:
-		storing the id of the element in a global variable
-		allows each menu to close whoever last opened then set
-		themselves as open.
-
-and rebuilt it for my purposes.
--->

@@ -21,24 +21,32 @@
 //  and rebuilt it for my purposes.
 //
 //  the original had a delay on close, I might reimplement that, it was "smoother"
+//    implement the timer, without looking at the original site
+
+//var navMenuImport = document.querySelector('#navMenuHTML');
+//var navMenuContent = navMenuImport.import.querySelector('#navMenuList');
+//document.getElementsByTagName('nav')[0].innerHTML = document.importNode(navMenuContent, true).innerHTML;
 
 var navMenuMenus = document.getElementsByClassName("navMenu");
 var navMenuMenuHeaders = document.getElementsByClassName("navMenuHeader");
+var navMenuMenuDelayTimer = 0;
 
 var navMenuOpenItem = 0;
 
 for (var i = 0; i < navMenuMenus.length; i++) {
 	navMenuMenus[i].onmouseover = function() {
+		clearTimeout(navMenuMenuDelayTimer);
 		navMenuMenuOpen(this);
 		};
 	navMenuMenus[i].onmouseout = function() {
-		navMenuMenuClose();
+		navMenuMenuCloseDelay();
 		};
 	navMenuMenuHeaders[i].onmouseover = function() {
+		clearTimeout(navMenuMenuDelayTimer);
 		navMenuMenuOpen(this.nextElementSibling);
 		};
 	navMenuMenuHeaders[i].onmouseout = function() {
-		navMenuMenuClose();
+		navMenuMenuCloseDelay();
 		};
 }
 
@@ -49,4 +57,7 @@ function navMenuMenuOpen(id) {
 	if (navMenuOpenItem) navMenuOpenItem.style.visibility = 'hidden';
 	navMenuOpenItem = id;
 	navMenuOpenItem.style.visibility = 'visible';
+}
+function navMenuMenuCloseDelay() {
+	navMenuMenuDelayTimer = setTimeout(function(){navMenuMenuClose()}, 1500);
 }
