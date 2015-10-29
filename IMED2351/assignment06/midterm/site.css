@@ -186,24 +186,24 @@ nav div a {
 }
 
 #contactForm {
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
-label.contact {
+label.formLabel {
 	display: inline-block;
 	width: 100px;
 }
 
-label.textA {
+label.formTextA {
 	margin: .25em 0 0; /* align top is really high compared the first line of text...push it back down a bit */
 	vertical-align: top;
 }
 
-input.contact {
+input.formInput {
 	float: right;
 	margin: 1em 17em 0;
 }
 
-span.errorText {
+span.formErrorText {
 	margin: 0 0 0 1em;
 }
