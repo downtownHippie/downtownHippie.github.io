@@ -13,7 +13,7 @@
 		<div id="wrapper">
 			<header>
 				<h1>Contact Page</h1>
-				<h4>how to phone home and ask us stuff</h4>
+				<h4>Phone home, ask us stuff</h4>
 			</header>
 			<nav>
 <div id='navMenuList'>
@@ -55,11 +55,24 @@
 			</aside>
 			<article>
 				<form method="get" action="thankyou.html" id="contactForm">
-					<p><label class="formLabel">Name</label><input type="text" name="name" id="name" placeholder='Name'><span id="nameErrorText" class="formErrorText"></span></p>
-					<p><label class="formLabel">Email</label><input type="text" name="email" id="email" placeholder='Email'><span id="emailErrorText" class="formErrorText"></span></p>
-					<p><label class="formLabel formTextA">Message</label><textarea name="message" id ="message" rows="10" cols="50" placeholder='Please send us a message'></textarea>
-						<span id="messageErrorText" class="formErrorText"</span></p>
-					<p><input class="formInput" type="submit" value="Submit">
+					<p>
+						<label class="formLabel">Name</label>
+						<input type="text" name="name" id="name" placeholder='Name'>
+						<span id="nameErrorText" class="formErrorText"></span>
+					</p>
+					<p>
+						<label class="formLabel">Email</label>
+						<input type="text" name="email" id="email" placeholder='Email'>
+						<span id="emailErrorText" class="formErrorText"></span>
+					</p>
+					<p>
+						<label class="formLabel formTextA">Message</label>
+						<textarea name="message" id ="message" rows="10" cols="50" placeholder='Please send us a message'></textarea>
+						<span id="messageErrorText" class="formErrorText"></span>
+					</p>
+					<p>
+						<input class="formInput" type="submit" value="Submit">
+					</p>
 				</form>
 			</article>
 			<div id="push"></div>
@@ -76,7 +89,7 @@
 				var email = document.getElementById('email').value;
 				var message = document.getElementById('message').value;
 
-				var errorTexts = document.getElementsByClassName("errorText");
+				var errorTexts = document.getElementsByClassName("formErrorText");
 				for (var i = 0; i < errorTexts.length; i++) {
 					errorTexts[i].textContent = '';
 				}

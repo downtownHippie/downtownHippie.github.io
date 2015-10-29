@@ -59,5 +59,5 @@ function navMenuMenuOpen(id) {
 	navMenuOpenItem.style.visibility = 'visible';
 }
 function navMenuMenuCloseDelay() {
-	navMenuMenuDelayTimer = setTimeout(function(){navMenuMenuClose()}, 1500);
+	navMenuMenuDelayTimer = setTimeout(function(){navMenuMenuClose()}, 750);
 }

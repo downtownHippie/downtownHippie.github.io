@@ -139,6 +139,7 @@ nav ul {
 	list-style: outside none none;
 	text-align: center;
 	margin: 0;
+	padding: 0;
 }
 
 nav li {
@@ -180,30 +181,39 @@ nav div a {
 }
 
 /* form input validation */
-.errorText {
+.formErrorText {
 	font-style: italic;
 	color: red;
+	margin: 0 0 0 1em;
 }
 
 #contactForm {
 	/* overflow: hidden; */
 }
 
-label.formLabel {
+.formLabel {
 	display: inline-block;
 	width: 100px;
 }
 
-label.formTextA {
+.formTextA {
 	margin: .25em 0 0; /* align top is really high compared the first line of text...push it back down a bit */
 	vertical-align: top;
 }
 
-input.formInput {
+.formInput {
 	float: right;
 	margin: 1em 17em 0;
 }
 
-span.formErrorText {
-	margin: 0 0 0 1em;
+.formSelect {
+	width: 100px;
+}
+
+.formTableCb {
+	width: 100px;
+}
+
+#petNameInput { /* default for the list is no display */
+	display: none;
 }
