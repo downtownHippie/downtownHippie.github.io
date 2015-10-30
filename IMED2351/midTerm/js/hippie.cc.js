@@ -52,7 +52,7 @@ function showElements(selection, elementName) {
 
 	for (var i = 1; i <= selection.value ; i++) {
 		fullName = elementName + i;
-		document.getElementById(fullName).style.displaa = 'block';
+		document.getElementById(fullName).style.display = 'block';
 	}
 
 	var curSpot = selection.value;
