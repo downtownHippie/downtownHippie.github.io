@@ -16,9 +16,6 @@ html, body {
 	background-color: #C2A57B;
 	font-family: sans-serif;
 }
-td {
-	text-align: center;
-}
 
 #wrapper {
 	min-height: 100%;
@@ -28,27 +25,27 @@ td {
 	/* so we add 27 to the 50 */
 	/* for the push */
 	margin: 0 auto -77px;
-	/* background-color: hotpink; */
+	/* background-color: purple; */
 }
 
 header {
-	padding: 10px;
+	padding: 2em 0;
 	background-color: #707678;
 	text-align: center;
 }
 header h1 {
-	font-size: 48px;
-	/* background-color: blue; */
+	font-size: 4em;
+	/* background-color: violet; */
 } 
 header h4 {
-	margin-top: -25px; /* bring it closer to the main header */
+	margin-top: -2em; /* bring it closer to the main header */
 	/* background-color: yellow; */
 }
 
 aside {
 	float: right;
 	width: 280px;
-	margin: 0;
+	margin: 0 2em 0 0;
 	/* background-color: grey; */
 }
 aside dl {
@@ -63,11 +60,14 @@ aside dd {
 aside td {
 	font-size: 90%;
 	font-weight: bold;
+	text-align: center;
 }
 
 article {
 	width: 780px;
 	/* background-color: green; */
+	margin: 0 0 0 2em;
+	padding: 0 0 2em 0;
 }
 article #articlepic {
 	float: right;
@@ -84,20 +84,19 @@ footer, #push {
 	/* background-color: blue; */
 }
 footer hr {
-	margin-bottom: -5px;
-	margin-top: 25px;
+	margin: 0;
 }
 footer .pRight {
 	float: right;
 	clear: both;
 	text-align: right;
-	margin-right: 10px;
+	margin-right: 1em;
 	/* background-color: cornflowerblue; */
 }
 footer .pLeft {
 	float: left;
 	text-align: left;
-	margin-left: 10px;
+	margin-left: 1em;
 	/* background-color: pink; */
 }
 
@@ -131,27 +130,29 @@ footer .pLeft {
 
 /* navigation menu */
 nav {
-	z-index: 30;
+	z-index: 30; /* place the nav bar in front of the base page */
 	background-color: #707678;
-	/* background-color: cornflowerblue; */
+	/* background-color: orange; */
+	margin: 0 0 2em 0;
 }
 nav ul {
 	list-style: outside none none;
 	text-align: center;
 	margin: 0;
+	padding: 0;
 }
 
 nav li {
 	display: inline-block;
 	background-color: #707678;
-	width: 200px;
+	width: 15em;
 }
 
 nav li a {
 	display: block;
 	background-color: #707678;
 	text-decoration: none;
-	width: 200px;
+	width: 15em;
 	color: black;
 	border: 1px solid black;
 	margin: 1px;
@@ -180,30 +181,43 @@ nav div a {
 }
 
 /* form input validation */
-.errorText {
+.formErrorText {
 	font-style: italic;
 	color: red;
+	margin: 0 0 0 1em;
 }
 
-#contactForm {
+form {
 	overflow: hidden;
 }
 
-label.contact {
+.formLabel {
 	display: inline-block;
-	width: 100px;
+	width: 10em;
 }
 
-label.textA {
+.formTextA {
 	margin: .25em 0 0; /* align top is really high compared the first line of text...push it back down a bit */
 	vertical-align: top;
 }
 
-input.contact {
+.formInput {
 	float: right;
 	margin: 1em 17em 0;
 }
 
-span.errorText {
-	margin: 0 0 0 1em;
+.formSelect {
+	width: 10em;
+}
+
+.formTableCb {
+	width: 5em;
+}
+
+#petNameInput { /* default for the list is no display */
+	display: none;
+}
+
+.thinInput {
+	width: 3em;
 }

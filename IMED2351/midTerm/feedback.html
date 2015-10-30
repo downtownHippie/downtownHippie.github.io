@@ -13,7 +13,7 @@
 		<div id="wrapper">
 			<header>
 				<h1>The Feedback Page</h1>
-				<h4>Where to leave us a note to tell us how you feel</h4>
+				<h4>Leave us a note and tell us how you feel</h4>
 			</header>
 			<nav>
 <div id='navMenuList'>
@@ -54,39 +54,91 @@
 			<aside>
 			</aside>
 			<article>
-				<form method="get" action="thankyou.html" id="feedback">
-					<label>Name</label><input type="text" name="name" id="name"><br/>
-					<label>EMail</label><input type="text" name="email" id="email"><br/>
-					<label>Phone</label><input type="text" name="phone" id="phone"><br/>
-					<label>Gender</label><input type="radio" name="gender" value="male">Male<input type="radio" name="gender" value="female">Female<br/>
-					<label>How many Pets do you have?</label><select name="pets">
-						<option value="0">None</option>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-					</select><br/>
-					<label>Pet Names:</label><br/>
-					<span id="petNameInput"></span><br/>
-					<label>Interests</label><br/>
-					<input type="checkbox" name="interestNone" value="interestNone">None
-					<input type="checkbox" name="interestWalking" value="interestWalking">Walking<br/>
-					<input type="checkbox" name="interestRunning" value="interestRunning">Running
-					<input type="checkbox" name="interestSwimming" value="interestSwimming">Swimming<br/>
-					<input type="checkbox" name="interestBiking" value="interestBiking">Biking
-					<input type="checkbox" name="interestOther" value="interestOther">Other<br/>
-
-					<label>Comments</label><textarea name="comments" rows="10" cols="50">plesae leave us your comments</textarea><br/>
-					<input type="checkbox" name="terms" value="termsAgree">by checking this box I agree to the unspecified terms of this site<br/>
-					<input type="submit" value="Submit">
+				<form method="get" action="thankyou.html" id="hippieForm">
+					<p>
+						<label class="formLabel">Name</label>
+						<input class="formValidate" type="text" name="name" id="name" placeholder="Name">
+						<span id="nameErrorText" class="formErrorText"></span>
+					</p>
+					<p>
+						<label class="formLabel">EMail</label>
+						<input class="formValidate" type="text" name="email" id="email" placeholder="Email">
+						<span id="emailErrorText" class="formErrorText"></span>
+					</p>
+					<p>
+						<label class="formLabel">Phone</label>
+						(<input class="formValidate thinInput" type="text" name="phone" id="phone" placeholer="Phone">)-
+						<input class="formValidate thinInput" type="text" name="phone" id="phone" placeholer="Phone">-
+						<input class="formValidate thinInput" type="text" name="phone" id="phone" placeholer="Phone">
+						<span id="phoneErrorText" class="formErrorText"></span>
+					</p>
+					<p>
+						<label class="formLabel">Gender</label>
+						<input class="formRadio" type="radio" name="gender" value="male">Male
+						<input class="formRadio" type="radio" name="gender" value="female">Female
+						<span id="genderErrorText" class="formErrorText"></span>
+					</p>
+					<p>
+						<label class="formLabel">How many Pets do you have?</label>
+						<select class="formSelect" name="pets" id="petSelect">
+							<option value="0">None</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+						<div id="petNameInput">
+							<label class="formLabel">Pet Names:</label>
+							<br/>
+							<ol>
+								<li class="hideList" id="petName1"><input type="text" name"petName1" id="petName1" placeholder="First pet's name"></li>
+								<li class="hideList" id="petName2"><input type="text" name"petName2" id="petName2" placeholder="Second pet's name"></li>
+								<li class="hideList" id="petName3"><input type="text" name"petName3" id="petName3" placeholder="Third pet's name"></li>
+								<li class="hideList" id="petName4"><input type="text" name"petName4" id="petName4" placeholder="Fourth pet's name"></li>
+								<li class="hideList" id="petName5"><input type="text" name"petName5" id="petName5" placeholder="Fifth pet's name"></li>
+							</ol>
+						</div>
+					</p>
+					<p>
+						<label class="formLabel">Interests</label>
+					</p>
+						<table>
+							<tr>
+								<td><input class="formTableCb interestsCBGroup" type="checkbox" id="interestNone" name="interestNone" value="interestNone">None</td>
+								<td><input class="formTableCb interestsCBGroup" type="checkbox" id="interestWalking" name="interestWalking" value="interestWalking">Walking</td>
+							</tr>
+							<tr>
+								<td><input class="formTableCb interestsCBGroup" type="checkbox" id="interestRunning" name="interestRunning" value="interestRunning">Running</td>
+								<td><input class="formTableCb interestsCBGroup" type="checkbox" id="interestSwimming" name="interestSwimming" value="interestSwimming">Swimming</td>
+							</tr>
+							<tr>
+								<td><input class="formTableCb interestsCBGroup" type="checkbox" id="interestBiking" name="interestBiking" value="interestBiking">Biking</td>
+								<td><input class="formTableCb interestsCBGroup" type="checkbox" id="interestOther" name="interestOther" value="interestOther">Other</td>
+							</tr>
+						</table>
+					<p>
+						<span id="otherInterest"></span>
+					</p>
+					<p>
+						<label class="formLabel formTextA">Comments</label>
+						<textarea class="formValidate" name="comments" rows="10" cols="50" placeholder="Please leave us your comments"></textarea>
+						<br/>
+						<span id="commentsErrorText" class="formErrorText"></span>
+					</p>
+					<p>
+						<input class="formTableCb" type="checkbox" name="terms" value="termsAgree" id="termsAgreedTo">by checking this box I agree to the unspecified terms of this site
+					</p>
+					<p>
+						<input class="formInput" type="submit" value="Submit" disabled id="submitButton">
+					</p>
 				</form>
 			</article>
 			<div id="push"></div>
 		</div> <!-- wrapper -->
 		<footer>
 			<hr/>
-			<p class="pRight">&#169; 2014 - <span id="currYearForCopyright">2014</span> <a href="mailto:someone@some.where">Joe Reid</a> IMED1316 and IMED2351</p> IMED2351</p>
+			<p class="pRight">&#169; 2014 - <span id="currYearForCopyright">2014</span> <a href="mailto:someone@some.where">Joe Reid</a> IMED1316 and IMED2351 IMED2351</p>
 		</footer>
 		<script src="js/navMenu.js"></script>
 		<script src="js/hippie.cc.js"></script>
