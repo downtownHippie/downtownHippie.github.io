@@ -54,28 +54,33 @@
 			<aside>
 			</aside>
 			<article>
-				<form method="get" action="thankyou.html" id="feedback">
+				<form method="get" action="thankyou.html" id="hippieForm">
 					<p>
 						<label class="formLabel">Name</label>
-						<input type="text" name="name" id="name">
+						<input class="formValidate" type="text" name="name" id="name" placeholder="Name">
+						<span id="nameErrorText" class="formErrorText"></span>
 					</p>
 					<p>
 						<label class="formLabel">EMail</label>
-						<input type="text" name="email" id="email">
+						<input class="formValidate" type="text" name="email" id="email" placeholder="Email">
+						<span id="emailErrorText" class="formErrorText"></span>
 					</p>
 					<p>
 						<label class="formLabel">Phone</label>
-						<input type="text" name="phone" id="phone">
+						(<input class="formValidate thinInput" type="text" name="phone" id="phone" placeholer="Phone">)-
+						<input class="formValidate thinInput" type="text" name="phone" id="phone" placeholer="Phone">-
+						<input class="formValidate thinInput" type="text" name="phone" id="phone" placeholer="Phone">
+						<span id="phoneErrorText" class="formErrorText"></span>
 					</p>
 					<p>
 						<label class="formLabel">Gender</label>
-						<br/>
 						<input class="formRadio" type="radio" name="gender" value="male">Male
 						<input class="formRadio" type="radio" name="gender" value="female">Female
+						<span id="genderErrorText" class="formErrorText"></span>
 					</p>
 					<p>
 						<label class="formLabel">How many Pets do you have?</label>
-						<select class="formSelect" name="pets">
+						<select class="formSelect" name="pets" id="petSelect">
 							<option value="0">None</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
@@ -83,42 +88,49 @@
 							<option value="4">4</option>
 							<option value="5">5</option>
 						</select>
-						<span id="petNameInput">
+						<div id="petNameInput">
 							<label class="formLabel">Pet Names:</label>
 							<br/>
-							<span id="petNameList"></span>
-						</span>
+							<ol>
+								<li class="hideList" id="petName1"><input type="text" name"petName1" id="petName1" placeholder="First pet's name"></li>
+								<li class="hideList" id="petName2"><input type="text" name"petName2" id="petName2" placeholder="Second pet's name"></li>
+								<li class="hideList" id="petName3"><input type="text" name"petName3" id="petName3" placeholder="Third pet's name"></li>
+								<li class="hideList" id="petName4"><input type="text" name"petName4" id="petName4" placeholder="Fourth pet's name"></li>
+								<li class="hideList" id="petName5"><input type="text" name"petName5" id="petName5" placeholder="Fifth pet's name"></li>
+							</ol>
+						</div>
 					</p>
 					<p>
 						<label class="formLabel">Interests</label>
 					</p>
 						<table>
 							<tr>
-								<td><input class="formTableCb" type="checkbox" id="interestNone" name="interestNone" value="interestNone">None</td>
-								<td><input class="formTableCb" type="checkbox" id="interestWalking" name="interestWalking" value="interestWalking">Walking</td>
+								<td><input class="formTableCb interestsCBGroup" type="checkbox" id="interestNone" name="interestNone" value="interestNone">None</td>
+								<td><input class="formTableCb interestsCBGroup" type="checkbox" id="interestWalking" name="interestWalking" value="interestWalking">Walking</td>
 							</tr>
 							<tr>
-								<td><input class="formTableCb" type="checkbox" id="interestRunning" name="interestRunning" value="interestRunning">Running</td>
-								<td><input class="formTableCb" type="checkbox" id="interestSwimming" name="interestSwimming" value="interestSwimming">Swimming</td>
+								<td><input class="formTableCb interestsCBGroup" type="checkbox" id="interestRunning" name="interestRunning" value="interestRunning">Running</td>
+								<td><input class="formTableCb interestsCBGroup" type="checkbox" id="interestSwimming" name="interestSwimming" value="interestSwimming">Swimming</td>
 							</tr>
 							<tr>
-								<td><input class="formTableCb" type="checkbox" id="interestBiking" name="interestBiking" value="interestBiking">Biking</td>
-								<td><input class="formTableCb" type="checkbox" id="interestOther" name="interestOther" value="interestOther">Other</td>
+								<td><input class="formTableCb interestsCBGroup" type="checkbox" id="interestBiking" name="interestBiking" value="interestBiking">Biking</td>
+								<td><input class="formTableCb interestsCBGroup" type="checkbox" id="interestOther" name="interestOther" value="interestOther">Other</td>
 							</tr>
 						</table>
 					<p>
 						<span id="otherInterest"></span>
 					</p>
 					<p>
-						<label class="formLabel formTextA">Comments</label><textarea name="comments" rows="10" cols="50">plesae leave us your comments</textarea>
+						<label class="formLabel formTextA">Comments</label>
+						<textarea class="formValidate" name="comments" rows="10" cols="50" placeholder="Please leave us your comments"></textarea>
 						<br/>
+						<span id="commentsErrorText" class="formErrorText"></span>
 					</p>
 					<p>
-						<input type="checkbox" name="terms" value="termsAgree">by checking this box I agree to the unspecified terms of this site
-						<br/>
+						<input class="formTableCb" type="checkbox" name="terms" value="termsAgree" id="termsAgreedTo">by checking this box I agree to the unspecified terms of this site
 					</p>
 					<p>
-						<input class="formInput" type="submit" value="Submit">
+						<input class="formInput" type="submit" value="Submit" disabled id="submitButton">
 					</p>
 				</form>
 			</article>

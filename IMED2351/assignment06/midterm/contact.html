@@ -54,20 +54,21 @@
 			<aside>
 			</aside>
 			<article>
-				<form method="get" action="thankyou.html" id="contactForm">
+				<form method="get" action="thankyou.html" id="hippieForm">
 					<p>
 						<label class="formLabel">Name</label>
-						<input type="text" name="name" id="name" placeholder='Name'>
+						<input class="formValidate" type="text" name="name" id="name" placeholder="Name">
 						<span id="nameErrorText" class="formErrorText"></span>
 					</p>
 					<p>
 						<label class="formLabel">Email</label>
-						<input type="text" name="email" id="email" placeholder='Email'>
+						<input class="formValidate" type="text" name="email" id="email" placeholder="Email">
 						<span id="emailErrorText" class="formErrorText"></span>
 					</p>
 					<p>
 						<label class="formLabel formTextA">Message</label>
-						<textarea name="message" id ="message" rows="10" cols="50" placeholder='Please send us a message'></textarea>
+						<textarea class="formValidate" name="message" id ="message" rows="10" cols="50" placeholder="Please send us a message"></textarea>
+						</br>
 						<span id="messageErrorText" class="formErrorText"></span>
 					</p>
 					<p>
@@ -81,39 +82,6 @@
 			<hr/>
 			<p class="pRight">&#169; 2014 - <span id="currYearForCopyright">2014</span> <a href="mailto:someone@some.where">Joe Reid</a> IMED1316 and IMED2351</p>
 		</footer>
-
-		<script>
-			document.getElementById('contactForm').onsubmit = function() {
-				var valid = true;
-				var name = document.getElementById('name').value;
-				var email = document.getElementById('email').value;
-				var message = document.getElementById('message').value;
-
-				var errorTexts = document.getElementsByClassName("formErrorText");
-				for (var i = 0; i < errorTexts.length; i++) {
-					errorTexts[i].textContent = '';
-				}
-
-				if (isNullorEmpty(name)) {
-					document.getElementById("nameErrorText").textContent = "Please enter your name";
-					valid = false;
-				};
-
-				if (isNullorEmpty(email)) {
-					document.getElementById("emailErrorText").textContent = "Please enter your email";
-					valid = false;
-				};
-
-				if (isNullorEmpty(message)) {
-					document.getElementById("messageErrorText").textContent = "Please enter your message";
-					valid = false;
-				};
-
-				return valid;
-			};
-
-			document.getElementById('currYearForCopyright').textContent = new Date().getFullYear();
-		</script>
 		<script src="js/navMenu.js"></script>
 		<script src="js/hippie.cc.js"></script>
 	</body>
