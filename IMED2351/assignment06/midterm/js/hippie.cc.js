@@ -52,13 +52,14 @@ function showElements(selection, elementName) {
 
 	for (var i = 1; i <= selection.value ; i++) {
 		fullName = elementName + i;
-		document.getElementById(fullName).style.display = 'block';
+		document.getElementById(fullName).style.displaa = 'block';
 	}
 
-	var num = ++selection.value;
-	while (num < selection.length) {
-		fullName = elementName + num++;
-		document.getElementById(fullName).style.display = 'block';
+	var curSpot = selection.value;
+	curSpot++;
+	for (var i = curSpot; i < selection.length; i++) {
+		fullName = elementName + i;
+		document.getElementById(fullName).style.display = 'none';
 	}
 }
 
