@@ -3,7 +3,7 @@
 
 // setup some useful common page elements
 
-document.getElementById("currYearForCopyright").textContent = new Date().getFullYear();
+document.getElementById('currYearForCopyright').textContent = new Date().getFullYear();
 
 // common functions
 //
@@ -17,7 +17,7 @@ function isNullorEmpty(text) {
 
 
 // hide show blocks
-var hideLists = document.getElementsByClassName("hideListHeader");
+var hideLists = document.getElementsByClassName('hideListHeader');
 for (var i = 0; i < hideLists.length; i++) {
 	hideLists[i].onclick = function() {
 		hideMenu(this.nextElementSibling);
@@ -48,11 +48,11 @@ function getRandomInt(min, max) {
 }
 
 function showElements(selection, elementName) {
-	var fullName = "";
+	var fullName = '';
 
-	for (var i = 1; i <= selection.value ; i++) {
+	for (var i = 1; i <= selection.value; i++) {
 		fullName = elementName + i;
-		document.getElementById(fullName).style.displaa = 'block';
+		document.getElementById(fullName).style.display = 'block';
 	}
 
 	var curSpot = selection.value;
@@ -73,7 +73,7 @@ function validateRadios(radios) {
 document.getElementById('hippieForm').onsubmit = function() {
 	var valid = true;
 
-	var errorTexts = document.getElementsByClassName("formErrorText");
+	var errorTexts = document.getElementsByClassName('formErrorText');
 	for (var i = 0; i < errorTexts.length; i++) {
 		errorTexts[i].textContent = '';
 	}
@@ -84,15 +84,15 @@ document.getElementById('hippieForm').onsubmit = function() {
 		var v = elles[i];
 		if (isNullorEmpty(v.value)) {
 				var n = elles[i].name;
-				document.getElementById(n + "ErrorText").textContent = "Please enter your " + n;
+				document.getElementById(n + 'ErrorText').textContent = 'Please enter your ' + n;
 				valid = false;
 		};
 	}
 
-	var radios = (document.forms["hippieForm"]["gender"])
+	var radios = (document.forms['hippieForm']['gender'])
 	if (radios != null) {
 		if (!validateRadios(radios)) {
-			document.getElementById("genderErrorText").textContent = "Please tell us if you're an inny or an outy";
+			document.getElementById('genderErrorText').textContent = 'Please tell us if you're an inny or an outy';
 			valid = false;
 		}
 	}
@@ -111,7 +111,7 @@ document.getElementById('termsAgreedTo').onchange = function() {
 document.getElementById('petSelect').onchange = function() {
 	if (this.value > 0) {
 		document.getElementById('petNameInput').style.display = 'block';
-		showElements(this, "petName");
+		showElements(this, 'petName');
 	}
 	else {
 		document.getElementById('petNameInput').style.display = 'none';
