@@ -92,7 +92,7 @@ document.getElementById('hippieForm').onsubmit = function() {
 	var radios = (document.forms['hippieForm']['gender'])
 	if (radios != null) {
 		if (!validateRadios(radios)) {
-			document.getElementById('genderErrorText').textContent = 'Please tell us if you're an inny or an outy';
+			document.getElementById('genderErrorText').textContent = 'Please tell us if you\'re an inny or an outy';
 			valid = false;
 		}
 	}
