@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>DOM Traversal Sample</title>
+	<meta charset="utf-8">
+    <style>
+        .cell {
+            height: 50px;
+            width: 50px;
+            border: 1px solid #000000;
+			text-align: center;
+        }
+		td:hover {
+			background-color: red;
+		}
+   </style>
+</head>
+<body>
+
+    <table class="board">
+        <tr id="row1" class="row">
+            <td id="cell11" class="cell">&nbsp;</td>
+            <td id="cell12" class="cell">&nbsp;</td>
+            <td id="cell13" class="cell">&nbsp;</td>
+        </tr>
+        <tr id="row2" class="row">
+            <td id="cell21" class="cell">&nbsp;</td>
+            <td id="cell22" class="cell">&nbsp;</td>
+            <td id="cell23" class="cell">&nbsp;</td>
+        </tr>
+        <tr id="row3" class="row">
+            <td id="cell31" class="cell">&nbsp;</td>
+            <td id="cell32" class="cell">&nbsp;</td>
+            <td id="cell33" class="cell">&nbsp;</td>
+        </tr>
+    </table>
+	
+	<script>
+	/*
+	INSTRUCTIONS:
+	
+	Convert the code below to jQuery
+	
+	- This page has a 9x9 table when the user clicks on a cell it will place an X in the cell.
+	
+	BONUS:  Add click event to remove the X if it is in the square.
+	
+	NOTE:  Don't forget to include the jQuery library.
+	
+	*/
+	window.onload = function() {
+		var mycell = document.getElementsByTagName("td");
+		var num = mycell.length;			// 9
+
+		for (i = 0; i <= num-1; i++)
+		{
+			mycell[i].addEventListener("click", function() {
+				this.textContent = "X";
+			});
+		}
+	};
+	</script>
+</body>
+</html>

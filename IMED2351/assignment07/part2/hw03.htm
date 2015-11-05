@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+
+<h1>Age Calculator</h1>
+
+<p id="content"></p>
+
+<script>
+/*
+INSTRUCTIONS:
+
+TODO:  Convert the plain JavaScript code below to jQuery
+HINT:  Don't forget to include the jQuery library
+
+Forgot how old someone is? Calculate it!
+
+Upload this file to your "assignment07/part2" folder of your site when complete.
+
+*/
+
+var birthyear = 1984;			// Store their birth year in a variable.
+var now  = new Date()
+now = now.getFullYear();		// Store the current year in a variable.
+var age  = now - birthyear;		// Calculate their 2 possible ages based on the stored values.
+
+// Output them to the screen like so: "They are either NN or NN", substituting the values.
+document.getElementById("content").innerHTML = 'They are either ' + age + ' or ' + (age - 1);
+
+</script>
+</body>
+</html>
+
+
+

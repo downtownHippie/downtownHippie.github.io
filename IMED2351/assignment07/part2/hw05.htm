@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Form</title>
+<meta charset="utf-8">
+
+</head>
+
+<body>
+
+<h1>Simple Form</h1>
+
+<form>
+	Name: <input type="text" id="name" value=""><br>
+	<button id="myBtn">Submit</button>
+</form>
+
+<h2 id="response"></h2>
+
+<script>
+/*
+INSTRUCTIONS:
+
+Convert the code below to jQuery
+
+NOTE:  Don't forget to include the jQuery library.
+
+*/
+	
+document.getElementById("myBtn").onclick = submitForm;
+
+function submitForm() {
+	var name = document.getElementById("name").value;
+
+	document.getElementById("response").textContent = "You entered: " + name;
+
+	return false;
+}
+
+</script>
+
+</body>
+</html>

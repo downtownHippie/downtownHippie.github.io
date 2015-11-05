@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--
+INSTRUCTIONS:
+
+Convert the JavaScript below to jQuery.
+
+1.  When the user enters a number between 0 - 100 you must calculate the related letter grade when they click the button.
+
+2.  The letter grades are as follows:
+90 - 100 = A
+80 - 89 = B
+70 - 79 = C
+60 - 69 = D
+59 and below = F
+
+BONUS:  Add validation.  If the user enters a number less than 0 or greater than 100 then display an error message
+
+Upload this file to your "assignment07/part2" folder of your site when complete.
+
+//-->
+</head>
+
+<body>
+
+<h1>Letter Grade</h1>
+
+<form>
+Input number grade: <input type="text" id="numberGrade">
+<button id="mybutton">Get Letter Grade</button>
+</form>
+
+<p>Letter grade: <span id="letterGrade"></span></p>
+
+
+<script>
+
+document.getElementById("mybutton").onclick = getLetterGrade;
+
+function getLetterGrade() {
+
+	var numberGrade = document.getElementById("numberGrade").value;
+	var letterGrade = "F";
+	
+	// Place conditional logic here
+	if (numberGrade >= 90) {
+		letterGrade = "A";
+	}
+	if (numberGrade >= 80 && numberGrade < 90) {
+		letterGrade = "B";
+	}
+	if (numberGrade >= 70 && numberGrade  < 80) {
+		letterGrade = "C";
+	}
+	if (numberGrade >= 60 && numberGrade < 70) {
+		letterGrade = "D";
+	}
+	if (numberGrade < 60) {
+		letterGrade = "F";
+	}
+
+	document.getElementById("letterGrade").innerHTML = letterGrade;
+	
+	return false;
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Homework 7 - Part 2</title>
+<meta charset="utf-8">
+<!--
+
+INSTRUCTIONS:
+1.  This page has a list of 100 records on it.
+2.  Build the jQuery code to allow a user to click the "delete" button and remove a row.
+3.  You should be able to remove any row one at a time
+4.  Do this without modifying the existing HTML code.  Only add the jQuery library and jQuery code to the page
+5.  You may modify the CSS code if needed, but do not modify any html.
+
+NOTE:  The items in the list will not be permanently deleted.  When the page is reloaded
+all items will come back.  This technique is used for lists of items on a page to "visually"
+delete a table row on the client-side first and then data is sent to the server later to delete 
+from a database.
+
+Upload this file to your "assignment7/part2" folder of your site when complete.
+
+//-->
+<style>
+body {
+	margin:10px;
+}
+
+table,th,td,li,dl {
+	font-family:"lucida grande",arial;
+	font-size:10pt;
+}
+
+dt {
+	font-weight:700;
+}
+
+table {
+	background-color:#efefef;
+	border:2px solid #ddd;
+	width:100%;
+}
+
+th {
+	background-color:#ddd;
+}
+/*
+td {
+	background-color:#fff;
+}
+*/
+tr:nth-child(odd) {
+	background-color: #efefef;
+}
+tr:nth-child(even) {
+	background-color: #fff;
+}
+
+tr:hover {
+	background-color: #ff0;
+}
+</style>
+</head>
+<body>
+
+<table cellpadding="1" cellspacing="0" id="myTable">
+<tr>
+<th>FirstName</th>
+<th>LastName</th>
+<th>Company</th>
+<th>Phone</th>
+<th>Action</th>
+</tr>
+<tr>
+<td>Hammett</td>
+<td>Hickman</td>
+<td>In Condimentum Donec Inc.</td>
+<td>1-527-167-6008</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Patience</td>
+<td>Robertson</td>
+<td>Donec Ltd</td>
+<td>1-712-761-4970</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Chaney</td>
+<td>Campbell</td>
+<td>Facilisis Suspendisse Associates</td>
+<td>1-740-547-1172</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Whilemina</td>
+<td>Lawson</td>
+<td>Tempor Corporation</td>
+<td>1-582-869-9186</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Channing</td>
+<td>Blevins</td>
+<td>Fermentum Metus Aenean Consulting</td>
+<td>1-633-788-4092</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Dustin</td>
+<td>Stuart</td>
+<td>A Auctor Non Company</td>
+<td>1-889-265-0569</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Damon</td>
+<td>Stanton</td>
+<td>Elementum Ltd</td>
+<td>1-979-447-1870</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Barclay</td>
+<td>Bishop</td>
+<td>Elit A Feugiat LLC</td>
+<td>1-972-988-4841</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Rylee</td>
+<td>Pacheco</td>
+<td>Habitant Institute</td>
+<td>1-584-518-2370</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Hayes</td>
+<td>Shepherd</td>
+<td>Morbi Foundation</td>
+<td>1-533-722-5600</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Rylee</td>
+<td>Valencia</td>
+<td>Metus In Lorem Institute</td>
+<td>1-535-987-8005</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Amery</td>
+<td>Hood</td>
+<td>Donec Feugiat Institute</td>
+<td>1-151-523-6807</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Violet</td>
+<td>Solomon</td>
+<td>Vivamus Rhoncus Donec Foundation</td>
+<td>1-410-118-7998</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Karina</td>
+<td>William</td>
+<td>Tincidunt Corp.</td>
+<td>1-196-249-5185</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Stacey</td>
+<td>Rogers</td>
+<td>Ligula Nullam Ltd</td>
+<td>1-196-298-0779</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Kelsey</td>
+<td>Edwards</td>
+<td>Odio Etiam Ligula Corporation</td>
+<td>1-181-796-7475</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Alea</td>
+<td>Merritt</td>
+<td>Vestibulum Neque Corporation</td>
+<td>1-851-561-3780</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Orla</td>
+<td>Hall</td>
+<td>Aliquam Corporation</td>
+<td>1-579-749-3140</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Patrick</td>
+<td>Hines</td>
+<td>Nisi Aenean Eget Associates</td>
+<td>1-893-940-0789</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Quentin</td>
+<td>Manning</td>
+<td>Mollis Inc.</td>
+<td>1-559-424-3567</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Melinda</td>
+<td>Hess</td>
+<td>Quam Ltd</td>
+<td>1-124-418-4253</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Cora</td>
+<td>Freeman</td>
+<td>Eu Nibh Vulputate LLC</td>
+<td>1-299-242-5782</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Kamal</td>
+<td>Joseph</td>
+<td>Dis Parturient Montes Associates</td>
+<td>1-270-612-4559</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Tiger</td>
+<td>Richardson</td>
+<td>Ipsum Incorporated</td>
+<td>1-792-607-8647</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Tasha</td>
+<td>Wooten</td>
+<td>Sapien Foundation</td>
+<td>1-173-134-3808</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Rose</td>
+<td>Woodard</td>
+<td>Odio Aliquam Vulputate Institute</td>
+<td>1-986-347-9334</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Austin</td>
+<td>Daugherty</td>
+<td>Egestas Duis Associates</td>
+<td>1-235-549-9770</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Michelle</td>
+<td>Mcmillan</td>
+<td>Nec Foundation</td>
+<td>1-835-559-1535</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Aaron</td>
+<td>Hoover</td>
+<td>Orci Adipiscing Non Foundation</td>
+<td>1-550-204-0028</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Athena</td>
+<td>Tran</td>
+<td>Cras Pellentesque Inc.</td>
+<td>1-295-731-7560</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Avye</td>
+<td>Newman</td>
+<td>A Nunc Corp.</td>
+<td>1-336-347-7579</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Ima</td>
+<td>Santiago</td>
+<td>Neque Et Nunc Industries</td>
+<td>1-218-782-8684</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Nerea</td>
+<td>Thornton</td>
+<td>Amet Foundation</td>
+<td>1-340-975-6503</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Kennan</td>
+<td>Kirby</td>
+<td>Vestibulum LLP</td>
+<td>1-255-924-1000</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Kasimir</td>
+<td>Park</td>
+<td>Montes Nascetur Ridiculus Consulting</td>
+<td>1-684-772-2472</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Remedios</td>
+<td>Fry</td>
+<td>Nec Euismod In Institute</td>
+<td>1-203-705-1261</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Dieter</td>
+<td>Calhoun</td>
+<td>Cursus Nunc Mauris Institute</td>
+<td>1-886-344-4782</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Zenaida</td>
+<td>Oneill</td>
+<td>Magna Lorem Foundation</td>
+<td>1-397-678-1807</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Alexander</td>
+<td>Glenn</td>
+<td>Suspendisse Commodo Tincidunt Ltd</td>
+<td>1-763-488-8357</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Larissa</td>
+<td>Langley</td>
+<td>Dolor Donec Incorporated</td>
+<td>1-142-800-6187</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Wing</td>
+<td>Vaughn</td>
+<td>Sit Institute</td>
+<td>1-654-993-7773</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Jolene</td>
+<td>Farmer</td>
+<td>Luctus Vulputate Nisi LLP</td>
+<td>1-298-488-4503</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Doris</td>
+<td>Wilkins</td>
+<td>Integer Associates</td>
+<td>1-194-593-8715</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Allen</td>
+<td>Mcdaniel</td>
+<td>Blandit Nam Nulla Ltd</td>
+<td>1-394-143-9889</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Carolyn</td>
+<td>Bullock</td>
+<td>Aliquet Libero Integer Ltd</td>
+<td>1-744-294-4815</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Iola</td>
+<td>Cortez</td>
+<td>At Company</td>
+<td>1-650-264-4523</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Irma</td>
+<td>Huff</td>
+<td>Parturient Montes Industries</td>
+<td>1-903-423-8619</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Declan</td>
+<td>Mercer</td>
+<td>Dolor Industries</td>
+<td>1-304-320-7660</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Yuli</td>
+<td>Barr</td>
+<td>Ut Lacus LLC</td>
+<td>1-434-766-0532</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Keane</td>
+<td>Marsh</td>
+<td>Primis In Faucibus Consulting</td>
+<td>1-790-232-2098</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Cain</td>
+<td>Ware</td>
+<td>Sed Pede Nec LLC</td>
+<td>1-306-773-3886</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Amy</td>
+<td>Head</td>
+<td>Amet Corp.</td>
+<td>1-361-384-5155</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Aubrey</td>
+<td>Newton</td>
+<td>Et Arcu Incorporated</td>
+<td>1-833-501-8497</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Breanna</td>
+<td>Alston</td>
+<td>Diam Industries</td>
+<td>1-355-484-7463</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Zia</td>
+<td>Patterson</td>
+<td>Molestie Tortor Nibh Foundation</td>
+<td>1-330-771-8557</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Emery</td>
+<td>Moss</td>
+<td>Lacus Nulla Tincidunt Company</td>
+<td>1-766-394-7793</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Brandon</td>
+<td>Weiss</td>
+<td>Donec LLP</td>
+<td>1-847-805-9914</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Nathaniel</td>
+<td>Haynes</td>
+<td>Donec Associates</td>
+<td>1-214-744-2222</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Linus</td>
+<td>Good</td>
+<td>Aliquam LLP</td>
+<td>1-648-439-8389</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Ray</td>
+<td>Macdonald</td>
+<td>Ac Mattis Company</td>
+<td>1-202-687-0192</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Ferris</td>
+<td>Mack</td>
+<td>Dui Lectus Inc.</td>
+<td>1-117-940-8237</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>David</td>
+<td>Clayton</td>
+<td>Magna Corp.</td>
+<td>1-471-630-3312</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Melodie</td>
+<td>Hooper</td>
+<td>Molestie Pharetra Nibh Consulting</td>
+<td>1-130-824-8172</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Urielle</td>
+<td>Atkinson</td>
+<td>Mauris Non PC</td>
+<td>1-653-717-7418</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Nathaniel</td>
+<td>Rosario</td>
+<td>Et Corp.</td>
+<td>1-354-337-7295</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Katell</td>
+<td>Sloan</td>
+<td>Imperdiet Nec Corp.</td>
+<td>1-256-627-3014</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Thomas</td>
+<td>Sykes</td>
+<td>Fermentum LLC</td>
+<td>1-349-773-5554</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Aurora</td>
+<td>Blackburn</td>
+<td>Parturient Company</td>
+<td>1-485-948-7789</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Catherine</td>
+<td>Roman</td>
+<td>Suspendisse Eleifend Cras Company</td>
+<td>1-374-252-4070</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Jameson</td>
+<td>Spencer</td>
+<td>Ipsum Ltd</td>
+<td>1-213-717-6844</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Rinah</td>
+<td>Nielsen</td>
+<td>Natoque Corp.</td>
+<td>1-388-803-0538</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Lunea</td>
+<td>Rowe</td>
+<td>Donec Vitae Erat Limited</td>
+<td>1-296-667-3268</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Quon</td>
+<td>Hudson</td>
+<td>Sed Facilisis Corp.</td>
+<td>1-639-410-7160</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Adrian</td>
+<td>Cunningham</td>
+<td>Orci Consectetuer Euismod Consulting</td>
+<td>1-498-145-8774</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Lucy</td>
+<td>Matthews</td>
+<td>Risus Donec Egestas PC</td>
+<td>1-169-101-0736</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Reese</td>
+<td>Garrett</td>
+<td>Faucibus Id Libero Company</td>
+<td>1-809-704-2910</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Iola</td>
+<td>Sampson</td>
+<td>Varius Nam Industries</td>
+<td>1-245-246-3536</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Cherokee</td>
+<td>Christian</td>
+<td>Neque Nullam Ut Associates</td>
+<td>1-198-959-3885</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Sandra</td>
+<td>Finley</td>
+<td>Integer In Foundation</td>
+<td>1-361-885-4108</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Risa</td>
+<td>Figueroa</td>
+<td>A LLC</td>
+<td>1-872-678-5064</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Mary</td>
+<td>Knox</td>
+<td>Gravida Non Sollicitudin Industries</td>
+<td>1-425-513-0651</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Jonah</td>
+<td>Griffin</td>
+<td>Vel Nisl Corporation</td>
+<td>1-839-106-9676</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Alexandra</td>
+<td>Henry</td>
+<td>Dui LLP</td>
+<td>1-117-668-0655</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Signe</td>
+<td>Yang</td>
+<td>Eros Nec Tellus Ltd</td>
+<td>1-118-119-6154</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Paloma</td>
+<td>Lewis</td>
+<td>Proin Ultrices Duis Incorporated</td>
+<td>1-394-950-8573</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Brielle</td>
+<td>Mccullough</td>
+<td>Dapibus Quam Industries</td>
+<td>1-810-711-6831</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Denise</td>
+<td>Baxter</td>
+<td>Enim Nunc Ut Industries</td>
+<td>1-938-433-4291</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Lisandra</td>
+<td>Black</td>
+<td>Mi Aliquam Gravida Corp.</td>
+<td>1-682-664-8221</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Jasper</td>
+<td>Kinney</td>
+<td>Dictum PC</td>
+<td>1-219-953-3952</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Calvin</td>
+<td>Coffey</td>
+<td>Laoreet Ipsum Corporation</td>
+<td>1-550-716-1094</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Carl</td>
+<td>Hancock</td>
+<td>Urna Nullam Lobortis Limited</td>
+<td>1-547-543-8724</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Aurelia</td>
+<td>Horton</td>
+<td>Non Luctus LLC</td>
+<td>1-798-870-4903</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Garrett</td>
+<td>Dillon</td>
+<td>Vehicula Pellentesque Tincidunt Limited</td>
+<td>1-380-935-2125</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Madeson</td>
+<td>Griffith</td>
+<td>Vitae Associates</td>
+<td>1-407-384-3234</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Kasimir</td>
+<td>Phillips</td>
+<td>Neque Sed Company</td>
+<td>1-348-341-8731</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Gillian</td>
+<td>Watts</td>
+<td>Neque Nullam Corporation</td>
+<td>1-372-100-5329</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Phyllis</td>
+<td>Preston</td>
+<td>Lacus Nulla Consulting</td>
+<td>1-664-499-5769</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Sydney</td>
+<td>Atkins</td>
+<td>Ac Risus Morbi LLP</td>
+<td>1-161-362-2155</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Basil</td>
+<td>French</td>
+<td>Nam Foundation</td>
+<td>1-233-673-5302</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+<tr>
+<td>Dominique</td>
+<td>Wilson</td>
+<td>Sit Incorporated</td>
+<td>1-619-846-0785</td>
+<td><input type="button" value="Delete" class="deleterow" /></td>
+</tr>
+</table>
+
+<!-- Include jQuery file here -->
+
+<script>
+// Convert the JavaScript code below to jQuery
+
+var elements = document.getElementsByClassName('deleterow');
+
+for (var i = 0; i < elements.length; i++)
+{
+	elements[i].onclick = function() { removeRow(this) };
+}
+
+function removeRow(myrow) {
+
+	if (confirm('Are you sure you want to delete?'))
+	{
+		var index = myrow.parentNode.parentNode.rowIndex;
+
+		document.getElementById('myTable').deleteRow(index);
+	}
+}
+
+/*
+
+http://www.w3schools.com/jsref/met_table_deleterow.asp
+
+*/
+</script>
+
+</body>
+</html>

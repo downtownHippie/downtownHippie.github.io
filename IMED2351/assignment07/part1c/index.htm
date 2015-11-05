@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Welcome to jQuery</title>
+
+</head>
+
+<body>
+
+<div id="welcome">
+    <h2 id="content"></h2>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type='text/javascript'>
+
+$(document).ready(function () {
+    $("#content").hide();
+    $("#content").text("Welcome to jQuery!").fadeIn(1000).delay(3000).fadeOut(1000);
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>IMED 2351 - Hide/Show</title>
+
+<style>
+a {
+	text-decoration: none;
+}
+
+.txtQuestion {
+	display: none;
+}
+</style>
+</head>
+
+<body>
+		<h2>Hide Only - Demonstration</h2>
+		
+		<a href="#" id="myLink" class="lnkQuestion">Question 1</a>
+
+		<p id="faq1" class="txtQuestion">Answer to question 1</p>
+
+		<p></p>
+
+		<a href="#" id="myLink2" class="lnkQuestion">Question 2</a>
+
+		<p id="faq2" class="txtQuestion">Answer to question 2</p>
+
+		<p></p>
+
+		<a href="#" id="myLink3" class="lnkQuestion">Question 3</a>
+
+		<p id="faq3" class="txtQuestion">Answer to question 3</p>
+		
+		<p></p>
+
+		<a href="#" id="myLink4" class="lnkQuestion">Question 4</a>
+
+		<p id="faq4" class="txtQuestion">Answer to question 4</p>
+		
+		<p></p>
+
+		<a href="#" id="myLink5" class="lnkQuestion">Question 5</a>
+
+		<p id="faq5" class="txtQuestion">Answer to question 5</p>
+<script>
+	/*
+	INSTRUCTIONS:
+	
+	Convert the code below to jQuery
+	
+	BONUS:  Try the most "efficient" way possible (e.g. try not to attach a click event to each <a> individually)
+	
+	NOTE:  Don't forget to include the jQuery library.
+	
+	Reference:
+	http://www.w3schools.com/jquery/jquery_hide_show.asp
+	
+	*/
+	
+	// Event Handler for 'myLink'
+	document.getElementById('myLink').onclick = function() {
+		hideShow('faq1');
+	}
+
+	// Event Handler for 'myLink2'
+	document.getElementById('myLink2').onclick = function() {
+		hideShow('faq2');
+	}
+	
+	// Event Handler for 'myLink3'
+	document.getElementById('myLink3').onclick = function() {
+		hideShow('faq3');
+	}
+	
+	// Event Handler for 'myLink4'
+	document.getElementById('myLink4').onclick = function() {
+		hideShow('faq4');
+	}
+	
+	// Event Handler for 'myLink5'
+	document.getElementById('myLink5').onclick = function() {
+		hideShow('faq5');
+	}
+	
+	function hideShow(val) {
+		// Hide a given element (val)
+			
+		// store the element object in faq1
+		var myval = document.getElementById(val);
+
+		// Use JavaScript to set the style display to 'none'.
+		// This will remove the element and any surrounding space.
+		if (myval.style.display == 'block') {
+			myval.style.display = 'none';
+		} else {
+			myval.style.display = 'block';
+		}
+	}
+
+</script>
+
+</body>
+</html>

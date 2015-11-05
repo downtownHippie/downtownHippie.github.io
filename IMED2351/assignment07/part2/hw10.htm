@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+#mylist {
+	display: none;
+}
+
+.icon {
+	background-image: url("arrow_right.png");
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding-right: 20px;
+}
+</style>
+</head>
+<body>
+
+<a href="#" id="mylink" class="icon">Recipes</a>
+<br>
+<ul id="mylist">
+	<li>Burger</li>
+	<li>Casserole</li>
+	<li>Soup</li>
+	<li>Rice</li>
+</ul>
+
+<script>
+/*
+INSTRUCTIONS:
+
+Convert the code below to jQuery
+
+NOTE:  Don't forget to include the jQuery library.
+
+Reference:
+http://www.htmlgoodies.com/html5/css/referencing-css3-properties-using-javascript.html#fbid=ksISES3akMY
+
+http://www.w3schools.com/jsref/met_document_getelementsbyclassname.asp
+
+http://www.w3schools.com/jquery/jquery_css.asp
+
+https://www.google.com/design/icons/
+
+*/
+	
+// 1. create variable for element
+var mylink = document.getElementById("mylink");
+
+// 1a. create variable for element
+var mylist = document.getElementById("mylist");
+
+// 1b. hide the list using JavaScript by default
+mylist.style.display = "none";
+
+var myicon = document.getElementsByClassName("icon");
+
+// 2. Attach event to element
+mylink.onclick = function() {
+
+	if (mylist.style.display == "none") {
+		mylist.style.display = "block";
+
+		for (var x = 0; x < myicon.length; x++) {
+			myicon[x].style.backgroundImage = "url('arrow_down.png')";
+		}
+	} else {
+		mylist.style.display = "none";
+
+		for (var x = 0; x < myicon.length; x++) {
+			myicon[x].style.backgroundImage = "url('arrow_right.png')";
+		}
+	}
+	
+	// turn off default behavior of the element/event
+	return false;
+};
+
+</script>
+
+</body>
+</html>
