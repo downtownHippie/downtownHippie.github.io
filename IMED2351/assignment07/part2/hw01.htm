@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+
+<h1>Concatenate Example</h1>
+
+<p id="mytag">Old <a href="http://google.com">content</a></p>
+
+<button id="btn">Click Me</button>
+
+<script>
+/*
+INSTRUCTIONS:
+
+Change content on the page.
+
+TODO:  
+- Convert the plain JavaScript code below to jQuery
+- Use a local copy of the uncompressed jQuery library
+- Upload to your web server when it works correctly
+
+HINT:  Don't forget to include the jQuery library.
+
+Upload this file to your "assignment07/part2" folder of your site when complete.
+
+Reference:
+http://www.w3schools.com/jquery/html_text.asp
+http://www.w3schools.com/jquery/html_html.asp
+
+*/
+
+document.getElementById("btn").onclick = function(){
+
+	var myname = 'Tom';
+
+	document.getElementsByTagName("h1")[0].innerHTML = 'Hi my name is ' + myname;
+
+	document.getElementById('mytag').innerHTML = 'My paragraph';
+
+};
+
+</script>
+</body>
+</html>
+
+
+
+
+
