@@ -48,6 +48,14 @@
 	NOTE:  Don't forget to include the jQuery library.
 	
 	*/
+
+	$(".cell").on("click", function() {
+		 if ($(this).text() == "X")
+			$(this).text("");
+		else
+			$(this).text("X");
+	});
+	/*
 	window.onload = function() {
 		var mycell = document.getElementsByTagName("td");
 		var num = mycell.length;			// 9
@@ -59,6 +67,7 @@
 			});
 		}
 	};
+	*/
 	</script>
 </body>
 </html>

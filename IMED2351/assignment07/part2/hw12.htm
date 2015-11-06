@@ -778,7 +778,13 @@ tr:hover {
 <script>
 // Convert the JavaScript code below to jQuery
 
-var elements = document.getElementsByClassName('deleterow');
+$(".deleterow").click(function() {
+		var i = $(this).closest('tr');
+		i.remove();
+});
+
+/*
+   var elements = document.getElementsByClassName('deleterow');
 
 for (var i = 0; i < elements.length; i++)
 {
@@ -795,6 +801,7 @@ function removeRow(myrow) {
 	}
 }
 
+*/
 /*
 
 http://www.w3schools.com/jsref/met_table_deleterow.asp
