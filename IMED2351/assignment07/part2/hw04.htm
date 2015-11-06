@@ -10,6 +10,7 @@
 
 <p><strong>Note:</strong><br>First create an LI node,<br> then create a Text node,<br> then append the Text node to the LI node.<br>Finally append the LI node to the list.</p>
 
+<script src='js/jquery-1.11.3.js'></script>
 <script type="text/javascript">
 /*
 INSTRUCTIONS:
@@ -24,6 +25,15 @@ Uses Unobtrusive JavaScript
 Upload this file to your "assignment07/part2" folder of your site when complete.
 */
 
+$('#mybutton').click(function() {
+		/*var node=document.createElement("LI");
+		var textnode=document.createTextNode("Water");
+		node.appendChild(textnode); */
+		var node = "<li>water</li>";
+		$('#myList').append(node);
+		});
+
+/*
 	document.getElementById("mybutton").onclick = myFunction;
 
 	function myFunction() {
@@ -37,6 +47,7 @@ Upload this file to your "assignment07/part2" folder of your site when complete.
 		document.getElementById("myList").appendChild(node);
 
 	}
+*/
 </script>
 
 </body>

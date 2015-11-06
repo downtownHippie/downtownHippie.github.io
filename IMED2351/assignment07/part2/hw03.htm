@@ -10,6 +10,7 @@
 
 <p id="content"></p>
 
+<script src='js/jquery-1.11.3.js'></script>
 <script>
 /*
 INSTRUCTIONS:
@@ -29,7 +30,9 @@ now = now.getFullYear();		// Store the current year in a variable.
 var age  = now - birthyear;		// Calculate their 2 possible ages based on the stored values.
 
 // Output them to the screen like so: "They are either NN or NN", substituting the values.
-document.getElementById("content").innerHTML = 'They are either ' + age + ' or ' + (age - 1);
+
+$('#content').html("They are either " + age + " or " + (age - 1));
+/* document.getElementById("content").innerHTML = 'They are either ' + age + ' or ' + (age - 1); */
 
 </script>
 </body>

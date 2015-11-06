@@ -35,8 +35,24 @@ Input number grade: <input type="text" id="numberGrade">
 <p>Letter grade: <span id="letterGrade"></span></p>
 
 
+<script src='js/jquery-1.11.3.js'></script>
 <script>
 
+$('#mybutton').click(function() {
+		var grade = 'F';
+		var val = $("#numberGrade").val();
+		if (val >= 90)
+			grade = 'A';
+		else if (val >= 80)
+			grade = 'B';
+		else if (val >= 70)
+			grade = 'C';
+		else if (val >= 60)
+			grade = 'D';
+		$("#letterGrade").text(grade);
+		return false;
+		});
+/*
 document.getElementById("mybutton").onclick = getLetterGrade;
 
 function getLetterGrade() {
@@ -65,6 +81,7 @@ function getLetterGrade() {
 	
 	return false;
 }
+*/
 
 </script>
 

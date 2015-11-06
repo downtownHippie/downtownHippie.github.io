@@ -31,8 +31,19 @@ How old are you? <input type="text" id="yourAge">
 
 <p id="response"></p>
 
+<script src='js/jquery-1.11.3.js'></script>
 <script>
 
+$("#mybutton").click(function() {
+		var voteAge = 18;
+		if ($("#yourAge").val() < voteAge)
+			$("#response").text("You are not old enough to vote.\nYou must be " + voteAge);
+		else
+			$("#response").text("You are old enough to vote, you are " + $("#yourAge").val());
+		return false;
+		});
+
+		/*
 document.getElementById("mybutton").onclick = checkAge;
 
 function checkAge() {
@@ -52,6 +63,7 @@ function checkAge() {
 	
 	return false;
 }
+*/
 
 </script>
 

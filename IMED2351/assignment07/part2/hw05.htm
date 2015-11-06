@@ -18,6 +18,7 @@
 
 <h2 id="response"></h2>
 
+<script src='js/jquery-1.11.3.js'></script>
 <script>
 /*
 INSTRUCTIONS:
@@ -28,6 +29,7 @@ NOTE:  Don't forget to include the jQuery library.
 
 */
 	
+/*
 document.getElementById("myBtn").onclick = submitForm;
 
 function submitForm() {
@@ -37,6 +39,12 @@ function submitForm() {
 
 	return false;
 }
+*/
+
+$("#myBtn").click(function() {
+		$("#response").text("You entered: " + $("#name").val())
+		return false;
+		});
 
 </script>
 

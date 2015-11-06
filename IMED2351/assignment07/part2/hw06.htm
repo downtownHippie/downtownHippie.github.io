@@ -53,8 +53,34 @@ p {
 <p id="text"></p>
 
 
+<script src='js/jquery-1.11.3.js'></script>
 <script>
 
+function showColor(bn, nc, tc) {
+	$(bn).text(nc);
+	$(bn).css("background-color", nc);
+	if (tc != '') {
+		$(bn).css("color", tc);
+	}
+}
+
+$("#box1").hover(function() {
+			showColor(this, "Green");
+		}, function() {
+			showColor(this, "Red");
+		});
+$("#box2").hover(function() {
+			showColor(this, "Black", "White");
+		}, function() {
+			showColor(this, "White", "Black");
+		});
+$("#box3").hover(function() {
+			showColor(this, "Yellow");
+		}, function() {
+			showColor(this, "Blue");
+		});
+
+/*
 function showColor(boxname, newcolor, textcolor) {
 	document.getElementById(boxname).innerHTML = newcolor;
 	document.getElementById(boxname).style.backgroundColor = newcolor;
@@ -64,28 +90,29 @@ function showColor(boxname, newcolor, textcolor) {
 }
 
 document.getElementById("box1").onmouseover = function() {
-	showColor("box1", "Green");
+	showColor("#box1", "Green");
 };
 
 document.getElementById("box1").onmouseout = function() {
-	showColor("box1", "Red");
+	showColor("#box1", "Red");
 };
 
 document.getElementById("box2").onmouseover = function() {
-	showColor("box2", "Black", "white");
+	showColor("#box2", "Black", "white");
 };
 
 document.getElementById("box2").onmouseout = function() {
-	showColor("box2", "White", "black");
+	showColor("#box2", "White", "black");
 };
 
 document.getElementById("box3").onmouseover = function() {
-	showColor("box3", "Yellow");
+	showColor("#box3", "Yellow");
 };
 
 document.getElementById("box3").onmouseout = function() {
-	showColor("box3", "Blue");
+	showColor("#box3", "Blue");
 };
+*/
 
 </script>
 

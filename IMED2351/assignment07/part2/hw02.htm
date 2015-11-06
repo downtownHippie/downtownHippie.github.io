@@ -12,6 +12,7 @@
 
 <button id="mybutton">Click Me!</button>
 
+<script src='js/jquery-1.11.3.js'></script>
 <script>
 /*
 INSTRUCTIONS:
@@ -29,6 +30,13 @@ Upload this file to your "assignment07/part2" folder of your site when complete.
 
 */
 
+$('#mybutton').click(function(){
+		var myname = "Susan";
+		$('h1').eq(0).html("Hi my name is " + myname);
+		$('#mytag').html("This is my new paragraph!");
+		});
+
+/*
 var mybutton = document.getElementById("mybutton");
 
 mybutton.onclick = function() {
@@ -38,6 +46,7 @@ mybutton.onclick = function() {
 
 	document.getElementById('mytag').innerHTML = 'This is my new paragraph!';
 };
+*/
 
 </script>
 </body>

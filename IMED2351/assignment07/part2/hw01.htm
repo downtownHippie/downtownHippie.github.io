@@ -12,6 +12,7 @@
 
 <button id="btn">Click Me</button>
 
+<script src='js/jquery-1.11.3.js'></script>
 <script>
 /*
 INSTRUCTIONS:
@@ -33,6 +34,13 @@ http://www.w3schools.com/jquery/html_html.asp
 
 */
 
+$("#btn").click(function() {
+		var myname = "Tom";
+		$("h1").eq(0).html("Hi my name is " + myname);
+		$("#mytag").html("My paragraph");
+		});
+
+/*
 document.getElementById("btn").onclick = function(){
 
 	var myname = 'Tom';
@@ -42,6 +50,7 @@ document.getElementById("btn").onclick = function(){
 	document.getElementById('mytag').innerHTML = 'My paragraph';
 
 };
+*/
 
 </script>
 </body>
