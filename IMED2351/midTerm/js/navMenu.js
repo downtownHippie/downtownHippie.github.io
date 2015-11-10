@@ -20,36 +20,30 @@
 //  				themselves as open.
 //  and rebuilt it for my purposes.
 //
-//  the original had a delay on close, I might reimplement that, it was "smoother"
-//    implement the timer, without looking at the original site
 
 //var navMenuImport = document.querySelector('#navMenuHTML');
 //var navMenuContent = navMenuImport.import.querySelector('#navMenuList');
 //document.getElementsByTagName('nav')[0].innerHTML = document.importNode(navMenuContent, true).innerHTML;
 
-var navMenuMenus = document.getElementsByClassName("navMenu");
-var navMenuMenuHeaders = document.getElementsByClassName("navMenuHeader");
-var navMenuMenuDelayTimer = 0;
+window.addEventListener("load", navMenuSetupNav);
 
+/* load the navigation menu html */
+var req = new XMLHttpRequest();
+req.onreadystatechange = function() {
+	if (req.readyState == 4 && req.status == 200) {
+		document.getElementsByTagName("nav")[0].innerHTML = req.responseText;
+	}
+}
+req.open("GET", "navMenu.html", true);
+req.send();
+
+/* setup variables for the menu */
+var navMenuMenus;
+var navMenuMenuHeaders;
+var navMenuMenuDelayTimer = 0;
 var navMenuOpenItem = 0;
 
-for (var i = 0; i < navMenuMenus.length; i++) {
-	navMenuMenus[i].onmouseover = function() {
-		clearTimeout(navMenuMenuDelayTimer);
-		navMenuMenuOpen(this);
-		};
-	navMenuMenus[i].onmouseout = function() {
-		navMenuMenuCloseDelay();
-		};
-	navMenuMenuHeaders[i].onmouseover = function() {
-		clearTimeout(navMenuMenuDelayTimer);
-		navMenuMenuOpen(this.nextElementSibling);
-		};
-	navMenuMenuHeaders[i].onmouseout = function() {
-		navMenuMenuCloseDelay();
-		};
-}
-
+/* nav menu functions */
 function navMenuMenuClose() {
 	if (navMenuOpenItem) navMenuOpenItem.style.visibility = 'hidden';
 }
@@ -60,4 +54,25 @@ function navMenuMenuOpen(id) {
 }
 function navMenuMenuCloseDelay() {
 	navMenuMenuDelayTimer = setTimeout(function(){navMenuMenuClose()}, 750);
+}
+function navMenuSetupNav() {
+	navMenuMenus = document.getElementsByClassName("navMenu");
+	navMenuMenuHeaders = document.getElementsByClassName("navMenuHeader");
+
+	for (var i = 0; i < navMenuMenus.length; i++) {
+		navMenuMenus[i].onmouseover = function() {
+			clearTimeout(navMenuMenuDelayTimer);
+			navMenuMenuOpen(this);
+			};
+		navMenuMenus[i].onmouseout = function() {
+			navMenuMenuCloseDelay();
+			};
+		navMenuMenuHeaders[i].onmouseover = function() {
+			clearTimeout(navMenuMenuDelayTimer);
+			navMenuMenuOpen(this.nextElementSibling);
+			};
+		navMenuMenuHeaders[i].onmouseout = function() {
+			navMenuMenuCloseDelay();
+			};
+	}
 }
