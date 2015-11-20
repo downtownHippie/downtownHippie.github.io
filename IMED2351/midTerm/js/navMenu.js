@@ -66,6 +66,7 @@ function navMenuMenuCloseDelay() {
 	navMenuMenuDelayTimer = setTimeout(function(){navMenuMenuClose()}, 750);
 }
 function navMenuSetupNav() {
+	if (document.getElementsByClassName("nav").innerHTML != null) {
 	navMenuMenus = document.getElementsByClassName("navMenu");
 	navMenuMenuHeaders = document.getElementsByClassName("navMenuHeader");
 
@@ -84,5 +85,9 @@ function navMenuSetupNav() {
 		navMenuMenuHeaders[i].onmouseout = function() {
 			navMenuMenuCloseDelay();
 			};
+	}
+	}
+	else {
+		settimeout(navMenuSetupNav, 500);
 	}
 }
