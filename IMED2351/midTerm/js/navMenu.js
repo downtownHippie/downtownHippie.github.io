@@ -65,7 +65,12 @@ function navMenuMenuOpen(id) {
 function navMenuMenuCloseDelay() {
 	navMenuMenuDelayTimer = setTimeout(function(){navMenuMenuClose()}, 750);
 }
+var navMenuSetup = 0;
 function navMenuSetupNav() {
+	if (navMenuSetup++ == 0) {
+		setTimeout(navMenuSetupNav, 2000);
+	}
+	else {
 	navMenuMenus = document.getElementsByClassName("navMenu");
 	navMenuMenuHeaders = document.getElementsByClassName("navMenuHeader");
 
@@ -84,5 +89,6 @@ function navMenuSetupNav() {
 		navMenuMenuHeaders[i].onmouseout = function() {
 			navMenuMenuCloseDelay();
 			};
+	}
 	}
 }
