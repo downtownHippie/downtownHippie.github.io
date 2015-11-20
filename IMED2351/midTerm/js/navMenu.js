@@ -67,28 +67,33 @@ function navMenuMenuCloseDelay() {
 }
 var navMenuSetup = 0;
 function navMenuSetupNav() {
-	if (navMenuSetup++ == 0) {
-		setTimeout(navMenuSetupNav, 2000);
+	// why do I have to do this??? why won't you wait for me...
+	//if (navMenuSetup++ == 0) {
+		//setTimeout(navMenuSetupNav, 2000);
+	//}
+	if (document.getElementsByTagName("nav")[0].textContent == null) {
+		console.log("waiting once");
+		setTimeout(navMenuSetupNav, 500);
 	}
 	else {
-	navMenuMenus = document.getElementsByClassName("navMenu");
-	navMenuMenuHeaders = document.getElementsByClassName("navMenuHeader");
+		navMenuMenus = document.getElementsByClassName("navMenu");
+		navMenuMenuHeaders = document.getElementsByClassName("navMenuHeader");
 
-	for (var i = 0; i < navMenuMenus.length; i++) {
-		navMenuMenus[i].onmouseover = function() {
-			clearTimeout(navMenuMenuDelayTimer);
-			navMenuMenuOpen(this);
-			};
-		navMenuMenus[i].onmouseout = function() {
-			navMenuMenuCloseDelay();
-			};
-		navMenuMenuHeaders[i].onmouseover = function() {
-			clearTimeout(navMenuMenuDelayTimer);
-			navMenuMenuOpen(this.nextElementSibling);
-			};
-		navMenuMenuHeaders[i].onmouseout = function() {
-			navMenuMenuCloseDelay();
-			};
-	}
+		for (var i = 0; i < navMenuMenus.length; i++) {
+			navMenuMenus[i].onmouseover = function() {
+				clearTimeout(navMenuMenuDelayTimer);
+				navMenuMenuOpen(this);
+				};
+			navMenuMenus[i].onmouseout = function() {
+				navMenuMenuCloseDelay();
+				};
+			navMenuMenuHeaders[i].onmouseover = function() {
+				clearTimeout(navMenuMenuDelayTimer);
+				navMenuMenuOpen(this.nextElementSibling);
+				};
+			navMenuMenuHeaders[i].onmouseout = function() {
+				navMenuMenuCloseDelay();
+				};
+		}
 	}
 }
