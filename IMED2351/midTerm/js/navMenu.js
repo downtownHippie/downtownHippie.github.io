@@ -25,13 +25,14 @@
 //var navMenuContent = navMenuImport.import.querySelector('#navMenuList');
 //document.getElementsByTagName('nav')[0].innerHTML = document.importNode(navMenuContent, true).innerHTML;
 
-window.addEventListener("load", navMenuSetupNav);
+//window.addEventListener("load", navMenuSetupNav);
 
 /* load the navigation menu html */
 var req = new XMLHttpRequest();
 req.onreadystatechange = function() {
 	if (req.readyState == 4 && req.status == 200) {
 		document.getElementsByTagName("nav")[0].innerHTML = req.responseText;
+		navMenuSetupNav();
 	}
 }
 req.open("GET", "navMenu.html", true);
@@ -68,16 +69,16 @@ function navMenuMenuCloseDelay() {
 var navMenuSetup = 0;
 function navMenuSetupNav() {
 	// why do I have to do this??? why won't you wait for me...
-	if (navMenuSetup++ == 0) {
-		console.log("sure wish the load event would wait for me");
-		setTimeout(navMenuSetupNav, 1000);
-	}
+	//if (navMenuSetup++ == 0) {
+		//console.log("sure wish the load event would wait for me");
+		//setTimeout(navMenuSetupNav, 1000);
+	//}
 	// if it had worked, this would have been sort of cool, still...why???
 	//if (document.getElementsByTagName("nav")[0].textContent == null) {
 		//console.log("waiting once");
 		//setTimeout(navMenuSetupNav, 500);
 	//}
-	else {
+	//else {
 		navMenuMenus = document.getElementsByClassName("navMenu");
 		navMenuMenuHeaders = document.getElementsByClassName("navMenuHeader");
 
@@ -97,5 +98,5 @@ function navMenuSetupNav() {
 				navMenuMenuCloseDelay();
 				};
 		}
-	}
+	//}
 }
