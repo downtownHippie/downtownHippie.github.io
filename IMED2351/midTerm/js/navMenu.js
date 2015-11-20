@@ -68,13 +68,14 @@ function navMenuMenuCloseDelay() {
 var navMenuSetup = 0;
 function navMenuSetupNav() {
 	// why do I have to do this??? why won't you wait for me...
-	//if (navMenuSetup++ == 0) {
-		//setTimeout(navMenuSetupNav, 2000);
-	//}
-	if (document.getElementsByTagName("nav")[0].textContent == null) {
+	if (navMenuSetup++ == 0) {
 		console.log("waiting once");
-		setTimeout(navMenuSetupNav, 500);
+		setTimeout(navMenuSetupNav, 2000);
 	}
+	//if (document.getElementsByTagName("nav")[0].textContent == null) {
+		//console.log("waiting once");
+		//setTimeout(navMenuSetupNav, 500);
+	//}
 	else {
 		navMenuMenus = document.getElementsByClassName("navMenu");
 		navMenuMenuHeaders = document.getElementsByClassName("navMenuHeader");
