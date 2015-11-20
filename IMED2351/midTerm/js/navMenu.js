@@ -28,6 +28,7 @@
 window.addEventListener("load", navMenuSetupNav);
 
 /* load the navigation menu html */
+/*
 var req = new XMLHttpRequest();
 req.onreadystatechange = function() {
 	if (req.readyState == 4 && req.status == 200) {
@@ -36,6 +37,15 @@ req.onreadystatechange = function() {
 }
 req.open("GET", "navMenu.html", true);
 req.send();
+*/
+
+$.ajax({
+	url: "navMenu.html",
+	cache: false
+})
+.done (function(h) {
+	$("nav").html(h);
+});
 
 /* setup variables for the menu */
 var navMenuMenus;
