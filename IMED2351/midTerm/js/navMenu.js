@@ -21,12 +21,6 @@
 //  and rebuilt it for my purposes.
 //
 
-//var navMenuImport = document.querySelector('#navMenuHTML');
-//var navMenuContent = navMenuImport.import.querySelector('#navMenuList');
-//document.getElementsByTagName('nav')[0].innerHTML = document.importNode(navMenuContent, true).innerHTML;
-
-//window.addEventListener("load", navMenuSetupNav);
-
 /* load the navigation menu html */
 var req = new XMLHttpRequest();
 req.onreadystatechange = function() {
@@ -37,16 +31,6 @@ req.onreadystatechange = function() {
 }
 req.open("GET", "navMenu.html", true);
 req.send();
-
-/*
-$.ajax({
-	url: "navMenu.html",
-	cache: false
-})
-.done (function(h) {
-	$("nav").html(h);
-});
-*/
 
 /* setup variables for the menu */
 var navMenuMenus;
@@ -66,37 +50,24 @@ function navMenuMenuOpen(id) {
 function navMenuMenuCloseDelay() {
 	navMenuMenuDelayTimer = setTimeout(function(){navMenuMenuClose()}, 750);
 }
-var navMenuSetup = 0;
 function navMenuSetupNav() {
-	// why do I have to do this??? why won't you wait for me...
-	//if (navMenuSetup++ == 0) {
-		//console.log("sure wish the load event would wait for me");
-		//setTimeout(navMenuSetupNav, 1000);
-	//}
-	// if it had worked, this would have been sort of cool, still...why???
-	//if (document.getElementsByTagName("nav")[0].textContent == null) {
-		//console.log("waiting once");
-		//setTimeout(navMenuSetupNav, 500);
-	//}
-	//else {
-		navMenuMenus = document.getElementsByClassName("navMenu");
-		navMenuMenuHeaders = document.getElementsByClassName("navMenuHeader");
+	navMenuMenus = document.getElementsByClassName("navMenu");
+	navMenuMenuHeaders = document.getElementsByClassName("navMenuHeader");
 
-		for (var i = 0; i < navMenuMenus.length; i++) {
-			navMenuMenus[i].onmouseover = function() {
-				clearTimeout(navMenuMenuDelayTimer);
-				navMenuMenuOpen(this);
-				};
-			navMenuMenus[i].onmouseout = function() {
-				navMenuMenuCloseDelay();
-				};
-			navMenuMenuHeaders[i].onmouseover = function() {
-				clearTimeout(navMenuMenuDelayTimer);
-				navMenuMenuOpen(this.nextElementSibling);
-				};
-			navMenuMenuHeaders[i].onmouseout = function() {
-				navMenuMenuCloseDelay();
-				};
-		}
-	//}
+	for (var i = 0; i < navMenuMenus.length; i++) {
+		navMenuMenus[i].onmouseover = function() {
+			clearTimeout(navMenuMenuDelayTimer);
+			navMenuMenuOpen(this);
+			};
+		navMenuMenus[i].onmouseout = function() {
+			navMenuMenuCloseDelay();
+			};
+		navMenuMenuHeaders[i].onmouseover = function() {
+			clearTimeout(navMenuMenuDelayTimer);
+			navMenuMenuOpen(this.nextElementSibling);
+			};
+		navMenuMenuHeaders[i].onmouseout = function() {
+			navMenuMenuCloseDelay();
+			};
+	}
 }
