@@ -66,7 +66,7 @@ function navMenuMenuCloseDelay() {
 	navMenuMenuDelayTimer = setTimeout(function(){navMenuMenuClose()}, 750);
 }
 function navMenuSetupNav() {
-	if (document.getElementsByTagName("nav")[0].innerHTML != null) {
+	if (document.getElementsByTagName("nav")[0].innerHTML == null) {
 	navMenuMenus = document.getElementsByClassName("navMenu");
 	navMenuMenuHeaders = document.getElementsByClassName("navMenuHeader");
 
