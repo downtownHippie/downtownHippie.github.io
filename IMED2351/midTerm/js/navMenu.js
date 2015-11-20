@@ -69,9 +69,10 @@ var navMenuSetup = 0;
 function navMenuSetupNav() {
 	// why do I have to do this??? why won't you wait for me...
 	if (navMenuSetup++ == 0) {
-		console.log("waiting once");
-		setTimeout(navMenuSetupNav, 2000);
+		console.log("sure wish the load event would wait for me");
+		setTimeout(navMenuSetupNav, 1000);
 	}
+	// if it had worked, this would have been sort of cool, still...why???
 	//if (document.getElementsByTagName("nav")[0].textContent == null) {
 		//console.log("waiting once");
 		//setTimeout(navMenuSetupNav, 500);
